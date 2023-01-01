@@ -1,0 +1,67 @@
+@import "./color";
+@import "./global";
+@import "./mixin";
+
+.header {
+    $height: 50px;
+    width: 100%;
+    padding: 30px 0;
+    display: inline-block;
+    height: fit-content;
+    margin-bottom: 40px;
+    // box-shadow: $box-shadow;
+	.widthFix {
+        @include flex-row-centered;
+		justify-content: space-between;
+	}
+	.logoBox {
+		@include flex-row-start;
+		width: 320px;
+		text-decoration: none;
+		font-size: $font-size-m;
+		.logo {
+			@include centered-background;
+			display: inline-block;
+			width: $height;
+			height: $height;
+			border-radius: 30%;
+			background-image: url("../assets/image/svg/logo.svg");
+			margin-right: 20px;
+			transition: $transition-f;
+			cursor: pointer;
+		}
+		.logo:hover {
+			box-shadow: $box-shadow;
+		}
+		.name {
+			font-weight: bold;
+			font-size: $font-size-l;
+			color: $font-color;
+		}
+	}
+	.buttonBox {
+		@include flex-row-start;
+		.button {
+			height: $height !important;
+			border-radius: calc($height/2) !important;
+			padding: 0 15px;
+			font-size: $font-size-s;
+			font-weight: bold;
+			color: $font-color;
+			margin-right: 10px;
+		}
+        .button.contained {
+            padding: 0 20px;
+			box-shadow: $box-shadow;
+            color: $opposite-font-color;
+            background-image: $gradient;
+            font-size: $font-size-m;
+		}
+        .button.contained:hover {
+			box-shadow: $box-shadow-hover;
+		}
+		.button:first-child {
+			margin-right: 0;
+		}
+	}
+}

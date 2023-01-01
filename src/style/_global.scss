@@ -1,0 +1,17 @@
+@import "./color";
+
+$font-size-es: 12px;
+$font-size-s: 14px;
+$font-size-m: 16px;
+$font-size-l: 22px;
+$font-size-el: 32px;
+
+$transition-s: 500ms;
+$transition-m: 300ms;
+$transition-f: 200ms;
+
+$logo: url("../image/svg/logo.svg");
+
+$box-shadow-none: 0 0 0 -2px $box-shadow-color;
+$box-shadow: 0 3px 12px 1px $box-shadow-color;
+$box-shadow-hover: 0 10px 16px 1px $box-shadow-color;

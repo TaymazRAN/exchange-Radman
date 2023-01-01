@@ -1,0 +1,23 @@
+@font-face {
+font-family: "Samim";
+src: url("./assets/fonts/Samim-WOL.woff2");
+font-weight: normal;
+}
+
+@font-face {
+font-family: "Samim";
+src: url("./assets/fonts/Samim-Bold-WOL.woff2");
+font-weight: bold;
+}
+
+* {
+	box-sizing: border-box;
+	font-family: 'Samim', sans-serif !important;
+}
+
+body {
+	margin: 0;
+	direction: rtl;
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+}
