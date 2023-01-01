@@ -7,8 +7,8 @@ export default function Header() {
 		<div className="header">
 			<div className="widthFix">
 				<Link to="/" className="logoBox">
-					<span className="name">کارگزاری صبا جهاد</span>
 					<div className="logo"></div>
+					<span className="name">کارگزاری صبا جهاد</span>
 				</Link>
 				<div className="buttonBox">
 					<Button className="button" variant="text" color="error">
@@ -25,11 +25,7 @@ export default function Header() {
 					</Button>
 				</div>
 				<div className="buttonBox">
-					<Button
-						className="button contained"
-						variant="text"
-						color="error"
-					>
+					<Button className="button contained" variant="text" color="error">
 						ورود / ثبت نام
 					</Button>
 				</div>
