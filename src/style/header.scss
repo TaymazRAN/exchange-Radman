@@ -8,7 +8,7 @@
     padding: 30px 0;
     display: inline-block;
     height: fit-content;
-    margin-bottom: 40px;
+    margin-bottom: 20px;
     // box-shadow: $box-shadow;
 	.widthFix {
         @include flex-row-centered;
@@ -64,4 +64,21 @@
 			margin-right: 0;
 		}
 	}
+}
+
+@media(max-width: 650px){
+	.header {
+    $height: 50px;
+    padding: 20px 0;
+	.logoBox {
+		@include flex-row-start;
+		width: $height;
+		.logo {
+			margin-left: 0;
+		}
+		.name {
+			display: none;
+		}
+	}
+}
 }

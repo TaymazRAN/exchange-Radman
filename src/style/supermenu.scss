@@ -1,0 +1,59 @@
+.navbar {
+	overflow: hidden;
+}
+.navbar a {
+	float: left;
+	font-size: 16px;
+	text-align: center;
+	padding: 10px 0 10px 10px;
+	text-decoration: none;
+}
+.d {
+	float: left;
+	overflow: hidden;
+}
+.d-content {
+	position: absolute;
+	background: #f1f1f1;
+	width: 90%;
+	left: 5%;
+    margin-top: 20px;
+	z-index: -10;
+    border-radius: 20px;
+    box-shadow: $box-shadow;
+    opacity: 0;
+    transition: $transition-s;
+}
+.d:hover .d-content {
+	z-index: 10;
+    opacity: 1;
+}
+.column {
+	float: right;
+	width: 25%;
+	padding: 10px;
+}
+.column a {
+	display: block;
+	float: none;
+    text-align: right;
+	color: $font-color;
+}
+.column h3 {
+	color: $font-color;
+    text-align: right;
+}
+.column a:hover {
+	color: $light-font-color;
+}
+.row:after {
+	content: '';
+	display: table;
+	clear: both;
+}
+@media(max-width: 650px){
+	.column {
+		width: 100%;
+		height: auto;
+	}
+}

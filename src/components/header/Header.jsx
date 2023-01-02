@@ -1,6 +1,7 @@
 import { Button } from "@mui/material";
 import React from "react";
 import { Link } from "react-router-dom";
+import SuperMenu from "../superMenu/SuperMenu";
 
 export default function Header() {
 	return (
@@ -14,9 +15,7 @@ export default function Header() {
 					<Button className="button" variant="text" color="error">
 						درباره ما
 					</Button>
-					<Button className="button" variant="text" color="error">
-						خدمات
-					</Button>
+					<SuperMenu />
 					<Button className="button" variant="text" color="error">
 						سامانه های معاملاتی
 					</Button>
@@ -24,6 +23,7 @@ export default function Header() {
 						تماس با ما
 					</Button>
 				</div>
+
 				<div className="buttonBox">
 					<Button className="button contained" variant="text" color="error">
 						ورود / ثبت نام
