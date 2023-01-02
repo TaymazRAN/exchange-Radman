@@ -1,5 +1,3 @@
-import "./faq.css";
-
 function Faq() {
   return (
 		<div className="faq">

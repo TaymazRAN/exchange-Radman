@@ -9,17 +9,15 @@
 	display: flex;
 	align-items: center;
 	flex-direction: column;
-	padding: 20px;
 }
 
 .faqData {
 	position: relative;
 	padding: 40px;
 	width: 100%;
-	max-width: 1100px;
 	border-radius: 15px;
-	background-color: #fafafa;
-	box-shadow: 0 2px 5px #dddddd;
+	background-color: #f1f1f1;
+	box-shadow: $box-shadow;
 	text-align: right;
 	direction: rtl;
 	margin-bottom: 40px;
@@ -31,25 +29,25 @@
 }
 
 .faqTitle {
-	font-size: 20px;
-	color: #444444;
+	font-size: $font-size-l;
+	color: $font-color;
+	font-weight: bold;
 	margin-bottom: 15px;
-	text-shadow: 0 1px 3px #cccccc;
 }
 
 .faqDescription {
-	font-size: 16px;
-	color: #222222;
+	font-size: $font-size-m;
+	color: $font-color;
 }
 
 .faqPicture {
 	position: absolute;
-	top: -50px;
+	top: -20px;
 	left: 70px;
-	width: 140px;
-	height: 140px;
+	width: 80px;
+	height: 80px;
 	background-position: center center;
 	background-size: contain;
 	background-repeat: no-repeat;
-	background-image: url("../../assets/image/png/Group\ 7.png");
+	background-image: url("../assets/image/png/faq.png");
 }
