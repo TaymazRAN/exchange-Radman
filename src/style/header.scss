@@ -16,7 +16,7 @@
 	}
 	.logoBox {
 		@include flex-row-start;
-		width: 320px;
+		// width: 320px;
 		text-decoration: none;
 		font-size: $font-size-m;
 		.logo {
@@ -25,7 +25,7 @@
 			width: $height;
 			height: $height;
 			border-radius: 30%;
-			background-image: url("../assets/image/svg/logo.svg");
+			background-image: url("../assets/image/svg/logo.png");
 			margin-left: 20px;
 			transition: $transition-f;
 			cursor: pointer;
