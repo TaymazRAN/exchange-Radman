@@ -1,0 +1,27 @@
+.account {
+	padding: 20px;
+	border-radius: 15px;
+	background-color: #e7f0ff;
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	margin-bottom: 20px;
+}
+
+.part {
+	color: #222222;
+}
+
+.part.iconContainer {
+	display: flex;
+	align-items: center;
+}
+
+.icon {
+	color: #39d3fa;
+	margin-left: 10px;
+}
+
+.profileInput.button {
+	min-width: 200px;
+}

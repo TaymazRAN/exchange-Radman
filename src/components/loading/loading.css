@@ -1,0 +1,19 @@
+.loadBody{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  /* width: 50vw; */
+  min-height: 500px;
+}
+
+.errorBox {
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.errorBox span {
+  color: red;
+}
