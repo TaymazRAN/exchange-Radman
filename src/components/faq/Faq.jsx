@@ -4,7 +4,7 @@ function Faq() {
       <div className="faqContainer">
         <div className="faqData">
           <div className="faqTitle bold">
-            مامـوریت ما چیست 000000000000000000؟
+            مامـوریت ما چیست ؟
           </div>
           <div className="faqDescription">
             لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ، و با
