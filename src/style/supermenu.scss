@@ -1,9 +1,9 @@
-.navbar {
+.d-navbar {
 	overflow: hidden;
 }
-.navbar a {
+.d-navbar a {
 	float: left;
-	font-size: 16px;
+	font-size: $font-size-s;
 	text-align: center;
 	padding: 10px 0 10px 10px;
 	text-decoration: none;
@@ -28,31 +28,34 @@
 	z-index: 10;
     opacity: 1;
 }
-.column {
+.d-column {
 	float: right;
 	width: 25%;
 	padding: 10px;
 }
-.column a {
+.d-column a {
 	display: block;
 	float: none;
     text-align: right;
 	color: $font-color;
 }
-.column h3 {
+.d-column h3 {
 	color: $font-color;
+	font-size: $font-size-l;
+	font-weight: bold;
     text-align: right;
+	margin-bottom: 10px;
 }
-.column a:hover {
+.d-column a:hover {
 	color: $light-font-color;
 }
-.row:after {
+.d-row:after {
 	content: '';
 	display: table;
 	clear: both;
 }
 @media(max-width: 650px){
-	.column {
+	.d-column {
 		width: 100%;
 		height: auto;
 	}
