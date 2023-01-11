@@ -1,23 +1,33 @@
 @font-face {
-font-family: "Samim";
-src: url("./assets/fonts/Samim-WOL.woff2");
+font-family: "Vazirmatn";
+src: url("./assets/fonts/Vazirmatn-Regular.woff2");
 font-weight: normal;
 }
 
 @font-face {
-font-family: "Samim";
-src: url("./assets/fonts/Samim-Bold-WOL.woff2");
-font-weight: bold;
+font-family: "Kalameh";
+src: url("./assets/fonts/Kalameh-Regular.woff2");
+font-weight: normal;
 }
+
+@import "./style/color.scss";
 
 * {
 	box-sizing: border-box;
-	font-family: 'Samim', sans-serif !important;
+	font-family: 'Kalameh', sans-serif !important;
+}
+
+*.vazir {
+	box-sizing: border-box;
+	font-family: 'Vazirmatn', sans-serif !important;
 }
 
 body {
+	position: relative;
+	z-index: -3;
 	margin: 0;
 	direction: rtl;
 	-webkit-font-smoothing: antialiased;
 	-moz-osx-font-smoothing: grayscale;
+	background-color: $body-color;
 }
