@@ -12,11 +12,16 @@ import { FormControl } from "@mui/material";
 import FormHelperText from "@mui/material/FormHelperText";
 import { Formik, Form } from "formik";
 import * as yup from "yup";
-import SnackAlert from "../../../component/snackAlert/SnackAlert";
-import LoadingRedux from "../../../component/loadingRedux/LoadingRedux";
-import LoadingSmall from "../../../component/loadingSmall/LoadingSmall";
+import SnackAlert from "../../../components/snackAlert/SnackAlert";
+import LoadingRedux from "../../../components/loadingRedux/LoadingRedux";
+import LoadingSmall from "../../../components/loadingSmall/LoadingSmall";
 import { fixNull } from "../../../services/fixNull";
-import { fetchUserByUsername, updateUser, uploadUserImage, userActions } from "../../../features/account/userSlice";
+import {
+	fetchUserByUsername,
+	updateUser,
+	uploadUserImage,
+	userActions,
+} from "../../../features/account/userSlice";
 
 const validationSchema = yup.object().shape({
 	firstName: yup

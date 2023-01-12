@@ -24,8 +24,8 @@ import {
 	LineChart,
 	Line,
 } from "recharts";
-import LoadingData from "../../../component/loadingData/LoadingData";
-import LoadingRedux from "../../../component/loadingRedux/LoadingRedux";
+import LoadingData from "../../../components/loadingData/LoadingData";
+import LoadingRedux from "../../../components/loadingRedux/LoadingRedux";
 import {
 	returnPointInPercent,
 	returnPointRounded,
@@ -212,7 +212,9 @@ export default function Report() {
 																				}}
 																			></div>
 																		</div>
-																		<div className="disorderName">{disorderItem.subject}</div>
+																		<div className="disorderName">
+																			{disorderItem.subject}
+																		</div>
 																	</div>
 																);
 															})}

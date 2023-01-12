@@ -10,8 +10,8 @@ import VisibilityOutlinedIcon from "@mui/icons-material/VisibilityOutlined";
 import { Button } from "@mui/material";
 import purifyPrice from "../../../services/purifyPrice";
 // import { storePackageActions } from "../../../features/package/storePackageSlice";
-// import SnackAlert from "../../../component/snackAlert/SnackAlert";
-import LoadingRedux from "../../../component/loadingRedux/LoadingRedux";
+// import SnackAlert from "../../../components/snackAlert/SnackAlert";
+import LoadingRedux from "../../../components/loadingRedux/LoadingRedux";
 import { fetchFunctions } from "../../../features/package/functionSlice";
 // import { useNavigate } from "react-router-dom";
 

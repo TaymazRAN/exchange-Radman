@@ -6,8 +6,8 @@ import "../../../panelPersonal/profile/profile.css";
 import { useNavigate, useParams } from "react-router-dom";
 import { useSelector, useDispatch } from "react-redux";
 // import purifyDate from "../../../../services/purifyDate";
-import LoadingRedux from "../../../../component/loadingRedux/LoadingRedux";
-import LoadingData from "../../../../component/loadingData/LoadingData";
+import LoadingRedux from "../../../../components/loadingRedux/LoadingRedux";
+import LoadingData from "../../../../components/loadingData/LoadingData";
 import { fetchOrganizations } from "../../../../features/organization/organizationSlice";
 import { fetchTypes } from "../../../../features/organization/typeSlice";
 

@@ -12,9 +12,9 @@ import Select from "@mui/material/Select";
 import FormHelperText from "@mui/material/FormHelperText";
 import { FormControl } from "@mui/material";
 import { fetchDepartments } from "../../../features/department/departmentSlice";
-import SnackAlert from "../../../component/snackAlert/SnackAlert";
-import LoadingRedux from "../../../component/loadingRedux/LoadingRedux";
-import LoadingSmall from "../../../component/loadingSmall/LoadingSmall";
+import SnackAlert from "../../../components/snackAlert/SnackAlert";
+import LoadingRedux from "../../../components/loadingRedux/LoadingRedux";
+import LoadingSmall from "../../../components/loadingSmall/LoadingSmall";
 import {
 	addEmployee,
 	employeeActions,

@@ -11,10 +11,14 @@ import * as yup from "yup";
 import { useNavigate, useParams } from "react-router-dom";
 import Button from "@mui/material/Button";
 import { fixNull } from "../../../../services/fixNull";
-import LoadingRedux from "../../../../component/loadingRedux/LoadingRedux";
-import LoadingSmall from "../../../../component/loadingSmall/LoadingSmall";
-import SnackAlert from "../../../../component/snackAlert/SnackAlert";
-import { fetchFunctions, functionActions, updateFunction } from "../../../../features/package/functionSlice";
+import LoadingRedux from "../../../../components/loadingRedux/LoadingRedux";
+import LoadingSmall from "../../../../components/loadingSmall/LoadingSmall";
+import SnackAlert from "../../../../components/snackAlert/SnackAlert";
+import {
+	fetchFunctions,
+	functionActions,
+	updateFunction,
+} from "../../../../features/package/functionSlice";
 
 const validationSchema = yup.object().shape({
 	name: yup

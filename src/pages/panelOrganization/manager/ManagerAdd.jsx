@@ -10,9 +10,9 @@ import { FormControl } from "@mui/material";
 import { Formik, Form } from "formik";
 import * as yup from "yup";
 import { useNavigate } from "react-router-dom";
-import SnackAlert from "../../../component/snackAlert/SnackAlert";
-import LoadingRedux from "../../../component/loadingRedux/LoadingRedux";
-import LoadingSmall from "../../../component/loadingSmall/LoadingSmall";
+import SnackAlert from "../../../components/snackAlert/SnackAlert";
+import LoadingRedux from "../../../components/loadingRedux/LoadingRedux";
+import LoadingSmall from "../../../components/loadingSmall/LoadingSmall";
 import {
 	managerRegister,
 	registerActions,

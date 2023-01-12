@@ -26,6 +26,16 @@
 	margin: 0 auto;
 }
 
+.icon {
+	font-size: inherit;
+	margin-right: 10px;
+	color: $secondary900;
+}
+
+.admin {
+	direction: ltr;
+}
+
 ::-webkit-scrollbar {
 	width: 8px;
 }

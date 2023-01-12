@@ -1,7 +1,7 @@
 import "./notFound.css";
 import React from "react";
-import Footer from "../../component/footer/Footer";
-import MenuTop from "../../component/menuTop/MenuTop";
+import Footer from "../../components/footer/Footer";
+import MenuTop from "../../components/menuTop/MenuTop";
 
 export default function NotFound() {
 	return (

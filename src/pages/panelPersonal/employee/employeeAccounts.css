@@ -20,6 +20,7 @@
 .icon {
 	color: #39d3fa;
 	margin-left: 10px;
+	margin-right: -10px;
 }
 
 .profileInput.button {

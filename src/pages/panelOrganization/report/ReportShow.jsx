@@ -23,10 +23,10 @@ import {
 	LineChart,
 	Line,
 } from "recharts";
-import LoadingData from "../../../component/loadingData/LoadingData";
+import LoadingData from "../../../components/loadingData/LoadingData";
 import { returnPointInPercent } from "../../../services/calculatePoint";
 import { fetchManagerReports } from "../../../features/report/reportSlice";
-import LoadingRedux from "../../../component/loadingRedux/LoadingRedux";
+import LoadingRedux from "../../../components/loadingRedux/LoadingRedux";
 import { useParams, useNavigate } from "react-router-dom";
 
 export default function ReportShow() {

@@ -12,9 +12,9 @@ import {
 	fetchDepartments,
 	updateDepartment,
 } from "../../../features/department/departmentSlice";
-import LoadingRedux from "../../../component/loadingRedux/LoadingRedux";
-import LoadingSmall from "../../../component/loadingSmall/LoadingSmall";
-import SnackAlert from "../../../component/snackAlert/SnackAlert";
+import LoadingRedux from "../../../components/loadingRedux/LoadingRedux";
+import LoadingSmall from "../../../components/loadingSmall/LoadingSmall";
+import SnackAlert from "../../../components/snackAlert/SnackAlert";
 
 const validationSchema = yup.object().shape({
 	name: yup

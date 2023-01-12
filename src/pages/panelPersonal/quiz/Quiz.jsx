@@ -10,8 +10,8 @@ import LinearProgress, {
 } from "@mui/material/LinearProgress";
 import Typography from "@mui/material/Typography";
 import Box from "@mui/material/Box";
-import LoadingData from "../../../component/loadingData/LoadingData";
-import LoadingRedux from "../../../component/loadingRedux/LoadingRedux";
+import LoadingData from "../../../components/loadingData/LoadingData";
+import LoadingRedux from "../../../components/loadingRedux/LoadingRedux";
 // import { useNavigate } from "react-router-dom";
 import {
 	fetchExamData,
@@ -19,8 +19,8 @@ import {
 	generateLink,
 } from "../../../features/runExam/runExamSlice";
 import { Button } from "@mui/material";
-import SnackAlert from "../../../component/snackAlert/SnackAlert";
-import LoadingSmall from "../../../component/loadingSmall/LoadingSmall";
+import SnackAlert from "../../../components/snackAlert/SnackAlert";
+import LoadingSmall from "../../../components/loadingSmall/LoadingSmall";
 
 const BorderLinearProgress = styled(LinearProgress)(({ theme }) => ({
 	height: 10,

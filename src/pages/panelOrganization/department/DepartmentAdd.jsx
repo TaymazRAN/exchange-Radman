@@ -1,4 +1,4 @@
-import React, { useRef, useEffect,useState } from "react";
+import React, { useRef, useEffect, useState } from "react";
 import { useSelector, useDispatch } from "react-redux";
 import TextField from "@mui/material/TextField";
 import Button from "@mui/material/Button";
@@ -6,10 +6,14 @@ import { Formik, Form } from "formik";
 import * as yup from "yup";
 import { useNavigate } from "react-router-dom";
 import Autocomplete from "@mui/material/Autocomplete";
-import { addDepartment, departmentActions, fetchDepartments } from "../../../features/department/departmentSlice";
-import SnackAlert from "../../../component/snackAlert/SnackAlert";
-import LoadingRedux from "../../../component/loadingRedux/LoadingRedux";
-import LoadingSmall from "../../../component/loadingSmall/LoadingSmall";
+import {
+	addDepartment,
+	departmentActions,
+	fetchDepartments,
+} from "../../../features/department/departmentSlice";
+import SnackAlert from "../../../components/snackAlert/SnackAlert";
+import LoadingRedux from "../../../components/loadingRedux/LoadingRedux";
+import LoadingSmall from "../../../components/loadingSmall/LoadingSmall";
 
 const initialValues = {
 	name: "",
@@ -30,7 +34,7 @@ const validationSchema = yup.object().shape({
 		// 	/ /,
 		// 	""
 		// )
-		.required("شناسه دپارتمان پدر را انتخاب کنید"), 
+		.required("شناسه دپارتمان پدر را انتخاب کنید"),
 });
 
 export default function DepartmentAdd(props) {
@@ -73,7 +77,7 @@ export default function DepartmentAdd(props) {
 		dispatch(fetchDepartments(organid));
 		// eslint-disable-next-line react-hooks/exhaustive-deps
 	}, []);
-	
+
 	useEffect(() => {
 		if (handleError === "success") {
 			handleOpenSuccess("عملیات با موفقیت انجام شد");

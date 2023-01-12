@@ -3,7 +3,7 @@ import { DataGrid } from "@mui/x-data-grid";
 import VisibilityOutlinedIcon from "@mui/icons-material/VisibilityOutlined";
 import { Button } from "@mui/material";
 import { useNavigate } from "react-router-dom";
-import LoadingRedux from "../../../component/loadingRedux/LoadingRedux";
+import LoadingRedux from "../../../components/loadingRedux/LoadingRedux";
 import React, { useEffect } from "react";
 import { fetchAllReports } from "../../../features/report/reportSlice";
 import { returnPointInPercentTable } from "../../../services/calculatePoint";

@@ -10,8 +10,8 @@ import {
 	selectAllPosts as selectAllManagers,
 	fetchManager,
 } from "../manager/managerSlice";
-import LoadingData from "../../../component/loadingData/LoadingData";
-import AlertDelete from "../../../component/alertDelete/AlertDelete";
+import LoadingData from "../../../components/loadingData/LoadingData";
+import AlertDelete from "../../../components/alertDelete/AlertDelete";
 
 const AccessTable = () => {
 	const data = useSelector((state) => selectAllPosts(state));

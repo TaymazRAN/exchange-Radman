@@ -5,9 +5,9 @@ import { Button } from "@mui/material";
 import { useNavigate } from "react-router-dom";
 import EditOutlinedIcon from "@mui/icons-material/EditOutlined";
 import React, { useState, useEffect } from "react";
-import AlertDeleteRedux from "../../../../component/alertDelete/AlertDeleteRedux";
-import SnackAlert from "../../../../component/snackAlert/SnackAlert";
-import LoadingRedux from "../../../../component/loadingRedux/LoadingRedux";
+import AlertDeleteRedux from "../../../../components/alertDelete/AlertDeleteRedux";
+import SnackAlert from "../../../../components/snackAlert/SnackAlert";
+import LoadingRedux from "../../../../components/loadingRedux/LoadingRedux";
 import purifyPrice from "../../../../services/purifyPrice";
 import {
 	deleteFunction,

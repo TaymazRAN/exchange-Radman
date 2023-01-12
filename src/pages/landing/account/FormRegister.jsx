@@ -22,8 +22,8 @@ import {
 	registerActions,
 	userRegister,
 } from "../../../features/account/registerSlice";
-import SnackAlert from "../../../component/snackAlert/SnackAlert";
-import LoadingSmall from "../../../component/loadingSmall/LoadingSmall";
+import SnackAlert from "../../../components/snackAlert/SnackAlert";
+import LoadingSmall from "../../../components/loadingSmall/LoadingSmall";
 
 const validationSchema = yup.object().shape({
 	firstName: yup

@@ -6,10 +6,10 @@ import {
 	fetchEmployeeAccounts,
 	sendReferRequest,
 } from "../../../features/referenceCode/referenceCodeSlice";
-import LoadingRedux from "../../../component/loadingRedux/LoadingRedux";
+import LoadingRedux from "../../../components/loadingRedux/LoadingRedux";
 import React, { useState, useEffect } from "react";
-import SnackAlert from "../../../component/snackAlert/SnackAlert";
-import AlertConfirmCustom from "../../../component/alertConfirm/AlertConfirmCustom";
+import SnackAlert from "../../../components/snackAlert/SnackAlert";
+import AlertConfirmCustom from "../../../components/alertConfirm/AlertConfirmCustom";
 import EngineeringIcon from "@mui/icons-material/Engineering";
 import TextField from "@mui/material/TextField";
 
@@ -65,8 +65,7 @@ const EmployeeAccounts = () => {
 		} else if (handleError !== "success" && handleError !== "") {
 			if (handleError === "Request failed with status code 409")
 				handleOpenError("درخواست شما به این سازمان قبلا فرستاده شده است");
-			else
-				handleOpenError("کد ارجاع اشتباه وارد شده است");
+			else handleOpenError("کد ارجاع اشتباه وارد شده است");
 			dispatch(referenceCodeActions.clearHandleError());
 		}
 		// eslint-disable-next-line react-hooks/exhaustive-deps

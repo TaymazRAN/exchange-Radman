@@ -3,7 +3,7 @@ import React from "react";
 import { useState, useEffect } from "react";
 import { useSelector, useDispatch } from "react-redux";
 import { Structure } from "./Structure";
-import LoadingRedux from "../../component/loadingRedux/LoadingRedux";
+import LoadingRedux from "../../components/loadingRedux/LoadingRedux";
 import {
 	fetchFilteredEmployee,
 	fetchStructureData,
@@ -15,7 +15,7 @@ import InputLabel from "@mui/material/InputLabel";
 import MenuItem from "@mui/material/MenuItem";
 import Select from "@mui/material/Select";
 import { FormControl } from "@mui/material";
-import LoadingSmall from "../../component/loadingSmall/LoadingSmall";
+import LoadingSmall from "../../components/loadingSmall/LoadingSmall";
 import TextField from "@mui/material/TextField";
 import axios from "axios";
 // import FormHelperText from "@mui/material/FormHelperText";
@@ -122,17 +122,17 @@ export default function StructureOrganization() {
 				let colorTemp = dataColor[0];
 				if (itemEmployee.grade) {
 					colorTemp = dataColor[Math.round(itemEmployee.grade)];
-				} 
-					dataTemp = addData(
-						dataTemp,
-						itemEmployee?.id,
-						item?.id,
-						itemEmployee?.name,
-						"Employee",
-						colorTemp,
-						0,
-						true
-					);
+				}
+				dataTemp = addData(
+					dataTemp,
+					itemEmployee?.id,
+					item?.id,
+					itemEmployee?.name,
+					"Employee",
+					colorTemp,
+					0,
+					true
+				);
 				return dataTemp;
 			});
 

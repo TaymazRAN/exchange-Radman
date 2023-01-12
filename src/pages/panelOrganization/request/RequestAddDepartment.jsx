@@ -11,9 +11,9 @@ import {
 	fetchRequestData,
 	requestActions,
 } from "../../../features/request/requestSlice";
-import LoadingSmall from "../../../component/loadingSmall/LoadingSmall";
-import LoadingRedux from "../../../component/loadingRedux/LoadingRedux";
-import SnackAlert from "../../../component/snackAlert/SnackAlert";
+import LoadingSmall from "../../../components/loadingSmall/LoadingSmall";
+import LoadingRedux from "../../../components/loadingRedux/LoadingRedux";
+import SnackAlert from "../../../components/snackAlert/SnackAlert";
 
 const initialValues = {
 	targetId: "",
@@ -121,7 +121,7 @@ export default function RequestAddDepartment(props) {
 					errorText,
 				}}
 			/>
-			
+
 			{error !== "" || !ready ? (
 				<LoadingRedux error={error} />
 			) : (

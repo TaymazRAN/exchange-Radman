@@ -12,7 +12,7 @@ import AddIcon from "@mui/icons-material/Add";
 import DeleteOutlineIcon from "@mui/icons-material/DeleteOutline";
 import EditOutlinedIcon from "@mui/icons-material/EditOutlined";
 import { menuRows } from "../../../../Data/Menu";
-import Editor from "../../../../component/editor/Editor";
+import Editor from "../../../../components/editor/Editor";
 
 // import {
 // 	getAllcategory,
@@ -20,8 +20,8 @@ import Editor from "../../../../component/editor/Editor";
 // createCategory,
 // deletePackage,
 // } from "../../../../services/PackageService";
-// import Loading from "../../../../component/loading/Loading";
-// import LoadingData from "../../../../component/loadingData/LoadingData";
+// import Loading from "../../../../components/loading/Loading";
+// import LoadingData from "../../../../components/loadingData/LoadingData";
 
 export default function MenuTable() {
 	const [open, setOpen] = useState(false);

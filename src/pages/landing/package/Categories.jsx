@@ -5,15 +5,15 @@ import AccordionDetails from "@mui/material/AccordionDetails";
 import AccordionSummary from "@mui/material/AccordionSummary";
 import Typography from "@mui/material/Typography";
 import ExpandMoreIcon from "@mui/icons-material/ExpandMore";
-import MenuTop from "../../../component/menuTop/MenuTop";
-import Footer from "../../../component/footer/Footer";
+import MenuTop from "../../../components/menuTop/MenuTop";
+import Footer from "../../../components/footer/Footer";
 import "./package.css";
 import PackageCreator from "./StorePackages";
 import { fetchCategorys } from "../../../features/package/categorySlice";
 import { fetchStorePackages } from "../../../features/package/storePackageSlice";
 // import { storePackageActions } from "../../../features/package/storePackageSlice";
-// import SnackAlert from "../../../component/snackAlert/SnackAlert";
-import LoadingRedux from "../../../component/loadingRedux/LoadingRedux";
+// import SnackAlert from "../../../components/snackAlert/SnackAlert";
+import LoadingRedux from "../../../components/loadingRedux/LoadingRedux";
 // import { useNavigate } from "react-router-dom";
 
 export default function Categories() {

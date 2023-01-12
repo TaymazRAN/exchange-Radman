@@ -10,10 +10,13 @@ import { FormControl } from "@mui/material";
 import { Formik, Form } from "formik";
 import * as yup from "yup";
 import { useNavigate } from "react-router-dom";
-import SnackAlert from "../../../../component/snackAlert/SnackAlert";
-import LoadingRedux from "../../../../component/loadingRedux/LoadingRedux";
-import LoadingSmall from "../../../../component/loadingSmall/LoadingSmall";
-import { addDiscountCode, discountCodeActions } from "../../../../features/shop/discountCodeSlice";
+import SnackAlert from "../../../../components/snackAlert/SnackAlert";
+import LoadingRedux from "../../../../components/loadingRedux/LoadingRedux";
+import LoadingSmall from "../../../../components/loadingSmall/LoadingSmall";
+import {
+	addDiscountCode,
+	discountCodeActions,
+} from "../../../../features/shop/discountCodeSlice";
 
 const validationSchema = yup.object().shape({
 	code: yup
@@ -69,7 +72,9 @@ export default function CategoryAdd(props) {
 	const formRef = useRef();
 	const dispatch = useDispatch();
 
-	const handleLoading = useSelector((state) => state.discountCode.handleLoading);
+	const handleLoading = useSelector(
+		(state) => state.discountCode.handleLoading
+	);
 	const error = useSelector((state) => state.discountCode.error);
 	const handleError = useSelector((state) => state.discountCode.handleError);
 	const ready = useSelector((state) => state.discountCode.ready);

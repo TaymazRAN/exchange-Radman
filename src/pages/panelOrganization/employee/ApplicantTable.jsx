@@ -1,7 +1,7 @@
 import { useSelector, useDispatch } from "react-redux";
 import { DataGrid } from "@mui/x-data-grid";
-// import AlertDeny from "../../../component/alertDeny/AlertDeny";
-import LoadingRedux from "../../../component/loadingRedux/LoadingRedux";
+// import AlertDeny from "../../../components/alertDeny/AlertDeny";
+import LoadingRedux from "../../../components/loadingRedux/LoadingRedux";
 import React, { useEffect } from "react";
 import { fetchReferedList } from "../../../features/referenceCode/referenceCodeSlice";
 import AddIcon from "@mui/icons-material/Add";

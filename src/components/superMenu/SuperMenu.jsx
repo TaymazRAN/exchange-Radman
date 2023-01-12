@@ -6,6 +6,17 @@ const SuperMenu = () => {
 	return (
 		<>
 			<nav class="d-navbar">
+				<div className="d">
+					<Button className="button" variant="text" color="error">
+						صفحه نخست
+					</Button>
+				</div>
+				<div className="d">
+					<Button className="button" variant="text" color="error">
+						درباره ما
+						<KeyboardArrowDownRoundedIcon className="superArrow" />
+					</Button>
+				</div>
 				<div class="d">
 					<Button className="button d-btn" variant="text" color="error">
 						خدمات
@@ -52,6 +63,23 @@ const SuperMenu = () => {
 							</div>
 						</div>
 					</div>
+				</div>
+				<div className="d">
+					<Button className="button" variant="text" color="error">
+						پلتفرم های معاملاتی
+						<KeyboardArrowDownRoundedIcon className="superArrow" />
+					</Button>
+				</div>
+				<div className="d">
+					<Button className="button" variant="text" color="error">
+						بلاگ
+					</Button>
+				</div>
+				<div className="d">
+					<Button className="button" variant="text" color="error">
+						ارتباط با ما
+						<KeyboardArrowDownRoundedIcon className="superArrow" />
+					</Button>
 				</div>
 			</nav>
 		</>

@@ -13,7 +13,7 @@ import { Formik, Form } from "formik";
 import * as yup from "yup";
 import { useNavigate } from "react-router-dom";
 import { userLogin } from "../../../../features/account/loginSlice";
-import LoadingSmall from "../../../../component/loadingSmall/LoadingSmall";
+import LoadingSmall from "../../../../components/loadingSmall/LoadingSmall";
 
 const initialValues = {
 	username: "",

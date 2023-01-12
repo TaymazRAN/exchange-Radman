@@ -6,9 +6,9 @@ import * as yup from "yup";
 import { useNavigate, useParams } from "react-router-dom";
 import Autocomplete from "@mui/material/Autocomplete";
 import Button from "@mui/material/Button";
-import LoadingSmall from "../../../component/loadingSmall/LoadingSmall";
-import LoadingRedux from "../../../component/loadingRedux/LoadingRedux";
-import SnackAlert from "../../../component/snackAlert/SnackAlert";
+import LoadingSmall from "../../../components/loadingSmall/LoadingSmall";
+import LoadingRedux from "../../../components/loadingRedux/LoadingRedux";
+import SnackAlert from "../../../components/snackAlert/SnackAlert";
 import {
 	acceptReferRequest,
 	fetchLastNodeDepartments,

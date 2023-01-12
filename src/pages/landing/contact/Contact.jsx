@@ -1,14 +1,14 @@
 import "./contact.css";
 import React from "react";
-import Footer from "../../../component/footer/Footer";
-import MenuTop from "../../../component/menuTop/MenuTop";
-import FormContact from "../../../component/formContact/FormContact";
+import Footer from "../../../components/footer/Footer";
+import MenuTop from "../../../components/menuTop/MenuTop";
+import FormContact from "../../../components/formContact/FormContact";
 
 export default function Contact() {
 	return (
 		<div>
-            <MenuTop />
-            <FormContact />
+			<MenuTop />
+			<FormContact />
 			<Footer />
 		</div>
 	);

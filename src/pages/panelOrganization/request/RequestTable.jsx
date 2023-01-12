@@ -3,8 +3,8 @@ import { DataGrid, GridAddIcon } from "@mui/x-data-grid";
 import { Button } from "@mui/material";
 import { useNavigate } from "react-router-dom";
 import purifyPrice from "../../../services/purifyPrice";
-import AlertConfirm from "../../../component/alertConfirm/AlertConfirm";
-import AlertDeny from "../../../component/alertDeny/AlertDeny";
+import AlertConfirm from "../../../components/alertConfirm/AlertConfirm";
+import AlertDeny from "../../../components/alertDeny/AlertDeny";
 import {
 	acceptRequest,
 	denyRequest,
@@ -13,9 +13,9 @@ import {
 	fetchRequests,
 	requestActions,
 } from "../../../features/request/requestSlice";
-import LoadingRedux from "../../../component/loadingRedux/LoadingRedux";
+import LoadingRedux from "../../../components/loadingRedux/LoadingRedux";
 import React, { useState, useEffect } from "react";
-import SnackAlert from "../../../component/snackAlert/SnackAlert";
+import SnackAlert from "../../../components/snackAlert/SnackAlert";
 
 const RequestTable = () => {
 	const organid = JSON.parse(localStorage.getItem("organid"));
