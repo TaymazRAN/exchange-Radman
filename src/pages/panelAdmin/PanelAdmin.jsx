@@ -52,115 +52,112 @@ import { fetchDiscountCodes } from "../../features/shop/discountCodeSlice";
 import { fetchUsers } from "../../features/account/userSlice";
 
 export default function PanelAdmin() {
-	const token = JSON.parse(localStorage.getItem("token"));
-	const user = JSON.parse(localStorage.getItem("adminname"));
+  const token = JSON.parse(localStorage.getItem("token"));
+  const user = JSON.parse(localStorage.getItem("adminname"));
 
-	if (token) {
-		axios.interceptors.request.use(function (config) {
-			config.headers.Authorization = `Bearer ${token.token}`;
+  if (token) {
+    axios.interceptors.request.use(function (config) {
+      config.headers.Authorization = `Bearer ${token.token}`;
 
-			return config;
-		});
-	}
+      return config;
+    });
+  }
 
-	const dispatch = useDispatch();
-	const ready = useSelector((state) => state.user.ready);
+  const dispatch = useDispatch();
+  const ready = useSelector((state) => state.user.ready);
 
-	if (!ready) {
-		dispatch(fetchTypes());
-		dispatch(fetchComplementTypes());
-		dispatch(fetchComplementValues());
-		dispatch(fetchOrganizations());
-		dispatch(fetchCategorys());
-		dispatch(fetchFunctions());
-		dispatch(fetchStorePackages());
-		dispatch(fetchPackages());
-		dispatch(fetchAllReports());
-		dispatch(fetchDiscountCodes());
-		dispatch(fetchUsers());
-	}
-	
-	return (
-		<>
-			{token && user ? (
-				<>
-					<MenuTopAdmin />
-					<div className="panel">
-						<div className="sidebar panelBox">
-							<SideBarAdmin />
-						</div>
-						<div className="page panelBox">
-							<Routes>
-								<Route path="/" element={<Dashboard />} />
-								<Route path="/user" element={<UserTable />} />
-								<Route path="/menu" element={<MenuTable />} />
-								<Route path="/discount" element={<DiscountTable />} />
-								<Route path="/discountAdd" element={<DiscountAdd />} />
-								<Route path="/function" element={<FunctionTable />} />
-								<Route path="/functionAdd" element={<FunctionAdd />} />
-								<Route path="/functionEdit/:id" element={<FunctionEdit />} />
-								<Route path="/category" element={<CategoryTable />} />
-								<Route path="/categoryAdd" element={<CategoryAdd />} />
-								<Route path="/categoryEdit/:id" element={<CategoryEdit />} />
-								<Route path="/storePackage" element={<StorePackageTable />} />
-								<Route path="/storePackageAdd" element={<StorePackageAdd />} />
-								<Route
-									path="/storePackageEdit/:id"
-									element={<StorePackageEdit />}
-								/>
-								<Route
-									path="/organizationInfo"
-									element={<OrganizationInfo />}
-								/>
-								<Route path="/storePackageAdd" element={<StorePackageAdd />} />
-								<Route
-									path="/storePackageEdit/:id"
-									element={<StorePackageEdit />}
-								/>
-								<Route path="/task" element={<PackageTable />} />
-								<Route path="/report" element={<PackageReportTable />} />
-								<Route path="/reportAdd" element={<PackageReportAdd />} />
-								<Route path="/reportAdd/:id" element={<PackageReportAdd />} />
-								<Route path="/reportShow/:id" element={<ReportShow />} />
-								<Route
-									path="/complementTypeAdd"
-									element={<ComplementTypeAdd />}
-								/>
-								<Route
-									path="/complementTypeEdit/:id"
-									element={<ComplementTypeEdit />}
-								/>
-								<Route path="/organization" element={<OrganizationTable />} />
-								<Route path="/organizationAdd" element={<OrganizationAdd />} />
-								<Route
-									path="/organizationEdit/:id"
-									element={<OrganizationEdit />}
-								/>
-								<Route
-									path="/organizationShow/:id"
-									element={<OrganizationShow />}
-								/>
-								<Route path="/creditAdd/:id" element={<CreditAdd />} />
-								<Route
-									path="/complementValueAdd"
-									element={<ComplementValueAdd />}
-								/>
-								<Route
-									path="/complementValueEdit/:id"
-									element={<ComplementValueEdit />}
-								/>
-								<Route path="/contact" element={<ContactTable />} />
-								<Route path="/contactShow" element={<ContactShow />} />
-								<Route path="*" element={<NotFoundPanel />} />
-								<Route path="/typeAdd" element={<TypeAdd />} />
-								<Route path="/typeEdit/:id" element={<TypeEdit />} />
-							</Routes>
-						</div>
-					</div>
-				</>
-			) : (
+  if (!ready) {
+    dispatch(fetchTypes());
+    dispatch(fetchComplementTypes());
+    dispatch(fetchComplementValues());
+    dispatch(fetchOrganizations());
+    dispatch(fetchCategorys());
+    dispatch(fetchFunctions());
+    dispatch(fetchStorePackages());
+    dispatch(fetchPackages());
+    dispatch(fetchAllReports());
+    dispatch(fetchDiscountCodes());
+    dispatch(fetchUsers());
+  }
+
+  return (
+    <>
+      {/* {token && user ? ( */}
+      <>
+        <MenuTopAdmin />
+        <div className="panel">
+          <div className="sidebar panelBox">
+            <SideBarAdmin />
+          </div>
+          <div className="page panelBox">
+            <Routes>
+              <Route path="/" element={<Dashboard />} />
+              <Route path="/user" element={<UserTable />} />
+              <Route path="/menu" element={<MenuTable />} />
+              <Route path="/discount" element={<DiscountTable />} />
+              <Route path="/discountAdd" element={<DiscountAdd />} />
+              <Route path="/function" element={<FunctionTable />} />
+              <Route path="/functionAdd" element={<FunctionAdd />} />
+              <Route path="/functionEdit/:id" element={<FunctionEdit />} />
+              <Route path="/category" element={<CategoryTable />} />
+              <Route path="/categoryAdd" element={<CategoryAdd />} />
+              <Route path="/categoryEdit/:id" element={<CategoryEdit />} />
+              <Route path="/storePackage" element={<StorePackageTable />} />
+              <Route path="/storePackageAdd" element={<StorePackageAdd />} />
+              <Route
+                path="/storePackageEdit/:id"
+                element={<StorePackageEdit />}
+              />
+              <Route path="/organizationInfo" element={<OrganizationInfo />} />
+              <Route path="/storePackageAdd" element={<StorePackageAdd />} />
+              <Route
+                path="/storePackageEdit/:id"
+                element={<StorePackageEdit />}
+              />
+              <Route path="/task" element={<PackageTable />} />
+              <Route path="/report" element={<PackageReportTable />} />
+              <Route path="/reportAdd" element={<PackageReportAdd />} />
+              <Route path="/reportAdd/:id" element={<PackageReportAdd />} />
+              <Route path="/reportShow/:id" element={<ReportShow />} />
+              <Route
+                path="/complementTypeAdd"
+                element={<ComplementTypeAdd />}
+              />
+              <Route
+                path="/complementTypeEdit/:id"
+                element={<ComplementTypeEdit />}
+              />
+              <Route path="/organization" element={<OrganizationTable />} />
+              <Route path="/organizationAdd" element={<OrganizationAdd />} />
+              <Route
+                path="/organizationEdit/:id"
+                element={<OrganizationEdit />}
+              />
+              <Route
+                path="/organizationShow/:id"
+                element={<OrganizationShow />}
+              />
+              <Route path="/creditAdd/:id" element={<CreditAdd />} />
+              <Route
+                path="/complementValueAdd"
+                element={<ComplementValueAdd />}
+              />
+              <Route
+                path="/complementValueEdit/:id"
+                element={<ComplementValueEdit />}
+              />
+              <Route path="/contact" element={<ContactTable />} />
+              <Route path="/contactShow" element={<ContactShow />} />
+              <Route path="*" element={<NotFoundPanel />} />
+              <Route path="/typeAdd" element={<TypeAdd />} />
+              <Route path="/typeEdit/:id" element={<TypeEdit />} />
+            </Routes>
+          </div>
+        </div>
+      </>
+      {/* ) : (
 				<AccessDeny />
-			)}
-		</>
-	);
+			)} */}
+    </>
+  );
 }
