@@ -54,16 +54,16 @@ export default function FormLogin() {
                   ورود به پنل ادمین
                 </NavLink>
               </Button>
-              <Button color="info" variant="outlined">
+              {/* <Button color="info" variant="outlined">
                 <NavLink to="/login/manager" className="loginButton">
                   ورود به پنل سازمان
                 </NavLink>
-              </Button>
-              <Button color="error" variant="outlined">
+              </Button> */}
+              {/* <Button color="error" variant="outlined">
                 <NavLink to="/login/user" className="loginButton">
                   ورود به پنل کاربری
                 </NavLink>
-              </Button>
+              </Button> */}
             </div>
           </form>
         </div>
