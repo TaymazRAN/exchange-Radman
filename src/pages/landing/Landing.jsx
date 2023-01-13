@@ -8,7 +8,7 @@ import Slider from "../../components/slider/Slider";
 import Branch from "./branch/Branch";
 import ServiceCompany from "./serviceCompany/ServiceCompany";
 import Services from "./services/Services";
-import Statistics from "./statistics/Statistics";
+import Trophies from "./trophies/Trophies";
 import StepperInvestment from "./StepperInvestment/StepperInvestment";
 import WhyJahad from "./whyJahad/WhyJahad";
 
@@ -21,7 +21,8 @@ const Landing = () => {
 			<div className="widthFix">
 				<Services />
 				<Divider />
-				<Statistics />
+				<Trophies />
+				<Divider />
 				<StepperInvestment />
 				<WhyJahad />
 				<ServiceCompany />

@@ -20,10 +20,14 @@
             margin: 0 20px;
 			box-shadow: $box-shadow;
 			background-color: $body-color;
-			min-height: 300px;
 			flex: 1;
 			overflow: hidden;
 			@include flex-column-centered;
+		}
+		.card.service {
+			max-width: 250px;
+			min-width: 250px;
+			min-height: 300px;
 			.circle {
 				position: absolute;
 				top: -20px;
@@ -79,9 +83,48 @@
 				color: $secondary900;
 			}
 		}
-		.card.service {
-			max-width: 250px;
-			min-width: 250px;
-		}
+        .card.trophy {
+			max-width: 220px;
+			min-width: 220px;
+			min-height: 200px;
+			border: 3px solid $secondary900;
+            .sign {
+                width: 50px;
+                height: 50px;
+				margin-bottom: 25px;
+				@include contained-background;
+            }
+            .sign.one {
+				background-image: url("../assets/image/svg/icontrophy1.svg");
+			}
+			.sign.two {
+				background-image: url("../assets/image/svg/icontrophy2.svg");
+			}
+			.sign.three {
+				background-image: url("../assets/image/svg/icontrophy3.svg");
+			}
+			.sign.four {
+				background-image: url("../assets/image/svg/icontrophy4.svg");
+			}
+            .titleNum {
+                display: inline-block;
+				font-size: $font-size-l;
+				font-weight: bold;
+				text-align: center;
+				margin-bottom: -5px;
+            }
+            .titleDescription {
+                font-size: $font-size-s;
+				font-weight: normal;
+				color: $light-font-color;
+                margin-bottom: 15px;
+            }
+            .description {
+                font-size: $font-size-m;
+				font-weight: normal;
+				text-align: center;
+				min-height: 60px;
+            }
+        }
 	}
 }
