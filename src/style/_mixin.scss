@@ -38,6 +38,12 @@
     background-repeat: no-repeat;
 }
 
+@mixin contained-background {
+    background-position: center center;
+    background-size: contain;
+    background-repeat: no-repeat;
+}
+
 @mixin link {
     color: inherit;
 }

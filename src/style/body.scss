@@ -1,0 +1,87 @@
+.cardBox {
+	h2 {
+		font-weight: bold;
+		font-size: $font-size-xl;
+		color: $font-color;
+		padding-right: 10px;
+		border-right: 4px solid $secondary900;
+	}
+	.cards {
+		display: flex;
+		align-items: center;
+		justify-content: center;
+        width: 100%;
+		padding: 30px 0;
+		flex-wrap: wrap;
+		.card {
+			position: relative;
+			border-radius: 8px;
+			padding: 15px;
+            margin: 0 20px;
+			box-shadow: $box-shadow;
+			background-color: $body-color;
+			min-height: 300px;
+			flex: 1;
+			overflow: hidden;
+			@include flex-column-centered;
+			.circle {
+				position: absolute;
+				top: -20px;
+				right: -20px;
+				width: 100px;
+				height: 100px;
+				@include contained-background;
+				background-image: url("../assets/image/svg/circle.svg");
+			}
+			.sign {
+				width: 35px;
+				height: 40px;
+				margin-bottom: 25px;
+				@include contained-background;
+			}
+			.sign.one {
+				background-image: url("../assets/image/svg/iconservice1.svg");
+			}
+			.sign.two {
+				background-image: url("../assets/image/svg/iconservice2.svg");
+			}
+			.sign.three {
+				background-image: url("../assets/image/svg/iconservice3.svg");
+			}
+			.sign.four {
+				background-image: url("../assets/image/svg/iconservice4.svg");
+			}
+			.title {
+				display: inline-block;
+				font-size: $font-size-m;
+				font-weight: bold;
+				padding: 0 10px 10px;
+				border-bottom: 3px solid $secondary900;
+				margin-bottom: 15px;
+				text-align: center;
+			}
+			.description {
+				font-size: $font-size-es;
+				font-weight: normal;
+                text-align: justify;
+                text-align-last: right;
+                min-height: 100px;
+                margin-bottom: 15px;
+			}
+			.button {
+				height: 40px !important;
+				border-radius: 8px !important;
+				padding: 0 15px 3px;
+				font-size: $font-size-s;
+				font-weight: normal;
+				background-color: $opposite-font-color !important;
+				border: 3px solid $secondary900;
+				color: $secondary900;
+			}
+		}
+		.card.service {
+			max-width: 250px;
+			min-width: 250px;
+		}
+	}
+}

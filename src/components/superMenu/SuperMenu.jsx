@@ -16,6 +16,25 @@ const SuperMenu = () => {
 						درباره ما
 						<KeyboardArrowDownRoundedIcon className="superArrow" />
 					</Button>
+					<div className="d-content-container">
+						<div className="d-content">
+							<div className="d-row">
+								<div className="d-column">
+									<a href="/">معرفی صبا جهاد</a>
+									<a href="/">اعضای هیئت مدیره</a>
+									<a href="/">پیام مدیر عامل</a>
+								</div>
+								<div className="d-column">
+									<a href="/">چارت سازمانی و معرفی مدیران</a>
+									<a href="/">چشم انداز و مأموریت</a>
+									<a href="/">مجوزات و افتخارت</a>
+								</div>
+								<div className="d-column">
+									<a href="/">مسئولیت اجتماعی</a>
+								</div>
+							</div>
+						</div>
+					</div>
 				</div>
 				<div class="d">
 					<Button className="button d-btn" variant="text" color="error">
@@ -69,6 +88,27 @@ const SuperMenu = () => {
 						پلتفرم های معاملاتی
 						<KeyboardArrowDownRoundedIcon className="superArrow" />
 					</Button>
+					<div className="d-content-container">
+						<div className="d-content">
+							<div className="d-row">
+								<div className="d-column">
+									<a href="/">سرمایه‌گذاری کم ریسک</a>
+									<a href="/">سرمایه‌گذاری با تقسیم سود ماهانه</a>
+									<a href="/">
+										سرمایه‌گذاری وجوه بیکار برای دوره‌های کوتاه مدت
+									</a>
+								</div>
+								<div className="d-column">
+									<a href="/">سرمایه‌گذاری تدریجی با مبالغ کم</a>
+									<a href="/">سرمایه‌گذاری اسلامی</a>
+									<a href="/">سرمایه‌گذاری اختصاصی شما</a>
+								</div>
+								<div className="d-column">
+									<a href="/">سرمایه‌گذاری در طلا</a>
+								</div>
+							</div>
+						</div>
+					</div>
 				</div>
 				<div className="d">
 					<Button className="button" variant="text" color="error">
@@ -80,6 +120,20 @@ const SuperMenu = () => {
 						ارتباط با ما
 						<KeyboardArrowDownRoundedIcon className="superArrow" />
 					</Button>
+					<div className="d-content-container">
+						<div className="d-content">
+							<div className="d-row">
+								<div className="d-column">
+									<a href="/">تماس با ما</a>
+									<a href="/">شعب و دفاتر</a>
+								</div>
+								<div className="d-column">
+									<a href="/">شماره حساب‌ها</a>
+									<a href="/">تماس با پشتیبانی</a>
+								</div>
+							</div>
+						</div>
+					</div>
 				</div>
 			</nav>
 		</>

@@ -1,94 +1,69 @@
 import * as React from "react";
-import Card from "@mui/material/Card";
-import CardContent from "@mui/material/CardContent";
-import CardMedia from "@mui/material/CardMedia";
-import Typography from "@mui/material/Typography";
-import { Button, CardActionArea, CardActions } from "@mui/material";
-import img from "./../../../assets/image/png/logo.png";
+import KeyboardArrowLeftRoundedIcon from "@mui/icons-material/KeyboardArrowLeftRounded";
+import { Button } from "@mui/material";
 
 export default function Services() {
-  return (
-    <div>
-      <h2> خدمات کارگزاری صبا جهاد </h2>
+	return (
+		<div className="cardBox">
+			<h2> خدمات کارگزاری صبا جهاد </h2>
 
-      <div style={{ display: "flex", marginTop: "3%", paddingBottom: "3%" }}>
-        <Card sx={{ maxWidth: 360 }} style={{ margin: 15 }}>
-          <CardActionArea>
-            <CardMedia
-              component="img"
-              height="150"
-              width="60"
-              image={img}
-              alt="green iguana"
-            />
-            <CardContent>
-              <Typography gutterBottom variant="h5" component="div">
-                بورس کالا
-              </Typography>
-              <Typography variant="body2" color="text.secondary">
-                Lizards are a widespread group of squamate reptiles, with over
-                6,000 species, ranging across all continents except Antarctica
-              </Typography>
-            </CardContent>
-          </CardActionArea>
-          <CardActions>
-            <Button size="small" color="primary">
-              مطالب بیشتر
-            </Button>
-          </CardActions>
-        </Card>
-        <Card sx={{ maxWidth: 360 }} style={{ margin: 15 }}>
-          <CardActionArea>
-            <CardMedia
-              component="img"
-              height="150"
-              width="60"
-              image={img}
-              alt="green iguana"
-            />
-            <CardContent>
-              <Typography gutterBottom variant="h5" component="div">
-                بورس کالا
-              </Typography>
-              <Typography variant="body2" color="text.secondary">
-                Lizards are a widespread group of squamate reptiles, with over
-                6,000 species, ranging across all continents except Antarctica
-              </Typography>
-            </CardContent>
-          </CardActionArea>
-          <CardActions>
-            <Button size="small" color="primary">
-              مطالب بیشتر
-            </Button>
-          </CardActions>
-        </Card>
+			<div className="cards">
+				<div className="card service">
+					<div className="circle"></div>
+					<div className="sign one"></div>
+					<h3 className="title">بورس اوراق بهادار</h3>
+					<p className="description">
+						بازار رسمی و سازمان‌یافتهٔ سرمایه است که در آن خرید و فروش سهام
+						شرکت‌ها و اوراق بهادار ...
+					</p>
+					<Button className="button" variant="text" color="error">
+						مطالب بیشتر
+						<KeyboardArrowLeftRoundedIcon className="icon" />
+					</Button>
+				</div>
 
-        <Card sx={{ maxWidth: 360 }} style={{ margin: 15 }}>
-          <CardActionArea>
-            <CardMedia
-              component="img"
-              height="150"
-              width="60"
-              image={img}
-              alt="green iguana"
-            />
-            <CardContent>
-              <Typography gutterBottom variant="h5" component="div">
-                بورس کالا
-              </Typography>
-              <Typography variant="body2" color="text.secondary">
-                Lizards are a widespread group of squamate reptiles, with over
-                6,000 species, ranging across all continents except Antarctica
-              </Typography>
-            </CardContent>
-          </CardActionArea>
-          <CardActions>
-            <Button size="small" color="primary">
-              مطالب بیشتر
-            </Button>
-          </CardActions>
-        </Card>
-      </div>
-    </div>
-  );
+				<div className="card service">
+					<div className="circle"></div>
+					<div className="sign two"></div>
+					<h3 className="title">بورس کالا</h3>
+					<p className="description">
+						به داد و ستد نقد، نسیه و سلف انواع محصولات صنعتی و کشاورزی در ایران
+						می‌پردازد و راه‌اندازی معاملات ابزارهای مشتقه و ...
+					</p>
+					<Button className="button" variant="text" color="error">
+						مطالب بیشتر
+						<KeyboardArrowLeftRoundedIcon className="icon" />
+					</Button>
+				</div>
+
+				<div className="card service">
+					<div className="circle"></div>
+					<div className="sign three"></div>
+					<h3 className="title">آتی کالا</h3>
+					<p className="description">
+						یک مرکز مالی برای انجام قراردادهای آتی استاندارد است که شامل
+						توافق‌نامه‌ای قانونی با حدومرز مشخص است و ...
+					</p>
+					<Button className="button" variant="text" color="error">
+						مطالب بیشتر
+						<KeyboardArrowLeftRoundedIcon className="icon" />
+					</Button>
+				</div>
+
+				<div className="card service">
+					<div className="circle"></div>
+					<div className="sign four"></div>
+					<h3 className="title">بورس انرژی</h3>
+					<p className="description">
+						به منظور انجام معاملات حامل‌های انرژی با مجوز شورای عالی بورس و
+						اوراق بهادار به عنوان چهارمین بورس رسمی کشور و ...
+					</p>
+					<Button className="button" variant="text" color="error">
+						مطالب بیشتر
+						<KeyboardArrowLeftRoundedIcon className="icon" />
+					</Button>
+				</div>
+			</div>
+		</div>
+	);
 }
