@@ -1,7 +1,7 @@
 import React from "react";
+import Divider from "../../components/divider/Divider";
 import Footer from "../../components/footer/Footer";
 import Header from "../../components/header/Header";
-import HrLine from "../../components/hr-Line/HrLine";
 // import Faq from "../../componentss/faq/Faq";
 import Holder from "../../components/slider/Holder";
 import Slider from "../../components/slider/Slider";
@@ -20,13 +20,10 @@ const Landing = () => {
 			<Slider />
 			<div className="widthFix">
 				<Services />
-				<HrLine />
+				<Divider />
 				<Statistics />
-				<HrLine />
 				<StepperInvestment />
-				<HrLine />
 				<WhyJahad />
-				<HrLine />
 				<ServiceCompany />
 				<Branch />
 			</div>

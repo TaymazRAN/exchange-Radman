@@ -37,6 +37,16 @@
 	direction: ltr;
 }
 
+.dividerC {
+	@include flex-column-centered;
+	padding: 30px 0;
+	.borderC {
+		border-bottom: 4px dashed $secondary900;
+		width: 100%;
+		max-width: 1000px;
+	}
+}
+
 ::-webkit-scrollbar {
 	width: 8px;
 }
