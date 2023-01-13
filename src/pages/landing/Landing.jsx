@@ -10,7 +10,7 @@ import ServiceCompany from "./serviceCompany/ServiceCompany";
 import Services from "./services/Services";
 import Trophies from "./trophies/Trophies";
 import StepperInvestment from "./StepperInvestment/StepperInvestment";
-import WhyJahad from "./whyJahad/WhyJahad";
+import Whys from "./whys/Whys";
 
 const Landing = () => {
 	return (
@@ -23,8 +23,9 @@ const Landing = () => {
 				<Divider />
 				<Trophies />
 				<Divider />
+				<Whys />
+				<Divider />
 				<StepperInvestment />
-				<WhyJahad />
 				<ServiceCompany />
 				<Branch />
 			</div>

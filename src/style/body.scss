@@ -10,18 +10,19 @@
 		display: flex;
 		align-items: center;
 		justify-content: center;
-        width: 100%;
-		padding: 30px 0;
+		width: 100%;
+		padding: 30px 0 0;
 		flex-wrap: wrap;
 		.card {
 			position: relative;
 			border-radius: 8px;
 			padding: 15px;
-            margin: 0 20px;
+			margin: 0 20px;
 			box-shadow: $box-shadow;
 			background-color: $body-color;
 			flex: 1;
 			overflow: hidden;
+			margin-bottom: 30px;
 			@include flex-column-centered;
 		}
 		.card.service {
@@ -67,10 +68,10 @@
 			.description {
 				font-size: $font-size-es;
 				font-weight: normal;
-                text-align: justify;
-                text-align-last: right;
-                min-height: 100px;
-                margin-bottom: 15px;
+				text-align: justify;
+				text-align-last: right;
+				min-height: 100px;
+				margin-bottom: 15px;
 			}
 			.button {
 				height: 40px !important;
@@ -83,18 +84,18 @@
 				color: $secondary900;
 			}
 		}
-        .card.trophy {
+		.card.trophy {
 			max-width: 220px;
 			min-width: 220px;
 			min-height: 200px;
 			border: 3px solid $secondary900;
-            .sign {
-                width: 50px;
-                height: 50px;
+			.sign {
+				width: 50px;
+				height: 50px;
 				margin-bottom: 25px;
 				@include contained-background;
-            }
-            .sign.one {
+			}
+			.sign.one {
 				background-image: url("../assets/image/svg/icontrophy1.svg");
 			}
 			.sign.two {
@@ -106,25 +107,63 @@
 			.sign.four {
 				background-image: url("../assets/image/svg/icontrophy4.svg");
 			}
-            .titleNum {
-                display: inline-block;
+			.titleNum {
+				display: inline-block;
 				font-size: $font-size-l;
 				font-weight: bold;
 				text-align: center;
 				margin-bottom: -5px;
-            }
-            .titleDescription {
-                font-size: $font-size-s;
+			}
+			.titleDescription {
+				font-size: $font-size-s;
 				font-weight: normal;
 				color: $light-font-color;
-                margin-bottom: 15px;
-            }
-            .description {
-                font-size: $font-size-m;
+				margin-bottom: 15px;
+			}
+			.description {
+				font-size: $font-size-m;
 				font-weight: normal;
 				text-align: center;
 				min-height: 60px;
-            }
-        }
+			}
+		}
+
+		.card.why .card.service {
+			min-height: 220px;
+			margin-right: -200px;
+			min-width: 220px;
+			max-width: 220px;
+			margin-bottom: 0;
+			box-shadow: none;
+			background-color: $secondary200;
+		}
+
+		.card.why {
+			overflow: unset;
+			min-width: 300px;
+			max-width: 300px;
+			margin: 0 60px;
+			padding: 60px 0;
+			@include centered-background;
+		}
+
+		.card.why.one {
+			background-image: url("../assets/image/jpg/why1.jpg");
+		}
+
+		.card.why.two {
+			background-image: url("../assets/image/jpg/why2.jpg");
+		}
+
+		.card.why.three {
+			background-image: url("../assets/image/jpg/why3.jpg");
+		}
+
+		@media screen and (max-width: $mobile-size) {
+			.card {
+				min-width: 100% !important;
+				max-width: 100% !important;
+			}
+		}
 	}
 }
