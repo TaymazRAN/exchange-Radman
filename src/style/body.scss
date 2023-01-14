@@ -127,7 +127,6 @@
 				min-height: 60px;
 			}
 		}
-
 		.card.why .card.service {
 			min-height: 220px;
 			margin-right: -200px;
@@ -137,7 +136,6 @@
 			box-shadow: none;
 			background-color: $secondary200;
 		}
-
 		.card.why {
 			overflow: unset;
 			min-width: 300px;
@@ -146,19 +144,135 @@
 			padding: 60px 0;
 			@include centered-background;
 		}
-
 		.card.why.one {
 			background-image: url("../assets/image/jpg/why1.jpg");
 		}
-
 		.card.why.two {
 			background-image: url("../assets/image/jpg/why2.jpg");
 		}
-
 		.card.why.three {
 			background-image: url("../assets/image/jpg/why3.jpg");
 		}
-
+		.card.stepContainer {
+			max-width: 230px;
+			min-width: 230px;
+			min-height: 300px;
+			margin: 0 60px;
+			overflow: unset;
+			box-shadow: none;
+			background-color: transparent;
+			.step {
+				max-width: 180px;
+				min-width: 180px;
+				min-height: 180px;
+				border-radius: 40px;
+				background-color: $secondary900;
+				@include flex-column-centered;
+				.sign {
+					width: 80px;
+					height: 80px;
+					@include contained-background;
+				}
+				.sign.one {
+					background-image: url("../assets/image/svg/step1.svg");
+				}
+				.sign.two {
+					background-image: url("../assets/image/svg/step2.svg");
+				}
+				.sign.three {
+					background-image: url("../assets/image/svg/step3.svg");
+				}
+				.stepper {
+					@include flex-row-centered;
+					$size: 50px;
+					color: $opposite-font-color;
+					background-color: $accent;
+					border: 5px solid $body-color;
+					font-size: $font-size-l;
+					font-weight: bold;
+					position: absolute;
+					width: $size;
+					height: $size;
+					border-radius: 20px;
+					top: calc($size/2 * -1);
+					left: calc(50% - $size/2);
+				}
+			}
+			.title {
+				display: inline-block;
+				font-size: $font-size-m;
+				font-weight: bold;
+				margin-top: 15px;
+				margin-bottom: 15px;
+				text-align: center;
+				min-height: 40px;
+			}
+			.description {
+				font-size: $font-size-s;
+				font-weight: normal;
+				text-align: justify;
+				text-align-last: center;
+				min-height: 80px;
+				margin-bottom: 15px;
+			}
+			.button {
+				height: 40px !important;
+				border-radius: 8px !important;
+				padding: 0 15px 3px;
+				font-size: $font-size-s;
+				font-weight: normal;
+				background-color: $opposite-font-color !important;
+				border: 3px solid $secondary900;
+				color: $secondary900;
+			}
+		}
+		.card.serviceC {
+			max-width: 240px;
+			min-width: 240px;
+			margin: 0 50px;
+			overflow: unset;
+			.title {
+				@include flex-row-centered;
+				padding: 8px 0;
+				display: inline-block;
+				font-size: $font-size-s;
+				font-weight: normal;
+				color: $opposite-font-color;
+				height: 40px;
+				margin: -15px -15px 25px;
+				width: 100%;
+				border-bottom-left-radius: 20px;
+				border-bottom-right-radius: 20px;
+				text-align: center;
+			}
+			.title.one {
+				background-color: #29CC60;
+			}
+			.title.two {
+				background-color: #3B7CDE;
+			}
+			.title.three {
+				background-color: #FB4444;
+			}
+			.description {
+				font-size: $font-size-s;
+				font-weight: normal;
+				text-align: justify;
+				text-align-last: right;
+				min-height: 100px;
+				margin-bottom: 25px;
+			}
+			.button {
+				height: 40px !important;
+				border-radius: 20px !important;
+				padding: 0 15px 3px;
+				font-size: $font-size-s;
+				font-weight: normal;
+				background-color: $opposite-font-color !important;
+				border: 3px solid $secondary900;
+				color: $secondary900;
+			}
+		}
 		@media screen and (max-width: $mobile-size) {
 			.card {
 				min-width: 100% !important;
