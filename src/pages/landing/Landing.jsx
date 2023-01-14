@@ -2,15 +2,14 @@ import React from "react";
 import Divider from "../../components/divider/Divider";
 import Footer from "../../components/footer/Footer";
 import Header from "../../components/header/Header";
-// import Faq from "../../componentss/faq/Faq";
 import Holder from "../../components/slider/Holder";
 import Slider from "../../components/slider/Slider";
 import Branch from "./branch/Branch";
-import ServiceCompany from "./serviceCompany/ServiceCompany";
 import Services from "./services/Services";
 import Trophies from "./trophies/Trophies";
-import StepperInvestment from "./StepperInvestment/StepperInvestment";
+import Steps from "./steps/Steps";
 import Whys from "./whys/Whys";
+import ServicesCompany from "./services/ServicesCompany";
 
 const Landing = () => {
 	return (
@@ -25,8 +24,10 @@ const Landing = () => {
 				<Divider />
 				<Whys />
 				<Divider />
-				<StepperInvestment />
-				<ServiceCompany />
+				<Steps />
+				<Divider />
+				<ServicesCompany />
+				<Divider />
 				<Branch />
 			</div>
 			<Footer />
