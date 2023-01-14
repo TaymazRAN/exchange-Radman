@@ -62,17 +62,17 @@ export default function SideBarAdmin() {
                 <HomeRoundedIcon className="sideBarIcon" />
                 داشبورد
               </NavLink>
-              <li className="sideBarListItem">
+              {/* <li className="sideBarListItem">
                 <PersonOutlineIcon className="sideBarIcon" />
                 مدیریت پروفایل
-              </li>
+              </li> */}
               <NavLink
                 to="/admin/menu"
                 activeclassname="active"
                 className="sideBarListItem"
               >
                 <WidgetsRoundedIcon className="sideBarIcon" />
-                منوهای لندینگ{" "}
+                درباره ما{" "}
               </NavLink>
               <NavLink
                 to="/admin/user"
@@ -80,7 +80,31 @@ export default function SideBarAdmin() {
                 className="sideBarListItem"
               >
                 <PeopleOutlineIcon className="sideBarIcon" />
-                لیست همه کاربران
+                پلتفرم های معاملاتی
+              </NavLink>
+              <NavLink
+                to="/admin/user"
+                activeclassname="active"
+                className="sideBarListItem"
+              >
+                <PeopleOutlineIcon className="sideBarIcon" />
+                سوالات متداول
+              </NavLink>{" "}
+              <NavLink
+                to="/admin/user"
+                activeclassname="active"
+                className="sideBarListItem"
+              >
+                <PeopleOutlineIcon className="sideBarIcon" />
+                لیست شعبه ها
+              </NavLink>
+              <NavLink
+                to="/admin/user"
+                activeclassname="active"
+                className="sideBarListItem"
+              >
+                <PeopleOutlineIcon className="sideBarIcon" />
+                شماره حساب ها
               </NavLink>
               <NavLink
                 to="/admin/contact"
@@ -104,59 +128,42 @@ export default function SideBarAdmin() {
             aria-controls="panel1bh-content"
             id="panel1bh-header"
           >
-            <div className="sideBarTitle bold"> مدیریت سازمان ها </div>
+            <div className="sideBarTitle bold"> خدمات صبا جهاد </div>
           </AccordionSummary>
           <AccordionDetails>
             <ul className="sideBarList">
-              <NavLink
-                to="/admin/organizationInfo"
-                activeclassname="active"
-                className="sideBarListItem"
-              >
-                <AppsIcon className="sideBarIcon" />
-                اطلاعات پایه سازمان
-              </NavLink>
-              {/* <NavLink
-                to="/admin/baseOrganization"
-                activeclassname="active"
-                className="sideBarListItem"
-              >
-                <AppsIcon className="sideBarIcon" />
-                نوع سازمان ها
-              </NavLink>
-              <NavLink
-                to="/admin/complementType"
-                activeclassname="active"
-                className="sideBarListItem"
-              >
-                <ListIcon className="sideBarIcon" />
-                فیلد های تکمیلی
-              </NavLink>
-              <NavLink
-                to="/admin/complementValue"
-                activeclassname="active"
-                className="sideBarListItem"
-              >
-                <CreateIcon className="sideBarIcon" />
-                ورودی های تکمیلی
-              </NavLink> */}
               <NavLink
                 to="/admin/organization"
                 activeclassname="active"
                 className="sideBarListItem"
               >
                 <CorporateFareIcon className="sideBarIcon" />
-                سازمان ها
-              </NavLink>
-
-              {/* <NavLink
-                to="/admin/inventory"
+                بورس اوراق بهادار
+              </NavLink>{" "}
+              <NavLink
+                to="/admin/organization"
                 activeclassname="active"
                 className="sideBarListItem"
               >
-                <InventoryIcon className="sideBarIcon" />
-                اعتبار ها
-              </NavLink> */}
+                <CorporateFareIcon className="sideBarIcon" />
+                بورس کالا
+              </NavLink>
+              <NavLink
+                to="/admin/organization"
+                activeclassname="active"
+                className="sideBarListItem"
+              >
+                <CorporateFareIcon className="sideBarIcon" />
+                آتی کالا
+              </NavLink>{" "}
+              <NavLink
+                to="/admin/organization"
+                activeclassname="active"
+                className="sideBarListItem"
+              >
+                <CorporateFareIcon className="sideBarIcon" />
+                بورس انرژی
+              </NavLink>
             </ul>
           </AccordionDetails>
         </Accordion>
@@ -171,7 +178,7 @@ export default function SideBarAdmin() {
             aria-controls="panel1bh-content"
             id="panel1bh-header"
           >
-            <div className="sideBarTitle bold"> مدیریت بسته ها</div>
+            <div className="sideBarTitle bold"> مدیریت منو ها</div>
           </AccordionSummary>
           <AccordionDetails>
             <ul className="sideBarList">
@@ -181,7 +188,6 @@ export default function SideBarAdmin() {
                 className="sideBarListItem"
               >
                 <SettingsSuggestOutlinedIcon className="sideBarIcon" />
-                عملکرد ها
               </NavLink>
               <NavLink
                 to="/admin/category"
@@ -189,7 +195,7 @@ export default function SideBarAdmin() {
                 className="sideBarListItem"
               >
                 <CategoryOutlinedIcon className="sideBarIcon" />
-                دسته بندی ها
+                .....
               </NavLink>
               <NavLink
                 to="/admin/storePackage"
@@ -197,7 +203,7 @@ export default function SideBarAdmin() {
                 className="sideBarListItem"
               >
                 <Inventory2OutlinedIcon className="sideBarIcon" />
-                بسته ها
+                ...
               </NavLink>
               <NavLink
                 to="/admin/discount"
@@ -205,79 +211,11 @@ export default function SideBarAdmin() {
                 className="sideBarListItem"
               >
                 <DiscountOutlinedIcon className="sideBarIcon" />
-                تخفیف ها
+                ...
               </NavLink>
             </ul>
           </AccordionDetails>
         </Accordion>
-        <Accordion
-          className="accordionSide"
-          expanded={expanded === "panel4"}
-          onChange={handleChange("panel4")}
-          sx={accordionStyle}
-        >
-          <AccordionSummary
-            expandIcon={<ExpandMoreIcon />}
-            aria-controls="panel1bh-content"
-            id="panel1bh-header"
-          >
-            <div className="sideBarTitle bold"> مدیریت آزمون ها</div>
-          </AccordionSummary>
-          <AccordionDetails>
-            <ul className="sideBarList">
-              <NavLink
-                to="/admin/report"
-                activeclassname="active"
-                className="sideBarListItem"
-              >
-                <AssessmentOutlinedIcon className="sideBarIcon" />
-                کارنامه ها
-              </NavLink>
-              <NavLink
-                to="/admin/task"
-                activeclassname="active"
-                className="sideBarListItem"
-              >
-                <BiotechIcon className="sideBarIcon" />
-                اجرا
-              </NavLink>
-              <li className="sideBarListItem">
-                <QuizIcon className="sideBarIcon" />
-                تمرین ها و ارجاع
-              </li>
-            </ul>
-          </AccordionDetails>
-        </Accordion>
-        {/* <Accordion
-          className="accordionSide"
-          expanded={expanded === "panel5"}
-          onChange={handleChange("panel5")}
-          sx={accordionStyle}
-        >
-          <AccordionSummary
-            expandIcon={<ExpandMoreIcon />}
-            aria-controls="panel1bh-content"
-            id="panel1bh-header"
-          >
-            <div className="sideBarTitle bold">گزارش ها</div>
-          </AccordionSummary>
-          <AccordionDetails>
-            <ul className="sideBarList">
-              <li className="sideBarListItem">
-                <BarChartOutlinedIcon className="sideBarIcon" />
-                گزارش های افراد
-              </li>
-              <li className="sideBarListItem">
-                <BarChartOutlinedIcon className="sideBarIcon" />
-                گزارش های سازمان
-              </li>
-              <li className="sideBarListItem">
-                <BarChartOutlinedIcon className="sideBarIcon" />
-                گزارش های فروش
-              </li>
-            </ul>
-          </AccordionDetails>
-        </Accordion> */}
       </div>
     </div>
   );
