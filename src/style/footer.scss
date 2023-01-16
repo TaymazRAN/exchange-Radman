@@ -2,28 +2,32 @@
 	@include flex-column-centered;
 	width: 100%;
 	.data {
-        width: 100%;
-        padding: 30px 60px;
+		width: 100%;
+		padding: 30px 60px;
 		@include flex-column-centered;
 		background-color: $secondary900;
 		color: $opposite-font-color;
 		.columns {
-            width: 100%;
+			width: 100%;
 			@include flex-row-centered;
-			min-height: 200px;
-		}
-		.social {
-            width: 100%;
-			@include flex-row-centered;
-			min-height: 80px;
+			flex-wrap: wrap;
+			.column {
+				padding: 0 20px;
+				min-width: calc(100% / 4);
+				@include flex-row-centered;
+				min-height: 180px;
+			}
+			.column.social {
+				min-height: 80px;
+			}
 		}
 	}
 	.copyright {
-        width: 100%;
+		width: 100%;
 		@include flex-row-centered;
 		padding: 10px 60px;
 		background-color: $accent;
 		color: $opposite-font-color;
-        font-size: $font-size-es;
+		font-size: $font-size-es;
 	}
 }

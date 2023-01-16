@@ -40,7 +40,7 @@ export default function LoginAdmin() {
   const error = useSelector((state) => state.login.error);
   const loading = useSelector((state) => state.login.loading);
   // const logged = useSelector((state) => state.login.logged);
-  const loggedd = true;
+  const logged = true;
 
   const [errorMessage, setErrorMessage] = useState("");
   const handleSubmit = () => {
@@ -50,9 +50,9 @@ export default function LoginAdmin() {
   };
 
   useEffect(() => {
-    const user = JSON.parse(localStorage.getItem("adminname"));
+    // const user = JSON.parse(localStorage.getItem("adminname"));
     // if (logged && user) navigate("/admin");
-    if (loggedd) navigate("/admin");
+    if (logged) navigate("/admin");
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [loading]);
 
