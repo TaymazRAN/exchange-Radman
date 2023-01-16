@@ -7,9 +7,7 @@
 		border-right: 4px solid $secondary900;
 	}
 	.cards {
-		display: flex;
-		align-items: center;
-		justify-content: center;
+		@include flex-row-centered;
 		width: 100%;
 		padding: 30px 0 0;
 		flex-wrap: wrap;
@@ -246,13 +244,13 @@
 				text-align: center;
 			}
 			.title.one {
-				background-color: #29CC60;
+				background-color: #29cc60;
 			}
 			.title.two {
-				background-color: #3B7CDE;
+				background-color: #3b7cde;
 			}
 			.title.three {
-				background-color: #FB4444;
+				background-color: #fb4444;
 			}
 			.description {
 				font-size: $font-size-s;
@@ -277,6 +275,58 @@
 			.card {
 				min-width: 100% !important;
 				max-width: 100% !important;
+			}
+		}
+	}
+}
+
+.compartmentBox {
+	h2 {
+		font-weight: bold;
+		font-size: $font-size-xl;
+		color: $font-color;
+		padding-right: 10px;
+		border-right: 4px solid $secondary900;
+	}
+	.compartment {
+		@include flex-row-space-between;
+		padding: 30px 0 0;
+		flex-wrap: wrap;
+		width: 100%;
+		.image.faq {
+			@include centered-background;
+			background-image: url("../assets/image/jpg/faq.jpg");
+			border-radius: 15px;
+			width: 100%;
+			aspect-ratio: 1/1;
+			flex: 1;
+		}
+		.data.faq {
+			@include flex-column-centered;
+			flex: 3;
+			margin-right: 50px;
+			.faqAccordion {
+				width: 100%;
+				box-shadow: none;
+				border-radius: 0;
+				background-color: transparent;
+				margin-bottom: 20px;
+				border-bottom: 3px solid $secondary900;
+			}
+			.faqAccordion:last-child {
+				border-bottom: none;
+				margin-bottom: 0;
+			}
+			.faqAccordion::before {
+				background-color: transparent;
+			}
+			.faqQuestion {
+				font-size: $font-size-m;
+				font-weight: normal;
+			}
+			.faqAnswer {
+				font-size: $font-size-s;
+				font-weight: normal;
 			}
 		}
 	}

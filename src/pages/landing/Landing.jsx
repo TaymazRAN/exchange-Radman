@@ -4,7 +4,7 @@ import Footer from "../../components/footer/Footer";
 import Header from "../../components/header/Header";
 import Holder from "../../components/slider/Holder";
 import Slider from "../../components/slider/Slider";
-import Branch from "./branch/Branch";
+import Faq from "./faq/Faq";
 import Services from "./services/Services";
 import Trophies from "./trophies/Trophies";
 import Steps from "./steps/Steps";
@@ -28,7 +28,7 @@ const Landing = () => {
 				<Divider />
 				<ServicesCompany />
 				<Divider />
-				<Branch />
+				<Faq />
 			</div>
 			<Footer />
 		</>
