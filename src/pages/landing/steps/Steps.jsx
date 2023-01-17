@@ -23,6 +23,8 @@ export default function Steps() {
 					</Button>
 				</div>
 
+				<div className="stepArrow"></div>
+
 				<div className="card stepContainer">
 					<div className="step">
 						<div className="stepper">2</div>
@@ -37,6 +39,8 @@ export default function Steps() {
 						<KeyboardArrowLeftRoundedIcon className="icon" />
 					</Button>
 				</div>
+
+				<div className="stepArrow"></div>
 
 				<div className="card stepContainer">
 					<div className="step">

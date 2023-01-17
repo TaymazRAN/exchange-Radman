@@ -10,6 +10,7 @@ import Trophies from "./trophies/Trophies";
 import Steps from "./steps/Steps";
 import Whys from "./whys/Whys";
 import ServicesCompany from "./services/ServicesCompany";
+import Support from "./support/Support";
 
 const Landing = () => {
 	return (
@@ -29,6 +30,8 @@ const Landing = () => {
 				<ServicesCompany />
 				<Divider />
 				<Faq />
+				<Divider />
+				<Support />
 			</div>
 			<Footer />
 		</>

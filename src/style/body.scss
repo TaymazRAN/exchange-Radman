@@ -155,7 +155,7 @@
 			max-width: 230px;
 			min-width: 230px;
 			min-height: 300px;
-			margin: 0 60px;
+			margin: 0 20px;
 			overflow: unset;
 			box-shadow: none;
 			background-color: transparent;
@@ -224,6 +224,12 @@
 				color: $secondary900;
 			}
 		}
+		.stepArrow {
+			height: 60px;
+			width: 200px;
+			@include contained-background;
+			background-image: url("../assets/image/svg/arrow.svg");
+		}
 		.card.serviceC {
 			max-width: 240px;
 			min-width: 240px;
@@ -281,12 +287,52 @@
 }
 
 .compartmentBox {
+	@include flex-column-centered;
 	h2 {
+		width: 100%;
 		font-weight: bold;
 		font-size: $font-size-xl;
 		color: $font-color;
 		padding-right: 10px;
 		border-right: 4px solid $secondary900;
+	}
+	.compartment.support {
+		@include flex-row-space-around;
+		max-width: 1000px;
+		.image.support {
+			@include centered-background;
+			background-image: url("../assets/image/jpg/support.jpg");
+			border-radius: 15px;
+			width: 100%;
+			aspect-ratio: 1/1;
+			margin-right: 50px;
+			flex: 3;
+			margin-bottom: 80px;
+		}
+		.data.support {
+			@include flex-column-start;
+			flex: 5;
+			margin-bottom: 80px;
+			h2 {
+				font-weight: bold;
+				font-size: $font-size-xl;
+				color: $font-color;
+				padding-right: 0;
+				border-right: none;
+				margin-bottom: 30px;
+			}
+			p {
+				font-weight: normal;
+				font-size: $font-size-m;
+				color: $font-color;
+				border-right: 4px solid $secondary900;
+				max-width: 500px;
+				padding: 5px 10px 5px 0;
+			}
+			.yellow {
+				color: $secondary900;
+			}
+		}
 	}
 	.compartment {
 		@include flex-row-space-between;
