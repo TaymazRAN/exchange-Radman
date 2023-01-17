@@ -1,5 +1,5 @@
 .quill .ql-toolbar:first-child{
-    display: none!important;
+    /* display: none!important; */
 }
 
 .quill .ql-editor{
