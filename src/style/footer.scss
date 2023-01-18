@@ -1,6 +1,7 @@
 .footerBox {
 	@include flex-column-top;
 	width: 100%;
+	margin-top: 50px;
 	.data {
 		width: 100%;
 		padding: 30px 60px;

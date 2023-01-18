@@ -1,14 +1,16 @@
 import React from "react";
 import { Button } from "@mui/material";
 import KeyboardArrowDownRoundedIcon from "@mui/icons-material/KeyboardArrowDownRounded";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 
 const SuperMenu = () => {
+	const navigate = useNavigate();
+
 	return (
 		<>
 			<nav class="d-navbar">
 				<div className="d">
-					<Button className="button" variant="text" color="error">
+					<Button className="button" variant="text" color="error" onClick={(event) => navigate("/")}>
 						صفحه نخست
 					</Button>
 				</div>

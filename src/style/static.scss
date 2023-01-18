@@ -1,3 +1,59 @@
 .page {
-    
+	@include flex-column-centered;
+	width: 100%;
+	h2 {
+		font-weight: bold;
+		font-size: $font-size-xl;
+		color: $font-color;
+		padding-right: 10px;
+		border-right: 4px solid $secondary900;
+		margin-bottom: 30px;
+	}
+	.accordionContainer {
+		width: 100%;
+		.customAccordion {
+			width: 100%;
+			box-shadow: none;
+			border-radius: 0;
+			background-color: transparent;
+			margin-bottom: 20px;
+			border-bottom: 3px solid $secondary900;
+		}
+		.customAccordion:last-child {
+			border-bottom: none;
+			margin-bottom: 0;
+		}
+		.customAccordion::before {
+			background-color: transparent;
+		}
+		.customQuestion {
+			@include flex-row-space-between;
+			font-size: $font-size-m;
+			font-weight: normal;
+			width: 100%;
+			.customBorder {
+				flex: 1;
+				margin: 0 10px;
+				border-top: 3px dashed $light-font-color;
+			}
+		}
+		.customAnswer {
+			font-size: $font-size-s;
+			font-weight: normal;
+			color: $font-color;
+			width: 100%;
+			ul {
+				list-style: none;
+				li {
+					margin-bottom: 10px;
+					b {
+						font-weight: bold;
+					}
+				}
+				li:last-child {
+					margin-bottom: 0;
+				}
+			}
+		}
+	}
 }
