@@ -6,6 +6,7 @@ import PanelAdmin from "./pages/panelAdmin/PanelAdmin";
 import Login from "./pages/landing/account/Login";
 import { Provider } from "react-redux";
 import store from "./app/store";
+import Static from "./pages/static/Static";
 
 function App() {
 	return (
@@ -14,6 +15,7 @@ function App() {
 				<Router>
 					<Routes>
 						<Route path="/" element={<Landing />} />
+						<Route path="/static/*" element={<Static />} />
 						<Route path="/login/*" element={<Login />} />
 						<Route path="/admin/*" element={<PanelAdmin />} />
 					</Routes>

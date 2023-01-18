@@ -1,6 +1,7 @@
 import React from "react";
 import { Button } from "@mui/material";
 import KeyboardArrowDownRoundedIcon from "@mui/icons-material/KeyboardArrowDownRounded";
+import { Link } from "react-router-dom";
 
 const SuperMenu = () => {
 	return (
@@ -124,8 +125,8 @@ const SuperMenu = () => {
 						<div className="d-content">
 							<div className="d-row">
 								<div className="d-column">
-									<a href="/">تماس با ما</a>
-									<a href="/">شعب و دفاتر</a>
+									<Link to="/static/contact">تماس با ما</Link>
+									<Link to="/static/branch">شعب و دفاتر</Link>
 								</div>
 								<div className="d-column">
 									<a href="/">شماره حساب‌ها</a>

@@ -2,6 +2,22 @@
 @import "./global";
 @import "./mixin";
 
+.header.dark {
+	.logoBox {
+		.name {
+			color: $font-color;
+		}
+	}
+	.buttonBox {
+		.button {
+			color: $font-color;
+		}
+		.button.contained {
+            color: $font-color;
+		}
+	}
+}
+
 .header {
     $height: 50px;
     width: 100%;
