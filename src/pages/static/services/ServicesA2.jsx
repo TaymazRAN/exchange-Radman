@@ -5,7 +5,7 @@ import Typography from "@mui/material/Typography";
 const ServicesA2 = () => {
   return (
     <div className="page">
-      <h2> معرفی سامانه معاملات </h2>
+      <h2> معرفی ServicesA2 </h2>
       <div className="accordionContainer">
         <Accordion className="customAccordion">
           <Typography>

@@ -28,7 +28,7 @@ const SuperMenu = () => {
             <div className="d-content">
               <div className="d-row">
                 <div className="d-column">
-                  <a href="/">معرفی صبا جهاد</a>
+                  <Link to="/static/Presentation"> معرفی صبا جهاد</Link>
                   <Link to="/static/BoardMembers"> اعضای هیئت مدیره </Link>
                   <Link to="/static/MessageOfHead"> پیام مدیر عامل </Link>
                 </div>
@@ -102,19 +102,29 @@ const SuperMenu = () => {
             <div className="d-content">
               <div className="d-row">
                 <div className="d-column">
-                  <a href="/">سرمایه‌گذاری کم ریسک</a>
-                  <a href="/">سرمایه‌گذاری با تقسیم سود ماهانه</a>
-                  <a href="/">
-                    سرمایه‌گذاری وجوه بیکار برای دوره‌های کوتاه مدت
-                  </a>
+                  <Link to="/static/PlatformA1"> سرمایه‌گذاری کم ریسک </Link>
+                  <Link to="/static/PlatformA2">
+                    {" "}
+                    سرمایه‌گذاری با تقسیم سود ماهانه{" "}
+                  </Link>
+                  <Link to="/static/PlatformA3">
+                    {" "}
+                    سرمایه‌گذاری وجوه بیکار برای دوره‌های کوتاه مدت{" "}
+                  </Link>
                 </div>
                 <div className="d-column">
-                  <a href="/">سرمایه‌گذاری تدریجی با مبالغ کم</a>
-                  <a href="/">سرمایه‌گذاری اسلامی</a>
-                  <a href="/">سرمایه‌گذاری اختصاصی شما</a>
+                  <Link to="/static/PlatformA4">
+                    {" "}
+                    سرمایه‌گذاری تدریجی با مبالغ کم{" "}
+                  </Link>
+                  <Link to="/static/PlatformA5"> سرمایه‌گذاری اسلامی </Link>
+                  <Link to="/static/PlatformA6">
+                    {" "}
+                    سرمایه‌گذاری اختصاصی شما{" "}
+                  </Link>
                 </div>
                 <div className="d-column">
-                  <a href="/">سرمایه‌گذاری در طلا</a>
+                  <Link to="/static/PlatformA7"> سرمایه‌گذاری در طلا </Link>
                 </div>
               </div>
             </div>

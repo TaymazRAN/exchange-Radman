@@ -2,10 +2,10 @@ import React from "react";
 import Accordion from "@mui/material/Accordion";
 import Typography from "@mui/material/Typography";
 
-const ServicesA2 = () => {
+const ServicesD7 = () => {
   return (
     <div className="page">
-      <h2> معرفی سامانه معاملات </h2>
+      <h2> معرفی سامانه ServicesD7 </h2>
       <div className="accordionContainer">
         <Accordion className="customAccordion">
           <Typography>
@@ -29,4 +29,4 @@ const ServicesA2 = () => {
   );
 };
 
-export default ServicesA2;
+export default ServicesD7;
