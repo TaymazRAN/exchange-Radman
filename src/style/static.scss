@@ -1,13 +1,32 @@
+.page.row {
+	@include flex-row-top;
+	flex-wrap: wrap;
+}
 .page {
 	@include flex-column-centered;
 	width: 100%;
+	.split {
+		@include flex-column-top-start;
+		flex: 1;
+		margin-left: 60px;
+		min-width: 350px;
+	}
+	.split:last-child {
+		margin-left: 0;
+	}
 	h2 {
 		font-weight: bold;
-		font-size: $font-size-xl;
+		font-size: $font-size-el;
 		color: $font-color;
 		padding-right: 10px;
 		border-right: 4px solid $secondary900;
 		margin-bottom: 30px;
+	}
+	p {
+		font-weight: normal;
+		font-size: $font-size-m;
+		color: $font-color;
+		margin-bottom: 10px;
 	}
 	.accordionContainer {
 		width: 100%;
@@ -16,11 +35,9 @@
 			box-shadow: none;
 			border-radius: 0;
 			background-color: transparent;
-			margin-bottom: 20px;
-			border-bottom: 3px solid $secondary900;
+			margin-bottom: 10px;
 		}
 		.customAccordion:last-child {
-			border-bottom: none;
 			margin-bottom: 0;
 		}
 		.customAccordion::before {
@@ -56,4 +73,58 @@
 			}
 		}
 	}
+}
+
+.inputBox {
+	@include flex-row-top-start;
+	width: 100%;
+	.input {
+		direction: rtl;
+		width: 100%;
+		margin-bottom: 15px;
+	}
+	.input.half {
+		width: 48%;
+		margin-left: 4%;
+	}
+	.input.half:last-child {
+		margin-left: 0;
+	}
+}
+
+.dataBox {
+	@include flex-row-start;
+	margin-bottom: 20px;
+	.image {
+		width: 50px;
+		min-width: 50px;
+		height: 50px;
+		@include contained-background;
+	}
+	.image.contact1 {
+		background-image: url("../assets/image/svg/contact1.svg");
+	}
+	.image.contact2 {
+		background-image: url("../assets/image/svg/contact2.svg");
+	}
+	.image.contact3 {
+		background-image: url("../assets/image/svg/contact3.svg");
+	}
+	.text {
+		color: $font-color;
+		font-size: $font-size-m;
+		font-weight: normal;
+		margin-right: 15px;
+		b {
+			font-weight: bold;
+		}
+	}
+}
+
+.map {
+	@include centered-background;
+	width: 100%;
+	aspect-ratio: 2/1;
+	border-radius: 20px;
+	background-image: url("../assets/image/jpg/map.jpg");
 }
