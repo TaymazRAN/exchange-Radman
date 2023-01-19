@@ -56,38 +56,53 @@ const SuperMenu = () => {
               <div className="d-row">
                 <div className="d-column">
                   <h3>بورس اوراق بهادار</h3>
-                  <Link to="/static/servicesA1"> معرفی بورس اوراق بهادار </Link>
-                  <Link to="/static/servicesA2"> سامانه معاملات</Link>
-                  <a href="/">فرم های مورد نیاز</a>
-                  <a href="/">سوالات متداول</a>
+                  <Link to="/static/ServicesA1"> معرفی بورس اوراق بهادار </Link>
+                  <Link to="/static/ServicesA2"> سامانه معاملات</Link>
+                  <Link to="/static/ServicesA3"> فرم های مورد نیاز </Link>
+                  <Link to="/static/servicesA4"> سوالات متداول</Link>
                 </div>
                 <div className="d-column">
                   <h3>بورس کالا</h3>
-                  <a href="/">معرفی بورس کالا</a>
-                  <a href="/">
-                    مدارک مورد نیاز جهت صدور کد مشتریان بازار فیزیکی
-                  </a>
-                  <a href="/">خدمات کارگزاری</a>
-                  <a href="/">نحوه درخواست پذیرش عرضه</a>
-                  <a href="/">نمای بازار</a>
+                  <Link to="/static/ServicesB1"> معرفی بورس کالا </Link>
+                  <Link to="/static/ServicesB2">
+                    {" "}
+                    مدارک مورد نیاز جهت صدور کد مشتریان بازار فیزیکی{" "}
+                  </Link>
+                  <Link to="/static/ServicesB3"> خدمات کارگزاری </Link>
+                  <Link to="/static/ServicesB4"> نمای بازار </Link>
                 </div>
                 <div className="d-column">
                   <h3>آتی کالا</h3>
-                  <a href="/">آتی صندوق طلا</a>
-                  <a href="/">معرفی آتی‌ کالا</a>
-                  <a href="/">مشاوره رایگان</a>
-                  <a href="/">اخذ کد بازار مشتقه</a>
-                  <a href="/">ورود به سامانه آتی‌سهام</a>
-                  <a href="/">ورود به سامانه آتی کالا</a>
-                  <a href="/">سوالات متداول</a>
-                  <a href="/">مشاهده آنلاین نمای بازار آتی کالا</a>
+                  <Link to="/static/ServicesC1"> آتی صندوق طلا</Link>
+                  <Link to="/static/ServicesC2"> معرفی آتی‌ کالا </Link>
+                  <Link to="/static/ServicesC3"> مشاوره رایگان </Link>
+                  <Link to="/static/ServicesC4"> اخذ کد بازار مشتقه </Link>
+                  <Link to="/static/ServicesC5"> ورود به سامانه آتی‌سهام </Link>
+                  <Link
+                    to="/static/ServicesC6
+                  "
+                  >
+                    {" "}
+                    ورود به سامانه آتی کالا
+                  </Link>
+                  <Link to="/static/ServicesC7"> سوالات متداول</Link>
+                  <Link to="/static/ServicesC8">
+                    {" "}
+                    مشاهده آنلاین نمای بازار آتی کالا{" "}
+                  </Link>
                 </div>
                 <div className="d-column">
                   <h3>بورس انرژی</h3>
-                  <a href="/">معرفی بورس انرژی ایران</a>
-                  <a href="/">منابع بورس انرژی ایران</a>
-                  <a href="/">مزایای پذیرش و معامله در بورس انرژی ایران</a>
-                  <a href="/">عرضه‌کنندگان عمده در بورس انرژی ایران</a>
+
+                  <Link to="/static/ServicesD1"> معرفی بورس انرژی ایران</Link>
+                  <Link to="/static/ServicesD2"> منابع بورس انرژی ایران </Link>
+                  <Link to="/static/ServicesD3">
+                    مزایای پذیرش و معامله در بورس انرژی ایران{" "}
+                  </Link>
+                  <Link to="/static/ServicesD4">
+                    {" "}
+                    عرضه‌کنندگان عمده در بورس انرژی ایران
+                  </Link>
                 </div>
               </div>
             </div>
