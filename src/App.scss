@@ -41,6 +41,11 @@
 	direction: ltr;
 }
 
+.dividerC.centered {
+	width: 100%;
+	max-width: 1000px;
+}
+
 .dividerC {
 	@include flex-column-centered;
 	padding: 40px 0;

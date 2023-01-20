@@ -1,8 +1,8 @@
 import React from "react";
 
-const Divider = () => {
+const Divider = ({ centered }) => {
 	return (
-		<div className="dividerC">
+		<div className={`dividerC ${centered && "centered"}`}>
 			<div className="borderC"></div>
 		</div>
 	);
