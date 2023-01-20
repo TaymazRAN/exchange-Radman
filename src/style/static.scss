@@ -2,19 +2,41 @@
 	@include flex-row-top;
 	flex-wrap: wrap;
 }
+.page.column {
+	@include flex-row-top;
+	flex-wrap: wrap;
+}
 .page {
 	@include flex-column-centered;
 	width: 100%;
+	.row {
+		@include flex-row-top;
+		flex-wrap: wrap;
+		.dataBox {
+			width: unset;
+		}
+	}
 	.split {
 		@include flex-column-top-start;
 		flex: 1;
 		margin-left: 60px;
 		min-width: 350px;
+		margin-bottom: 30px;
+	}
+	.split.big {
+		max-width: 700px;
+	}
+	.split.small {
+		max-width: 550px;
+	}
+	.split.centered {
+		@include flex-column-top;
 	}
 	.split:last-child {
 		margin-left: 0;
 	}
 	h2 {
+		width: unset;
 		font-weight: bold;
 		font-size: $font-size-el;
 		color: $font-color;
@@ -55,21 +77,32 @@
 			}
 		}
 		.customAnswer {
+			@include flex-row-start;
 			font-size: $font-size-s;
 			font-weight: normal;
 			color: $font-color;
 			width: 100%;
 			ul {
+				flex: 6;
 				list-style: none;
 				li {
 					margin-bottom: 10px;
 					b {
 						font-weight: bold;
+						margin-left: 5px;
 					}
 				}
 				li:last-child {
 					margin-bottom: 0;
 				}
+			}
+			.image {
+				@include contained-background;
+				flex: 1;
+				aspect-ratio: 2/3;
+			}
+			.image.bankmelli {
+				background-image: url("../assets/image/png/bankmelli.png");
 			}
 		}
 	}

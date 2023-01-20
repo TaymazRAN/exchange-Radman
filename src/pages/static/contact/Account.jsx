@@ -1,32 +1,274 @@
 import React from "react";
 import Accordion from "@mui/material/Accordion";
+import AccordionSummary from "@mui/material/AccordionSummary";
+import AccordionDetails from "@mui/material/AccordionDetails";
 import Typography from "@mui/material/Typography";
+import ExpandMoreIcon from "@mui/icons-material/ExpandMore";
 
 const Account = () => {
-  return (
-    <div className="page">
-      <h2>شماره حساب</h2>
-      <div className="accordionContainer">
-        <Accordion className="customAccordion">
-          <Typography>
-            <div className="customAnswer">
-              <ul>
-                <li>
-                  <b> شماره حساب :</b>
-                  شرکت کارگزاری صباجهاد در تاریخ 1383/06/08 و با شماره 229185 در
-                  اداره ثبت شرکت‌ها و مؤسسات غیرتجاری تهران به ثبت رسید و از اول
-                  مهرماه همان سال با افتتاح تالار بورس کالای کشاورزی، فعالیت خود
-                  را آغاز نمود. صباجهاد با تکیه بر سرمایه انسانی متخصص و با هدف
-                  ارائه راهکارهای تخصصی مالی در صنعت واسطه گری مالی و بنگاه داری
-                  (بازار سرمایه، بازار پول و هلدینگ ها) فعالیت می کند.
-                </li>
-              </ul>
-            </div>
-          </Typography>
-        </Accordion>
-      </div>
-    </div>
-  );
+	return (
+		<div className="page">
+			<h2>شماره حساب های کارگزاری صباجهاد</h2>
+			<div className="accordionContainer">
+				<Accordion className="customAccordion">
+					<AccordionSummary
+						expandIcon={
+							<ExpandMoreIcon style={{ color: "#D0CD38", fontSize: 25 }} />
+						}
+						aria-controls="panel1a-content"
+						id="panel1a-header"
+					>
+						<div className="customQuestion">
+							بانک ملی
+							<div className="customBorder"></div>
+						</div>
+					</AccordionSummary>
+					<AccordionDetails>
+						<Typography>
+							<div className="customAnswer">
+								<div className="image bankmelli"></div>
+								<ul>
+									<li>
+										<b>شعبه:</b>بورس اوراق بهادار
+									</li>
+									<li>
+										<b>شماره حساب:</b>۰۱۰۸۳۰۲۰۰۲۰۰۲
+									</li>
+									<li>
+										<b>شماره شبا:</b>IR03 0170 0000 0010 8302 0020 02
+									</li>
+								</ul>
+							</div>
+						</Typography>
+					</AccordionDetails>
+				</Accordion>
+				<Accordion className="customAccordion">
+					<AccordionSummary
+						expandIcon={
+							<ExpandMoreIcon style={{ color: "#D0CD38", fontSize: 25 }} />
+						}
+						aria-controls="panel1a-content"
+						id="panel1a-header"
+					>
+						<div className="customQuestion">
+							بانک ملت
+							<div className="customBorder"></div>
+						</div>
+					</AccordionSummary>
+					<AccordionDetails>
+						<Typography>
+							<div className="customAnswer">
+								<div className="image bankmelli"></div>
+								<ul>
+									<li>
+										<b>شعبه:</b>بورس اوراق بهادار
+									</li>
+									<li>
+										<b>شماره حساب:</b>۰۱۰۸۳۰۲۰۰۲۰۰۲
+									</li>
+									<li>
+										<b>شماره شبا:</b>IR03 0170 0000 0010 8302 0020 02
+									</li>
+								</ul>
+							</div>
+						</Typography>
+					</AccordionDetails>
+				</Accordion>
+				<Accordion className="customAccordion">
+					<AccordionSummary
+						expandIcon={
+							<ExpandMoreIcon style={{ color: "#D0CD38", fontSize: 25 }} />
+						}
+						aria-controls="panel1a-content"
+						id="panel1a-header"
+					>
+						<div className="customQuestion">
+							بانک سامان
+							<div className="customBorder"></div>
+						</div>
+					</AccordionSummary>
+					<AccordionDetails>
+						<Typography>
+							<div className="customAnswer">
+								<div className="image bankmelli"></div>
+								<ul>
+									<li>
+										<b>شعبه:</b>بورس اوراق بهادار
+									</li>
+									<li>
+										<b>شماره حساب:</b>۰۱۰۸۳۰۲۰۰۲۰۰۲
+									</li>
+									<li>
+										<b>شماره شبا:</b>IR03 0170 0000 0010 8302 0020 02
+									</li>
+								</ul>
+							</div>
+						</Typography>
+					</AccordionDetails>
+				</Accordion>
+				<Accordion className="customAccordion">
+					<AccordionSummary
+						expandIcon={
+							<ExpandMoreIcon style={{ color: "#D0CD38", fontSize: 25 }} />
+						}
+						aria-controls="panel1a-content"
+						id="panel1a-header"
+					>
+						<div className="customQuestion">
+							بانک پاسارگاد
+							<div className="customBorder"></div>
+						</div>
+					</AccordionSummary>
+					<AccordionDetails>
+						<Typography>
+							<div className="customAnswer">
+								<div className="image bankmelli"></div>
+								<ul>
+									<li>
+										<b>شعبه:</b>بورس اوراق بهادار
+									</li>
+									<li>
+										<b>شماره حساب:</b>۰۱۰۸۳۰۲۰۰۲۰۰۲
+									</li>
+									<li>
+										<b>شماره شبا:</b>IR03 0170 0000 0010 8302 0020 02
+									</li>
+								</ul>
+							</div>
+						</Typography>
+					</AccordionDetails>
+				</Accordion>
+				<Accordion className="customAccordion">
+					<AccordionSummary
+						expandIcon={
+							<ExpandMoreIcon style={{ color: "#D0CD38", fontSize: 25 }} />
+						}
+						aria-controls="panel1a-content"
+						id="panel1a-header"
+					>
+						<div className="customQuestion">
+							بانک پارسیان
+							<div className="customBorder"></div>
+						</div>
+					</AccordionSummary>
+					<AccordionDetails>
+						<Typography>
+							<div className="customAnswer">
+								<div className="image bankmelli"></div>
+								<ul>
+									<li>
+										<b>شعبه:</b>بورس اوراق بهادار
+									</li>
+									<li>
+										<b>شماره حساب:</b>۰۱۰۸۳۰۲۰۰۲۰۰۲
+									</li>
+									<li>
+										<b>شماره شبا:</b>IR03 0170 0000 0010 8302 0020 02
+									</li>
+								</ul>
+							</div>
+						</Typography>
+					</AccordionDetails>
+				</Accordion>
+				<Accordion className="customAccordion">
+					<AccordionSummary
+						expandIcon={
+							<ExpandMoreIcon style={{ color: "#D0CD38", fontSize: 25 }} />
+						}
+						aria-controls="panel1a-content"
+						id="panel1a-header"
+					>
+						<div className="customQuestion">
+							بانک کشاورزی
+							<div className="customBorder"></div>
+						</div>
+					</AccordionSummary>
+					<AccordionDetails>
+						<Typography>
+							<div className="customAnswer">
+								<div className="image bankmelli"></div>
+								<ul>
+									<li>
+										<b>شعبه:</b>بورس اوراق بهادار
+									</li>
+									<li>
+										<b>شماره حساب:</b>۰۱۰۸۳۰۲۰۰۲۰۰۲
+									</li>
+									<li>
+										<b>شماره شبا:</b>IR03 0170 0000 0010 8302 0020 02
+									</li>
+								</ul>
+							</div>
+						</Typography>
+					</AccordionDetails>
+				</Accordion>
+				<Accordion className="customAccordion">
+					<AccordionSummary
+						expandIcon={
+							<ExpandMoreIcon style={{ color: "#D0CD38", fontSize: 25 }} />
+						}
+						aria-controls="panel1a-content"
+						id="panel1a-header"
+					>
+						<div className="customQuestion">
+							بانک شهر
+							<div className="customBorder"></div>
+						</div>
+					</AccordionSummary>
+					<AccordionDetails>
+						<Typography>
+							<div className="customAnswer">
+								<div className="image bankmelli"></div>
+								<ul>
+									<li>
+										<b>شعبه:</b>بورس اوراق بهادار
+									</li>
+									<li>
+										<b>شماره حساب:</b>۰۱۰۸۳۰۲۰۰۲۰۰۲
+									</li>
+									<li>
+										<b>شماره شبا:</b>IR03 0170 0000 0010 8302 0020 02
+									</li>
+								</ul>
+							</div>
+						</Typography>
+					</AccordionDetails>
+				</Accordion>
+				<Accordion className="customAccordion">
+					<AccordionSummary
+						expandIcon={
+							<ExpandMoreIcon style={{ color: "#D0CD38", fontSize: 25 }} />
+						}
+						aria-controls="panel1a-content"
+						id="panel1a-header"
+					>
+						<div className="customQuestion">
+							بانک رسالت
+							<div className="customBorder"></div>
+						</div>
+					</AccordionSummary>
+					<AccordionDetails>
+						<Typography>
+							<div className="customAnswer">
+								<div className="image bankmelli"></div>
+								<ul>
+									<li>
+										<b>شعبه:</b>بورس اوراق بهادار
+									</li>
+									<li>
+										<b>شماره حساب:</b>۰۱۰۸۳۰۲۰۰۲۰۰۲
+									</li>
+									<li>
+										<b>شماره شبا:</b>IR03 0170 0000 0010 8302 0020 02
+									</li>
+								</ul>
+							</div>
+						</Typography>
+					</AccordionDetails>
+				</Accordion>
+			</div>
+		</div>
+	);
 };
 
 export default Account;
