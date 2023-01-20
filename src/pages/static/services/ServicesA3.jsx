@@ -5,14 +5,14 @@ import Typography from "@mui/material/Typography";
 const ServicesA3 = () => {
   return (
     <div className="page">
-      <h2> ServicesA3</h2>
+      <h2> فرم های مورد نیاز</h2>
       <div className="accordionContainer">
         <Accordion className="customAccordion">
           <Typography>
             <div className="customAnswer">
               <ul>
                 <li>
-                  <b> سامانه معاملات :</b>
+                  <b>فرم های مورد نیاز:</b>
                   شرکت کارگزاری صباجهاد در تاریخ 1383/06/08 و با شماره 229185 در
                   اداره ثبت شرکت‌ها و مؤسسات غیرتجاری تهران به ثبت رسید و از اول
                   مهرماه همان سال با افتتاح تالار بورس کالای کشاورزی، فعالیت خود
