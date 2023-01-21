@@ -60,10 +60,20 @@
 		@include centered-background;
 		width: 100%;
 		border-radius: 20px;
+		margin: 30px 0;
 		aspect-ratio: 5/2;
 	}
 	.fullImage.bours2 {
 		background-image: url("../assets/image/jpg/bours2.jpg");
+	}
+	.fullImage.boursc1 {
+		background-image: url("../assets/image/jpg/BoursC1.jpg");
+	}
+	.fullImage.boursc2 {
+		background-image: url("../assets/image/jpg/BoursC2.jpg");
+	}
+	.fullImage.madarek {
+		background-image: url("../assets/image/jpg/madarek.jpg");
 	}
 	.row {
 		@include flex-row-top;
@@ -101,11 +111,33 @@
 		border-right: 4px solid $secondary900;
 		margin-bottom: 30px;
 	}
+	h2.small {
+		font-size: $font-size-m;
+		margin-bottom: 15px;
+	}
+	h2.fullWidth,
+	h3.fullWidth,
+	p.fullWidth {
+		width: 100%;
+	}
+	h3 {
+		width: unset;
+		font-weight: bold;
+		font-size: $font-size-l;
+		color: $secondary900;
+		margin: 20px 0;
+	}
 	p {
 		font-weight: normal;
 		font-size: $font-size-m;
 		color: $font-color;
 		margin-bottom: 10px;
+		width: 100%;
+		ol,
+		ul {
+			width: 100%;
+			margin: 20px 0;
+		}
 	}
 	.accordionContainer {
 		width: 100%;
@@ -179,6 +211,58 @@
 	}
 	.input.half:last-child {
 		margin-left: 0;
+	}
+}
+
+.banksContainer {
+	@include flex-row-centered;
+	flex-wrap: wrap;
+	width: 100%;
+	max-width: 800px;
+	.bank {
+		@include contained-background;
+		width: 60px;
+		height: 60px;
+		margin: 15px;
+	}
+	.bank.saderat {
+		background-image: url("../assets/image/jpg/bank/saderat.jpg");
+	}
+	.bank.ayandeh {
+		background-image: url("../assets/image/jpg/bank/ayandeh.jpg");
+	}
+	.bank.pasargad {
+		background-image: url("../assets/image/jpg/bank/pasargad.jpg");
+	}
+	.bank.refah {
+		background-image: url("../assets/image/jpg/bank/refah.jpg");
+	}
+	.bank.gardeshgari {
+		background-image: url("../assets/image/jpg/bank/gardeshgari.jpg");
+	}
+	.bank.keshavarzi {
+		background-image: url("../assets/image/jpg/bank/keshavarzi.jpg");
+	}
+	.bank.sanat {
+		background-image: url("../assets/image/jpg/bank/sanat.jpg");
+	}
+	.bank.mellat {
+		background-image: url("../assets/image/jpg/bank/mellat.jpg");
+	}
+	.bank.sepah {
+		background-image: url("../assets/image/jpg/bank/sepah.jpg");
+	}
+	.bank.melli {
+		background-image: url("../assets/image/jpg/bank/melli.jpg");
+	}
+	.bank.shahr {
+		background-image: url("../assets/image/jpg/bank/shahr.jpg");
+	}
+	.bank.parsian {
+		background-image: url("../assets/image/jpg/bank/parsian.jpg");
+	}
+	.bank.tosee {
+		background-image: url("../assets/image/jpg/bank/tosee.jpg");
 	}
 }
 
