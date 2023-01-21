@@ -84,6 +84,18 @@
 	.fullImage.paziresh2 {
 		background-image: url("../assets/image/jpg/paziresh2.jpg");
 	}
+	.fullImage.ati1 {
+		background-image: url("../assets/image/jpg/ati1.jpg");
+	}
+	.fullImage.ati2 {
+		background-image: url("../assets/image/jpg/ati2.jpg");
+	}
+	.fullImage.energy1 {
+		background-image: url("../assets/image/jpg/energy1.jpg");
+	}
+	.fullImage.energy2 {
+		background-image: url("../assets/image/jpg/energy2.jpg");
+	}
 	.row {
 		@include flex-row-top;
 		flex-wrap: wrap;
@@ -118,10 +130,12 @@
 		color: $font-color;
 		padding-right: 10px;
 		border-right: 4px solid $secondary900;
+		margin-top: 40px;
 		margin-bottom: 30px;
 	}
 	h2.small {
 		font-size: $font-size-m;
+		margin-top: 25px;
 		margin-bottom: 15px;
 	}
 	h2.fullWidth,
@@ -206,6 +220,37 @@
 	}
 }
 
+.dataGridContainer {
+	width: 100%;
+	height: 850px;
+}
+
+.dataGridContainer.small {
+	width: 100%;
+	height: 650px;
+}
+
+.dataGrid {
+	.MuiDataGrid-footerContainer {
+		display: none;
+	}
+}
+
+.hollowContainer {
+	@include flex-row-space-between;
+	flex-wrap: wrap;
+	width: 100%;
+	.hollow {
+		padding: 10px 15px;
+		border-radius: 8px;
+		box-shadow: $box-shadow;
+		font-size: $font-size-m;
+		color: $font-color;
+		font-weight: bold;
+		margin: 20px;
+	}
+}
+
 .inputBox {
 	@include flex-row-top-start;
 	width: 100%;
@@ -272,6 +317,46 @@
 	}
 	.bank.tosee {
 		background-image: url("../assets/image/jpg/bank/tosee.jpg");
+	}
+}
+
+.kalaContainer {
+	@include flex-row-centered;
+	flex-wrap: wrap;
+	width: 100%;
+	max-width: 1000px;
+	.kalaCard {
+		@include flex-column-centered;
+		margin: 20px 40px;
+		min-width: 120px;
+		.image {
+			@include centered-background;
+			box-shadow: $box-shadow;
+			width: 120px;
+			height: 120px;
+			border-radius: 8px;
+			margin-bottom: 15px;
+		}
+		.image.mes {
+			background-image: url("../assets/image/jpg/mes.jpg");
+		}
+		.image.tala {
+			background-image: url("../assets/image/jpg/tala.jpg");
+		}
+		.image.zaferan {
+			background-image: url("../assets/image/jpg/zaferan.jpg");
+		}
+		.image.pesteh {
+			background-image: url("../assets/image/jpg/pesteh.jpg");
+		}
+		.image.aluminium {
+			background-image: url("../assets/image/jpg/aluminium.jpg");
+		}
+		.title {
+			font-size: $font-size-m;
+			color: $font-color;
+			font-weight: bold;
+		}
 	}
 }
 

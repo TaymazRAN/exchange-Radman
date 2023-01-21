@@ -45,6 +45,8 @@ import ServicesD6 from "./services/ServicesD6";
 
 import ServicesC8 from "./services/ServicesC8";
 import Paziresh from "./services/Paziresh";
+import Platforms from "./platform/Platforms";
+import Darkhast from "./services/Darkhast";
 
 const Static = () => {
   return (
@@ -55,6 +57,8 @@ const Static = () => {
 					<Route path="/contact" element={<Contact />} />
 					<Route path="/branch" element={<Branch />} />
 					<Route path="/paziresh" element={<Paziresh />} />
+					<Route path="/platforms" element={<Platforms />} />
+					<Route path="/darkhast" element={<Darkhast />} />
 					<Route path="/ServicesA1" element={<ServicesA1 />} />
 					<Route path="/ServicesA2" element={<ServicesA2 />} />
 					<Route path="/ServicesA3" element={<ServicesA3 />} />
