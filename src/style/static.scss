@@ -63,6 +63,9 @@
 		margin: 30px 0;
 		aspect-ratio: 5/2;
 	}
+	.fullImage.long {
+		aspect-ratio: 3/2;
+	}
 	.fullImage.bours2 {
 		background-image: url("../assets/image/jpg/bours2.jpg");
 	}
@@ -74,6 +77,12 @@
 	}
 	.fullImage.madarek {
 		background-image: url("../assets/image/jpg/madarek.jpg");
+	}
+	.fullImage.paziresh {
+		background-image: url("../assets/image/jpg/paziresh.jpg");
+	}
+	.fullImage.paziresh2 {
+		background-image: url("../assets/image/jpg/paziresh2.jpg");
 	}
 	.row {
 		@include flex-row-top;

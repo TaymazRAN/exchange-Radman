@@ -1,8 +1,11 @@
 import * as React from "react";
 import KeyboardArrowLeftRoundedIcon from "@mui/icons-material/KeyboardArrowLeftRounded";
 import { Button } from "@mui/material";
+import { useNavigate } from "react-router-dom";
 
 export default function ServicesCompany() {
+	const navigate = useNavigate();
+
 	return (
 		<div className="cardBox">
 			<h2> خدمات شرکتی </h2>
@@ -14,7 +17,7 @@ export default function ServicesCompany() {
 						تأمین مالی به فرآیند تأمین سرمایه موردنیاز برای فعالیت‌های کسب‌وکار،
 						خرید تجهیزات و سرمایه‌گذاری گفته می‌شود.
 					</p>
-					<Button className="button" variant="text" color="error">
+					<Button className="button" variant="text" color="error" onClick={(event) => navigate("/static/paziresh")}>
 						مطالب بیشتر
 						<KeyboardArrowLeftRoundedIcon className="icon" />
 					</Button>

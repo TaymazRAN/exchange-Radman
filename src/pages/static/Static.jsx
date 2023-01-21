@@ -44,68 +44,70 @@ import ServicesD5 from "./services/ServicesD5";
 import ServicesD6 from "./services/ServicesD6";
 
 import ServicesC8 from "./services/ServicesC8";
+import Paziresh from "./services/Paziresh";
 
 const Static = () => {
   return (
-    <>
-      <Header dark />
-      <div className="widthFix small">
-        <Routes>
-          <Route path="/contact" element={<Contact />} />
-          <Route path="/branch" element={<Branch />} />
-          <Route path="/ServicesA1" element={<ServicesA1 />} />
-          <Route path="/ServicesA2" element={<ServicesA2 />} />
-          <Route path="/ServicesA3" element={<ServicesA3 />} />
-          <Route path="/servicesA4" element={<ServicesA4 />} />
-          <Route path="/ServicesB1" element={<ServicesB1 />} />
-          <Route path="/ServicesB2" element={<ServicesB2 />} />
-          <Route path="/ServicesB4" element={<ServicesB4 />} />
-          <Route path="/ServicesB3" element={<ServicesB3 />} />
-          <Route path="/ServicesB5" element={<ServicesB5 />} />
-          <Route path="/ServicesC1" element={<ServicesC1 />} />
-          <Route path="/ServicesC2" element={<ServicesC2 />} />
-          <Route path="/ServicesC3" element={<ServicesC3 />} />
-          <Route path="/ServicesC4" element={<ServicesC4 />} />
-          <Route path="/ServicesC5" element={<ServicesC5 />} />
-          <Route path="/ServicesC6" element={<ServicesC6 />} />
-          <Route path="/ServicesC7" element={<ServicesC7 />} />
-          <Route path="/ServicesD1" element={<ServicesD1 />} />
-          <Route path="/ServicesD2" element={<ServicesD2 />} />
-          <Route path="/ServicesD3" element={<ServicesD3 />} />
-          <Route path="/ServicesD3" element={<ServicesD3 />} />
-          <Route path="/ServicesD4" element={<ServicesD4 />} />
-          <Route path="/ServicesD5" element={<ServicesD5 />} />
-          <Route path="/ServicesD6" element={<ServicesD6 />} />
-          <Route path="/ServicesC8" element={<ServicesC8 />} />
-          <Route path="/BoardMembers" element={<BoardMembers />} />
-          <Route path="/MessageOfHead" element={<MessageOfHead />} />
-          <Route path="/Permissions" element={<Permissions />} />
-          <Route path="/Presentation" element={<Presentation />} />
-          <Route path="/Responsibility" element={<Responsibility />} />
-          <Route path="/Support" element={<Support />} />
-          <Route path="/Account" element={<Account />} />
-          <Route path="/Vision" element={<Vision />} />
-          <Route path="/PlatformA1" element={<PlatformA1 />} />
-          <Route path="/PlatformA2" element={<PlatformA2 />} />
-          <Route path="/PlatformA3" element={<PlatformA3 />} />
-          <Route path="/PlatformA4" element={<PlatformA4 />} />
-          <Route path="/PlatformA5" element={<PlatformA5 />} />
-          <Route path="/PlatformA6" element={<PlatformA6 />} />
-          <Route path="/PlatformA7" element={<PlatformA7 />} />
-          <Route path="/Vision" element={<Vision />} />
-          <Route path="/Vision" element={<Vision />} />
-          <Route path="/Vision" element={<Vision />} />
-          <Route path="/Vision" element={<Vision />} />
-          <Route path="/Vision" element={<Vision />} />
-          <Route
-            path="/OrganizationalChart"
-            element={<OrganizationalChart />}
-          />
-        </Routes>
-      </div>
-      <Footer />
-    </>
-  );
+		<>
+			<Header dark />
+			<div className="widthFix small">
+				<Routes>
+					<Route path="/contact" element={<Contact />} />
+					<Route path="/branch" element={<Branch />} />
+					<Route path="/paziresh" element={<Paziresh />} />
+					<Route path="/ServicesA1" element={<ServicesA1 />} />
+					<Route path="/ServicesA2" element={<ServicesA2 />} />
+					<Route path="/ServicesA3" element={<ServicesA3 />} />
+					<Route path="/servicesA4" element={<ServicesA4 />} />
+					<Route path="/ServicesB1" element={<ServicesB1 />} />
+					<Route path="/ServicesB2" element={<ServicesB2 />} />
+					<Route path="/ServicesB4" element={<ServicesB4 />} />
+					<Route path="/ServicesB3" element={<ServicesB3 />} />
+					<Route path="/ServicesB5" element={<ServicesB5 />} />
+					<Route path="/ServicesC1" element={<ServicesC1 />} />
+					<Route path="/ServicesC2" element={<ServicesC2 />} />
+					<Route path="/ServicesC3" element={<ServicesC3 />} />
+					<Route path="/ServicesC4" element={<ServicesC4 />} />
+					<Route path="/ServicesC5" element={<ServicesC5 />} />
+					<Route path="/ServicesC6" element={<ServicesC6 />} />
+					<Route path="/ServicesC7" element={<ServicesC7 />} />
+					<Route path="/ServicesD1" element={<ServicesD1 />} />
+					<Route path="/ServicesD2" element={<ServicesD2 />} />
+					<Route path="/ServicesD3" element={<ServicesD3 />} />
+					<Route path="/ServicesD3" element={<ServicesD3 />} />
+					<Route path="/ServicesD4" element={<ServicesD4 />} />
+					<Route path="/ServicesD5" element={<ServicesD5 />} />
+					<Route path="/ServicesD6" element={<ServicesD6 />} />
+					<Route path="/ServicesC8" element={<ServicesC8 />} />
+					<Route path="/BoardMembers" element={<BoardMembers />} />
+					<Route path="/MessageOfHead" element={<MessageOfHead />} />
+					<Route path="/Permissions" element={<Permissions />} />
+					<Route path="/Presentation" element={<Presentation />} />
+					<Route path="/Responsibility" element={<Responsibility />} />
+					<Route path="/Support" element={<Support />} />
+					<Route path="/Account" element={<Account />} />
+					<Route path="/Vision" element={<Vision />} />
+					<Route path="/PlatformA1" element={<PlatformA1 />} />
+					<Route path="/PlatformA2" element={<PlatformA2 />} />
+					<Route path="/PlatformA3" element={<PlatformA3 />} />
+					<Route path="/PlatformA4" element={<PlatformA4 />} />
+					<Route path="/PlatformA5" element={<PlatformA5 />} />
+					<Route path="/PlatformA6" element={<PlatformA6 />} />
+					<Route path="/PlatformA7" element={<PlatformA7 />} />
+					<Route path="/Vision" element={<Vision />} />
+					<Route path="/Vision" element={<Vision />} />
+					<Route path="/Vision" element={<Vision />} />
+					<Route path="/Vision" element={<Vision />} />
+					<Route path="/Vision" element={<Vision />} />
+					<Route
+						path="/OrganizationalChart"
+						element={<OrganizationalChart />}
+					/>
+				</Routes>
+			</div>
+			<Footer />
+		</>
+	);
 };
 
 export default Static;
