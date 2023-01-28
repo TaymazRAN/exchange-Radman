@@ -32,47 +32,56 @@ export default function Slider() {
 				<SwiperSlide>
 					<div className="slideContainer first">
 						<h1 className="title">
-							بـــرای رویـــــــــاهـــات{" "}
-							<span className="yellow">برنامه ریزی کن</span>
+							<span className="yellow">عرضه خودرو</span>
+							در بورس کالا{" "}
 						</h1>
-						<p className="description">
-							در عصر حاضر، سرمایه گذاری محدود به افرادی خاص با سرمایه و تخصص
-							بالا نیست همه می توانند با هر شغل و هر میزان دارایی به فکر آینده
-							خود باشند.
-						</p>
-						<Button className="button" variant="text" color="error">
-							افتتاح حساب
-							<KeyboardArrowLeftRoundedIcon className="icon" />
-						</Button>
+						<p className="description">متن توضیحات برای تایتل</p>
+						<a
+							href="https://sjb.ebgo.ir/Login"
+							rel="noreferrer"
+							target="_blank"
+						>
+							<Button className="button" variant="text" color="error">
+								ثبت نام
+								<KeyboardArrowLeftRoundedIcon className="icon" />
+							</Button>
+						</a>
 					</div>
 				</SwiperSlide>
 				<SwiperSlide>
 					<div className="slideContainer second">
 						<h1 className="title">
-							صندوق <span className="yellow">تضمین</span>
+							سامانه معاملات <span className="yellow">همراه پلاس</span>
 						</h1>
-						<p className="description">
-							برای سرمایه گذاری در صندوق تضمین اصل سرمایه کاریزما همین حالا
-							اقدام کنید
-						</p>
-						<Button className="button" variant="text" color="error">
-							شروع سرمایه‌گذاری
-							<KeyboardArrowLeftRoundedIcon className="icon" />
-						</Button>
+						<p className="description">متن توضیحات برای تایتل </p>
+						<a
+							href="https://mobile.sjb.co.ir/Login"
+							rel="noreferrer"
+							target="_blank"
+						>
+							<Button className="button" variant="text" color="error">
+								ورود به سامانه
+								<KeyboardArrowLeftRoundedIcon className="icon" />
+							</Button>
+						</a>
 					</div>
 				</SwiperSlide>
 				<SwiperSlide>
 					<div className="slideContainer third">
 						<h1 className="title">
-							با یه کلیک <span className="yellow">پول تو حســـــابته</span>
+							سامانه ثبت نام <span className="yellow">غیرحضوری</span>
 						</h1>
-						<p className="description">
-							برداشت وجه آنی با سامانه مشتریان کارگزاری صبا جهاد
-						</p>
-						<Button className="button" variant="text" color="error">
-							پیش به سوی تحول
-							<KeyboardArrowLeftRoundedIcon className="icon" />
-						</Button>
+						<p className="description">متن توضیحات برای تایتل</p>
+						<a
+							href="https://customer.sjb.co.ir"
+							rel="noreferrer"
+							target="_blank"
+						>
+							<Button className="button" variant="text" color="error">
+								افتتاح حساب
+								<KeyboardArrowLeftRoundedIcon className="icon" />
+							</Button>
+						</a>
 					</div>
 				</SwiperSlide>
 			</Swiper>

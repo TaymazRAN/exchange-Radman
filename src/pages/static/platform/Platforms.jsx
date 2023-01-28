@@ -11,16 +11,19 @@ const Platforms = () => {
 					<div className="data">
 						<h2>همراه پلاس</h2>
 						<p>
-							با همراه پلاس فرصت ها را در بازار از دست نمی دهید. اگر در زمان
-							معاملات، خارج از محل کار و یا زندگی خود هستید، ما همراه پلاس را به
-							شما پیشنهاد می کنیم. بدون نیاز به نصب اپلیکیشن به راحتی بر روی
-							گوشی ها و تبلت ها با سیستم عامل Android و iOS و با اینترنت
-							اپراتورهای موبایل به راحتی کار می کند.
+							با همراه پلاس نیازی به نصب اپلیکیشن ندارید. اگر در زمان معاملات،
+							خارج از محل کار و یا زندگی خود هستید، ما همراه پلاس را به شما
+							پیشنهاد می کنیم. از طریق این سامانه به راحتی، با سرعت بالا و بدون
+							نیاز به نصب اپلیکیشن، با گوشی ها و تبلت ها با سیستم عامل Android و
+							iOS وارد سامانه معاملات شوید.{" "}
 						</p>
-						<Button className="button" variant="text" color="error">
-							مطالب بیشتر
-							<KeyboardArrowLeftRoundedIcon className="icon" />
-						</Button>
+
+						<a href="https://mobile.sjb.co.ir" rel="noreferrer" target="_blank">
+							<Button className="button" variant="text" color="error">
+								ورود
+								<KeyboardArrowLeftRoundedIcon className="icon" />
+							</Button>
+						</a>
 					</div>
 					<div className="image platform1"></div>
 				</div>
@@ -32,15 +35,20 @@ const Platforms = () => {
 					<div className="data">
 						<h2>سامانه فروش سهام عدالت</h2>
 						<p>
-							در دولت نهم، آیین نامه اجرایی سهام عدالت با نام “افزایش ثروت
-							خانوارهای ایرانی” تبدیل به سهام عدالت شد و به مشمولان این آیین
-							نامه که شامل دو دهک پایین درآمدی و چهار دهک میانی درآمد بود یک
-							میلیون تومان سهام تخصیص و در مقابل پولی از آنها دریافت نگردید.
+							اگر سهام عدالت به شما تعلق گرفته و نسبت به آزاد سازی آن اقدام
+							نموده اید، می توانید بدون دریافت کد بورسی و بدون مراجعه حضوری به
+							کارگزاری، نسبت به فروش آن اقدام نمایید.{" "}
 						</p>
-						<Button className="button" variant="text" color="error">
-							مطالب بیشتر
-							<KeyboardArrowLeftRoundedIcon className="icon" />
-						</Button>
+						<a
+							href="https://sjbse.etadbir.com/login.html"
+							rel="noreferrer"
+							target="_blank"
+						>
+							<Button className="button" variant="text" color="error">
+								فروش
+								<KeyboardArrowLeftRoundedIcon className="icon" />
+							</Button>
+						</a>
 					</div>
 				</div>
 			</div>
@@ -55,12 +63,18 @@ const Platforms = () => {
 							متنوع این سامانه معاملاتی می باشد. امکان مدیریت سفارش ها با حجم
 							بالا و یا ارسال همزمان سفارش در چند نماد مختلف، شما را قادر می
 							سازد در کوتاه ترین زمان ممکن، استراتژی معاملاتی خود را اجرا
-							نمایید.
+							نمایید.{" "}
 						</p>
-						<Button className="button" variant="text" color="error">
-							مطالب بیشتر
-							<KeyboardArrowLeftRoundedIcon className="icon" />
-						</Button>
+						<a
+							href="https://onlineplus.sjb.co.ir/Account/Login"
+							rel="noreferrer"
+							target="_blank"
+						>
+							<Button className="button" variant="text" color="error">
+								مطالب بیشتر
+								<KeyboardArrowLeftRoundedIcon className="icon" />
+							</Button>
+						</a>
 					</div>
 					<div className="image platform3"></div>
 				</div>
@@ -76,12 +90,18 @@ const Platforms = () => {
 							درخواست خرید و یا فروش خود را به اتاق معاملات ما ارسال نمایید و
 							اجرای آنها را به معامله گران حرفه ای بسپارید. اگر مشغله روزانه به
 							شما فرصت معامله نمی دهد، ما اجرای سفارش های از پیش ارسال شده شما
-							را به عهده می گیریم.
+							را به عهده می گیریم.{" "}
 						</p>
-						<Button className="button" variant="text" color="error">
-							مطالب بیشتر
-							<KeyboardArrowLeftRoundedIcon className="icon" />
-						</Button>
+						<a
+							href="https://c.sjb.co.ir/User/Login?ReturnUrl=/"
+							rel="noreferrer"
+							target="_blank"
+						>
+							<Button className="button" variant="text" color="error">
+								مطالب بیشتر
+								<KeyboardArrowLeftRoundedIcon className="icon" />
+							</Button>
+						</a>
 					</div>
 				</div>
 			</div>
@@ -91,13 +111,20 @@ const Platforms = () => {
 					<div className="data">
 						<h2>همراه تریدر آتی</h2>
 						<p>
-							این اپلیکیشن را بر روی تلفن همراه و تبلت Android یا iOS خود نصب
-							کنید و در زمان معاملات از هر کجا که هستید خرید و فروش کنید.{" "}
+							با نصب این اپلیکیشن بر روی تلفن همراه و تبلت Android یا iOS خود،
+							تغییر و تحولات لحظه ای در جهان را از دست نمی دهید و از هر کجا که
+							باشید می توانید معاملات خود را انجام دهید.{" "}
 						</p>
-						<Button className="button" variant="text" color="error">
-							مطالب بیشتر
-							<KeyboardArrowLeftRoundedIcon className="icon" />
-						</Button>
+						<a
+							href="https://onlineplus.sjb.co.ir/Account/Login"
+							rel="noreferrer"
+							target="_blank"
+						>
+							<Button className="button" variant="text" color="error">
+								دانلود
+								<KeyboardArrowLeftRoundedIcon className="icon" />
+							</Button>
+						</a>
 					</div>
 					<div className="image platform5"></div>
 				</div>
@@ -112,10 +139,16 @@ const Platforms = () => {
 							با این سامانه هر آنچه را که در معاملات به آن نیاز خواهید داشت، به
 							صورت یکجا به آن دسترسی دارید.{" "}
 						</p>
-						<Button className="button" variant="text" color="error">
-							مطالب بیشتر
-							<KeyboardArrowLeftRoundedIcon className="icon" />
-						</Button>
+						<a
+							href="https://coinonline.sjb.co.ir"
+							rel="noreferrer"
+							target="_blank"
+						>
+							<Button className="button" variant="text" color="error">
+								مطالب بیشتر
+								<KeyboardArrowLeftRoundedIcon className="icon" />
+							</Button>
+						</a>
 					</div>
 				</div>
 			</div>

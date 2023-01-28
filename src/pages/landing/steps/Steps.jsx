@@ -17,10 +17,16 @@ export default function Steps() {
 					<p className="description">
 						اولین مرحله ثبت نام در سامانه سجام و احراز هویت شماست
 					</p>
-					<Button className="button" variant="text" color="error">
-						سامانه سجام
-						<KeyboardArrowLeftRoundedIcon className="icon" />
-					</Button>
+					<a
+						href="https://profilesejam.csdiran.ir/session"
+						rel="noreferrer"
+						target="_blank"
+					>
+						<Button className="button" variant="text" color="error">
+							سامانه سجام
+							<KeyboardArrowLeftRoundedIcon className="icon" />
+						</Button>
+					</a>
 				</div>
 
 				<div className="stepArrow"></div>
@@ -34,10 +40,12 @@ export default function Steps() {
 					<p className="description">
 						دومین مرحله افتتاح حساب در سایت صبا جهاد می باشد
 					</p>
-					<Button className="button" variant="text" color="error">
-						افتتاح حساب
-						<KeyboardArrowLeftRoundedIcon className="icon" />
-					</Button>
+					<a href="https://customer.sjb.co.ir" rel="noreferrer" target="_blank">
+						<Button className="button" variant="text" color="error">
+							افتتاح حساب
+							<KeyboardArrowLeftRoundedIcon className="icon" />
+						</Button>
+					</a>
 				</div>
 
 				<div className="stepArrow"></div>
@@ -51,10 +59,16 @@ export default function Steps() {
 					<p className="description">
 						تبریک در این مرحله شما می توانید سرمایه گذاری خود را شروع کنید
 					</p>
-					<Button className="button" variant="text" color="error">
-						شروع سرمایه گذاری
-						<KeyboardArrowLeftRoundedIcon className="icon" />
-					</Button>
+					<a
+						href="https://onlineplus.sjb.co.ir/Account/Login"
+						rel="noreferrer"
+						target="_blank"
+					>
+						<Button className="button" variant="text" color="error">
+							شروع سرمایه گذاری
+							<KeyboardArrowLeftRoundedIcon className="icon" />
+						</Button>
+					</a>
 				</div>
 			</div>
 		</div>
