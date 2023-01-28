@@ -17,34 +17,47 @@ export default function ServicesCompany() {
 						تأمین مالی به فرآیند تأمین سرمایه موردنیاز برای فعالیت‌های کسب‌وکار،
 						خرید تجهیزات و سرمایه‌گذاری گفته می‌شود.
 					</p>
-					<Button className="button" variant="text" color="error" onClick={(event) => navigate("/static/paziresh")}>
+					<Button
+						className="button"
+						variant="text"
+						color="error"
+						onClick={(event) => navigate("/static/paziresh")}
+					>
 						مطالب بیشتر
 						<KeyboardArrowLeftRoundedIcon className="icon" />
 					</Button>
 				</div>
 
 				<div className="card serviceC">
-					<h3 className="title two">مشاوره سرمایه گذاری</h3>
+					<h3 className="title two">صندوق سرمایه گذاری</h3>
 					<p className="description">
 						یکی از راه‌های جذب سرمایه جدید برای کسب و کارها پذیرش و ورود آنها به
 						بازار بورس اوراق بهادار یا فرابورس است
 					</p>
-					<Button className="button" variant="text" color="error">
-						مطالب بیشتر
-						<KeyboardArrowLeftRoundedIcon className="icon" />
-					</Button>
+					<a href="https://sjb.co.ir/sandogh" rel="noreferrer" target="_blank">
+						<Button className="button" variant="text" color="error">
+							مطالب بیشتر
+							<KeyboardArrowLeftRoundedIcon className="icon" />
+						</Button>
+					</a>
 				</div>
 
 				<div className="card serviceC">
-					<h3 className="title three">مشاوره تامین مالی</h3>
+					<h3 className="title three">تامین مالی</h3>
 					<p className="description">
 						مشاوره‌سرمایه گذاری در خصوص یافتن ابزار های جدید اهمیت فراوانی دارد
 						تا نقدینگی به سمت مناسبی سوق پیدا کند.
 					</p>
-					<Button className="button" variant="text" color="error">
-						مطالب بیشتر
-						<KeyboardArrowLeftRoundedIcon className="icon" />
-					</Button>
+					<a
+						href="https://sjb.co.ir/taminmali"
+						rel="noreferrer"
+						target="_blank"
+					>
+						<Button className="button" variant="text" color="error">
+							مطالب بیشتر
+							<KeyboardArrowLeftRoundedIcon className="icon" />
+						</Button>
+					</a>
 				</div>
 			</div>
 		</div>
