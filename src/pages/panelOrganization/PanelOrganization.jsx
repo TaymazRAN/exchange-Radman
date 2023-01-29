@@ -31,99 +31,90 @@ import { fetchOrganizationManagers } from "../../features/account/managerSlice";
 import { fetchOrganizationByID } from "../../features/organization/organizationSlice";
 import { fetchManagerReports } from "../../features/report/reportSlice";
 import {
-	fetchCredit,
-	fetchRequestData,
-	fetchRequests,
+  fetchCredit,
+  fetchRequestData,
+  fetchRequests,
 } from "../../features/request/requestSlice";
 import { fetchStructureData } from "../../features/structure/structureSlice";
 // import axios from "axios";
 
 export default function PanelOrganization() {
-	const token = JSON.parse(localStorage.getItem("token"));
-	const organid = JSON.parse(localStorage.getItem("organid"));
-	const departmentid = JSON.parse(localStorage.getItem("departmentid"));
-	const user = JSON.parse(localStorage.getItem("managername"));
-	const userAdmin = JSON.parse(localStorage.getItem("adminname"));
+  const token = JSON.parse(localStorage.getItem("token"));
+  const organid = JSON.parse(localStorage.getItem("organid"));
+  const departmentid = JSON.parse(localStorage.getItem("departmentid"));
+  const user = JSON.parse(localStorage.getItem("managername"));
+  const userAdmin = JSON.parse(localStorage.getItem("adminname"));
 
-	if (token) {
-		axios.interceptors.request.use(function (config) {
-			config.headers.Authorization = `Bearer ${token.token}`;
+  if (token) {
+    axios.interceptors.request.use(function (config) {
+      config.headers.Authorization = `Bearer ${token.token}`;
 
-			return config;
-		});
-	}
+      return config;
+    });
+  }
 
-	const dispatch = useDispatch();
-	const ready = useSelector((state) => state.structure.ready);
+  const dispatch = useDispatch();
+  const ready = useSelector((state) => state.structure.ready);
 
-	if (!ready) {
-		dispatch(fetchDepartments(organid));
-		dispatch(fetchEmployees(organid));
-		dispatch(fetchOrganizationManagers(organid));
-		dispatch(fetchOrganizationByID(organid));
-		dispatch(fetchManagerReports(organid));
-		dispatch(fetchCredit(organid));
-		dispatch(fetchRequests(organid));
-		dispatch(fetchRequestData({ organid, departmentid }));
-		dispatch(fetchStructureData(organid));
-	}
+  if (!ready) {
+    dispatch(fetchDepartments(organid));
+    dispatch(fetchEmployees(organid));
+    dispatch(fetchOrganizationManagers(organid));
+    dispatch(fetchOrganizationByID(organid));
+    dispatch(fetchManagerReports(organid));
+    dispatch(fetchCredit(organid));
+    dispatch(fetchRequests(organid));
+    dispatch(fetchRequestData({ organid, departmentid }));
+    dispatch(fetchStructureData(organid));
+  }
 
-	return (
-		<>
-			{token && (user || userAdmin) ? (
-				<>
-					<MenuTopOrganization />
-					<div className="panel">
-						<div className="sidebar panelBox">
-							<SideBarOrganaization />
-						</div>
-						<div className="page panelBox">
-							<Routes>
-								<Route path="/" element={<Dashboard />} />
-								<Route path="/manager" element={<ManagerTable />} />
-								<Route path="/managerAdd" element={<ManagerAdd />} />
-								<Route
-									path="/managerEdit/:username"
-									element={<ManagerEdit />}
-								/>
-								<Route path="/department" element={<DepartmentTable />} />
-								<Route path="/departmentAdd" element={<DepartmentAdd />} />
-								<Route
-									path="/departmentEdit/:id"
-									element={<DepartmentEdit />}
-								/>
-								<Route path="/employee" element={<EmployeeTable />} />
-								<Route path="/employeeAdd" element={<EmployeeAdd />} />
-								<Route path="/employeeEdit/:id" element={<EmployeeEdit />} />
-								<Route path="/applicant" element={<ApplicantTable />} />
-								<Route
-									path="/applicantAdd/:username"
-									element={<ApplicantAdd />}
-								/>
-								<Route path="/report" element={<ReportTable />} />
-								<Route path="/reportShow/:id" element={<ReportShow />} />
-								<Route path="/request" element={<RequestTable />} />
-								<Route
-									path="/requestAddEmployee"
-									element={<RequestAddEmployee />}
-								/>
-								<Route
-									path="/requestAddDepartment"
-									element={<RequestAddDepartment />}
-								/>
-								<Route
-									path="/organizationEdit"
-									element={<OrganizationEdit />}
-								/>
-								<Route path="*" element={<NotFoundPanel />} />
-								{/* <Route path="*" element={<NotFoundPanel />} /> */}
-							</Routes>
-						</div>
-					</div>
-				</>
-			) : (
+  return (
+    <>
+      {/* {token && (user || userAdmin) ? ( */}
+      <>
+        <MenuTopOrganization />
+        <div className="panel">
+          <div className="sidebar panelBox">
+            <SideBarOrganaization />
+          </div>
+          <div className="page panelBox">
+            <Routes>
+              <Route path="/" element={<Dashboard />} />
+              <Route path="/manager" element={<ManagerTable />} />
+              <Route path="/managerAdd" element={<ManagerAdd />} />
+              <Route path="/managerEdit/:username" element={<ManagerEdit />} />
+              <Route path="/department" element={<DepartmentTable />} />
+              <Route path="/departmentAdd" element={<DepartmentAdd />} />
+              <Route path="/departmentEdit/:id" element={<DepartmentEdit />} />
+              <Route path="/employee" element={<EmployeeTable />} />
+              <Route path="/employeeAdd" element={<EmployeeAdd />} />
+              <Route path="/employeeEdit/:id" element={<EmployeeEdit />} />
+              <Route path="/applicant" element={<ApplicantTable />} />
+              <Route
+                path="/applicantAdd/:username"
+                element={<ApplicantAdd />}
+              />
+              <Route path="/report" element={<ReportTable />} />
+              <Route path="/reportShow/:id" element={<ReportShow />} />
+              <Route path="/request" element={<RequestTable />} />
+              <Route
+                path="/requestAddEmployee"
+                element={<RequestAddEmployee />}
+              />
+              <Route
+                path="/requestAddDepartment"
+                element={<RequestAddDepartment />}
+              />
+              <Route path="/organizationEdit" element={<OrganizationEdit />} />
+              <Route path="*" element={<NotFoundPanel />} />
+              {/* <Route path="*" element={<NotFoundPanel />} /> */}
+            </Routes>
+          </div>
+        </div>
+      </>
+      {/* ) : (
 				<AccessDeny />
-			)}
-		</>
-	);
+			)} */}
+    </>
+  );
 }

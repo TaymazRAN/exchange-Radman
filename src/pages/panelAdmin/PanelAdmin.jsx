@@ -2,19 +2,14 @@ import "./panel.css";
 import "./table.css";
 import { Routes, Route } from "react-router-dom";
 import UserTable from "./user/UserTable";
-
 import MenuTopAdmin from "../../components/menuTopAdmin/MenuTopAdmin";
 import SideBarAdmin from "../../components/sideBarAdmin/SideBarAdmin";
 import Dashboard from "./dashboard/Dashboard";
-
 import MenuTable from "./menu/menuTable/MenuTable";
-
-// import AccessDeny from "../../components/accessDeny/AccessDeny";
-
 import axios from "axios";
 import { useDispatch, useSelector } from "react-redux";
-
 import { fetchUsers } from "../../features/account/userSlice";
+import MemberList from "./manager/MemberList";
 
 export default function PanelAdmin() {
   const token = JSON.parse(localStorage.getItem("token"));
@@ -49,6 +44,7 @@ export default function PanelAdmin() {
               <Route path="/" element={<Dashboard />} />
               <Route path="/user" element={<UserTable />} />
               <Route path="/menu" element={<MenuTable />} />
+              <Route path="/manager" element={<MemberList />} />
             </Routes>
           </div>
         </div>
