@@ -66,6 +66,9 @@
 	.fullImage.long {
 		aspect-ratio: 3/2;
 	}
+	.fullImage.clong {
+		@include contained-background;
+	}
 	.fullImage.bours2 {
 		background-image: url("../assets/image/jpg/bours2.jpg");
 	}
@@ -95,6 +98,15 @@
 	}
 	.fullImage.energy2 {
 		background-image: url("../assets/image/jpg/energy2.jpg");
+	}
+	.fullImage.about {
+		background-image: url("../assets/image/jpg/about.jpg");
+	}
+	.fullImage.about2 {
+		background-image: url("../assets/image/jpg/about2.jpg");
+	}
+	.fullImage.chart {
+		background-image: url("../assets/image/jpg/chart.jpg");
 	}
 	.row {
 		@include flex-row-top;
@@ -360,6 +372,67 @@
 	}
 }
 
+.personContainer {
+	@include flex-row-space-between;
+	flex-wrap: wrap;
+	width: 100%;
+	.personCard {
+		padding: 15px;
+		border-radius: 15px;
+		box-shadow: $box-shadow;
+		margin: 40px 20px;
+		text-align: center;
+		.image {
+			@include centered-background;
+			width: 250px;
+			aspect-ratio: 1/1;
+			border-radius: 15px;
+			margin-bottom: 15px;
+		}
+		.image.noperson {
+			background-image: url("../assets/image/jpg/person/noperson.jpg");
+		}
+		.image.abolfazl {
+			background-image: url("../assets/image/jpg/person/abolfazl.jpg");
+		}
+		.image.ali {
+			background-image: url("../assets/image/jpg/person/ali.jpg");
+		}
+		.image.alireza {
+			background-image: url("../assets/image/jpg/person/alireza.jpg");
+		}
+		.image.mahnush {
+			background-image: url("../assets/image/jpg/person/mahnush.jpg");
+		}
+		.image.milad {
+			background-image: url("../assets/image/jpg/person/milad.jpg");
+		}
+		.image.mohamad {
+			background-image: url("../assets/image/jpg/person/mohamad.jpg");
+		}
+		.image.salman {
+			background-image: url("../assets/image/jpg/person/salman.jpg");
+		}
+		.image.vahid {
+			background-image: url("../assets/image/jpg/person/vahid.jpg");
+		}
+		.title {
+			font-size: $font-size-m;
+			color: $font-color;
+			font-weight: bold;
+			margin-bottom: 25px;
+		}
+		.role {
+			font-size: $font-size-s;
+			color: $accent;
+			font-weight: normal;
+			padding: 7px 15px 10px;
+			border-radius: 8px;
+			border: 2px solid $secondary900;
+		}
+	}
+}
+
 .dataBox {
 	@include flex-row-start;
 	margin-bottom: 20px;
@@ -400,6 +473,7 @@
 .compartmentContainer {
 	@include flex-column-centered;
 	width: 100%;
+	margin: 40px 0;
 	h2 {
 		width: 100%;
 		font-weight: bold;
@@ -418,7 +492,7 @@
 			@include contained-background;
 			border-radius: 15px;
 			width: 100%;
-			aspect-ratio: 1/1;
+			aspect-ratio: 3/2;
 			margin-right: 50px;
 			flex: 3;
 			margin-bottom: 20px;
@@ -448,6 +522,12 @@
 		}
 		.image.bours1 {
 			background-image: url("../assets/image/jpg/bours1.jpg");
+		}
+		.image.about3 {
+			background-image: url("../assets/image/jpg/about3.jpg");
+		}
+		.image.about4 {
+			background-image: url("../assets/image/jpg/about4.jpg");
 		}
 		.data {
 			@include flex-column-start;
@@ -502,6 +582,56 @@
 		}
 		.data {
 			margin-right: 50px;
+		}
+	}
+}
+
+.viewCardContainer {
+	@include flex-row-space-around;
+	width: 100%;
+	flex-wrap: wrap;
+	.viewCard {
+		color: $font-color;
+		font-size: $font-size-m;
+		font-weight: normal;
+		border-radius: 15px;
+		padding: 40px 15px 15px;
+		width: 400px;
+		box-shadow: $box-shadow;
+		position: relative;
+		text-align: right;
+		min-height: 200px;
+		margin: 40px 0;
+		.top {
+			@include flex-row-space-between;
+			position: absolute;
+			left: 0;
+			padding: 0 15px;
+			top: -30px;
+			width: 100%;
+			.role {
+				display: inline-block;
+				font-size: $font-size-s;
+				color: $accent;
+				font-weight: normal;
+				padding: 7px 15px 10px;
+				border-radius: 8px;
+				border: 2px solid $secondary900;
+				background-color: $body-color;
+			}
+			.image {
+				@include contained-background;
+				width: 50px;
+				height: 50px;
+				border-radius: 8px;
+				box-shadow: $box-shadow;
+			}
+			.image.view1 {
+				background-image: url("../assets/image/png/view1.png");
+			}
+			.image.view2 {
+				background-image: url("../assets/image/png/view2.png");
+			}
 		}
 	}
 }
