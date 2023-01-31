@@ -5,12 +5,11 @@ import configData from "../../services/config.json";
 
 const url = `${configData.AddressApi}/Member`;
 
-export const fetchManagerByUsername = createAsyncThunk(
-  "user/fetchManagerByUsername",
-  async (user) => {
-    return axios
-      .get(`${url}/username?username=${user}`)
-      .then((response) => response.data);
+// api/v1/Member?id=a3bdcf61-4380-4e57-bd7c-22e66a72c26f
+export const fetchManagerByID = createAsyncThunk(
+  "manager/fetchManagerByID",
+  async (id) => {
+    return axios.get(`${url}?id=${id}`).then((response) => response.data);
   }
 );
 
@@ -32,8 +31,21 @@ export const fetchOrganizationManagers = createAsyncThunk(
 
 export const updateManager = createAsyncThunk(
   "manager/updateManager",
-  async ({ user, data }) => {
-    return axios.put(`${url}/${user}`, data).then((response) => response.data);
+  async ({ id, data }) => {
+    return axios
+      .post(`${url}/UpdateMember/${id}`, data)
+      .then((response) => response.data);
+  }
+);
+
+export const addManager = createAsyncThunk(
+  "manager/addManager",
+  async (data) => {
+    const register = await axios
+      .post(`${url}/InsertMember`, data)
+      .then((response) => response.data);
+
+    return { register, data };
   }
 );
 
@@ -72,17 +84,17 @@ export const slice = createSlice({
     },
   },
   extraReducers: (builder) => {
-    // fetchManagerByUsername
-    builder.addCase(fetchManagerByUsername.pending, (state, action) => {
+    // fetchManagerByID
+    builder.addCase(fetchManagerByID.pending, (state, action) => {
       state.loading = true;
     });
-    builder.addCase(fetchManagerByUsername.fulfilled, (state, action) => {
+    builder.addCase(fetchManagerByID.fulfilled, (state, action) => {
       state.loading = false;
       state.manager = action.payload;
       state.ready = true;
       state.error = "";
     });
-    builder.addCase(fetchManagerByUsername.rejected, (state, action) => {
+    builder.addCase(fetchManagerByID.rejected, (state, action) => {
       state.loading = false;
       state.ready = false;
       state.error = action.error.message;
@@ -129,7 +141,18 @@ export const slice = createSlice({
       state.handleLoading = false;
       state.handleError = action.error.message;
     });
-
+    //addManager
+    builder.addCase(addManager.pending, (state, action) => {
+      state.handleLoading = true;
+    });
+    builder.addCase(addManager.fulfilled, (state, action) => {
+      state.handleLoading = false;
+      state.handleError = "success";
+    });
+    builder.addCase(addManager.rejected, (state, action) => {
+      state.handleLoading = false;
+      state.handleError = action.error.message;
+    });
     // uploadManagerImage
     builder.addCase(uploadManagerImage.pending, (state, action) => {
       state.handleLoading = true;

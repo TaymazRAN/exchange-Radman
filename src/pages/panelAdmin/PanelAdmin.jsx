@@ -10,6 +10,8 @@ import axios from "axios";
 import { useDispatch, useSelector } from "react-redux";
 import { fetchUsers } from "../../features/account/userSlice";
 import MemberList from "./manager/MemberList";
+import ManagerAdd from "./manager/ManagerAdd";
+import ManagerEdit from "./manager/ManagerEdit";
 
 export default function PanelAdmin() {
   const token = JSON.parse(localStorage.getItem("token"));
@@ -45,6 +47,8 @@ export default function PanelAdmin() {
               <Route path="/user" element={<UserTable />} />
               <Route path="/menu" element={<MenuTable />} />
               <Route path="/manager" element={<MemberList />} />
+              <Route path="/managerAdd" element={<ManagerAdd />} />
+              <Route path="/managerEdit/:id" element={<ManagerEdit />} />
             </Routes>
           </div>
         </div>

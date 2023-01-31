@@ -122,7 +122,7 @@ const MemberList = () => {
               className="gridButton"
               color="info"
               onClick={(event) =>
-                navigate(`/organization/managerEdit/${parameters.row.username}`)
+                navigate(`/admin/managerEdit/${parameters.id}`)
               }
             >
               <EditOutlinedIcon className="gridIcon" />
@@ -159,7 +159,7 @@ const MemberList = () => {
           className="topButton"
           variant="outlined"
           color="success"
-          onClick={(event) => navigate("/admin/functionAdd")}
+          onClick={(event) => navigate("/admin/managerAdd")}
         >
           اضافه کردن <AddIcon className="topButtonIcon" />
         </Button>
