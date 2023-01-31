@@ -26,13 +26,13 @@ const Account = () => {
 					<AccordionDetails>
 						<Typography>
 							<div className="customAnswer">
-								<div className="image bankmelli"></div>
+								<div className="image melli"></div>
 								<ul>
 									<li>
 										<b>شعبه:</b>بورس اوراق بهادار
 									</li>
 									<li>
-										<b>شماره حساب:</b>۰۱۰۸۳۰۲۰۰۲۰۰۲
+										<b>شماره حساب:</b>0108302002002
 									</li>
 									<li>
 										<b>شماره شبا:</b>IR03 0170 0000 0010 8302 0020 02
@@ -58,16 +58,16 @@ const Account = () => {
 					<AccordionDetails>
 						<Typography>
 							<div className="customAnswer">
-								<div className="image bankmelli"></div>
+								<div className="image mellat"></div>
 								<ul>
 									<li>
-										<b>شعبه:</b>بورس اوراق بهادار
+										<b>شعبه:</b>بورس کالا
 									</li>
 									<li>
-										<b>شماره حساب:</b>۰۱۰۸۳۰۲۰۰۲۰۰۲
+										<b>شماره حساب:</b>4674170062
 									</li>
 									<li>
-										<b>شماره شبا:</b>IR03 0170 0000 0010 8302 0020 02
+										<b>شماره شبا:</b>IR58 0120 0000 0000 4674 1700 62
 									</li>
 								</ul>
 							</div>
@@ -90,16 +90,16 @@ const Account = () => {
 					<AccordionDetails>
 						<Typography>
 							<div className="customAnswer">
-								<div className="image bankmelli"></div>
+								<div className="image saman"></div>
 								<ul>
 									<li>
-										<b>شعبه:</b>بورس اوراق بهادار
+										<b>شعبه:</b>سی تیر
 									</li>
 									<li>
-										<b>شماره حساب:</b>۰۱۰۸۳۰۲۰۰۲۰۰۲
+										<b>شماره حساب:</b>849408868093
 									</li>
 									<li>
-										<b>شماره شبا:</b>IR03 0170 0000 0010 8302 0020 02
+										<b>شماره شبا:</b>IR78 0560 0849 0400 0886 8090 03
 									</li>
 								</ul>
 							</div>
@@ -122,16 +122,16 @@ const Account = () => {
 					<AccordionDetails>
 						<Typography>
 							<div className="customAnswer">
-								<div className="image bankmelli"></div>
+								<div className="image pasargad"></div>
 								<ul>
 									<li>
-										<b>شعبه:</b>بورس اوراق بهادار
+										<b>شعبه:</b>فاطمی
 									</li>
 									<li>
-										<b>شماره حساب:</b>۰۱۰۸۳۰۲۰۰۲۰۰۲
+										<b>شماره حساب:</b>225110139213921
 									</li>
 									<li>
-										<b>شماره شبا:</b>IR03 0170 0000 0010 8302 0020 02
+										<b>شماره شبا:</b>IR88 0570 0225 1101 3921 3920 01
 									</li>
 								</ul>
 							</div>
@@ -154,16 +154,16 @@ const Account = () => {
 					<AccordionDetails>
 						<Typography>
 							<div className="customAnswer">
-								<div className="image bankmelli"></div>
+								<div className="image parsian"></div>
 								<ul>
 									<li>
-										<b>شعبه:</b>بورس اوراق بهادار
+										<b>شعبه:</b>میدان سلماس
 									</li>
 									<li>
-										<b>شماره حساب:</b>۰۱۰۸۳۰۲۰۰۲۰۰۲
+										<b>شماره حساب:</b>20100190072604
 									</li>
 									<li>
-										<b>شماره شبا:</b>IR03 0170 0000 0010 8302 0020 02
+										<b>شماره شبا:</b>IR43 0540 1065 2010 0190 0726 04
 									</li>
 								</ul>
 							</div>
@@ -186,16 +186,16 @@ const Account = () => {
 					<AccordionDetails>
 						<Typography>
 							<div className="customAnswer">
-								<div className="image bankmelli"></div>
+								<div className="image keshavarzi"></div>
 								<ul>
 									<li>
-										<b>شعبه:</b>بورس اوراق بهادار
+										<b>شعبه:</b>بورس کالا
 									</li>
 									<li>
-										<b>شماره حساب:</b>۰۱۰۸۳۰۲۰۰۲۰۰۲
+										<b>شماره حساب:</b>647533658
 									</li>
 									<li>
-										<b>شماره شبا:</b>IR03 0170 0000 0010 8302 0020 02
+										<b>شماره شبا:</b>IR30 0160 0000 0000 0647 5336 58
 									</li>
 								</ul>
 							</div>
@@ -218,16 +218,16 @@ const Account = () => {
 					<AccordionDetails>
 						<Typography>
 							<div className="customAnswer">
-								<div className="image bankmelli"></div>
+								<div className="image shahr"></div>
 								<ul>
 									<li>
-										<b>شعبه:</b>بورس اوراق بهادار
+										<b>شعبه:</b>سهروردی شمالی تهران
 									</li>
 									<li>
-										<b>شماره حساب:</b>۰۱۰۸۳۰۲۰۰۲۰۰۲
+										<b>شماره حساب:</b>1001001984172
 									</li>
 									<li>
-										<b>شماره شبا:</b>IR03 0170 0000 0010 8302 0020 02
+										<b>شماره شبا:</b>IR17 0610 0000 0100 1001 9841 72
 									</li>
 								</ul>
 							</div>
@@ -250,16 +250,16 @@ const Account = () => {
 					<AccordionDetails>
 						<Typography>
 							<div className="customAnswer">
-								<div className="image bankmelli"></div>
+								<div className="image resalat"></div>
 								<ul>
 									<li>
-										<b>شعبه:</b>بورس اوراق بهادار
+										<b>شعبه:</b>بانکداری اجتماعی
 									</li>
 									<li>
-										<b>شماره حساب:</b>۰۱۰۸۳۰۲۰۰۲۰۰۲
+										<b>شماره حساب:</b>1056055571
 									</li>
 									<li>
-										<b>شماره شبا:</b>IR03 0170 0000 0010 8302 0020 02
+										<b>شماره شبا:</b>IR96 0700 0010 0022 5605 5570 01
 									</li>
 								</ul>
 							</div>
