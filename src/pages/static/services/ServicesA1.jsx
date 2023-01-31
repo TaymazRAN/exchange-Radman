@@ -41,7 +41,7 @@ const ServicesA1 = () => {
 						</Button>
 					</div>
 					<div className="hollowCard">
-						<h3>سامانه آفلاین</h3>
+						<h3>سامانه معاملات برخط(آنلاین)</h3>
 						<Button className="button yellow" variant="text" color="error">
 							ورود
 						</Button>
@@ -50,7 +50,7 @@ const ServicesA1 = () => {
 						</Button>
 					</div>
 					<div className="hollowCard">
-						<h3>سامانه آفلاین</h3>
+						<h3>سامانه قدیم (آنلاین-سامانه قدیم1)</h3>
 						<Button className="button yellow" variant="text" color="error">
 							ورود
 						</Button>
@@ -59,7 +59,7 @@ const ServicesA1 = () => {
 						</Button>
 					</div>
 					<div className="hollowCard">
-						<h3>سامانه آفلاین</h3>
+						<h3>سامانه قدیم (آنلاین-سامانه قدیم2)</h3>
 						<Button className="button yellow" variant="text" color="error">
 							ورود
 						</Button>

@@ -1,32 +1,37 @@
 import React from "react";
-import Accordion from "@mui/material/Accordion";
-import Typography from "@mui/material/Typography";
+import KeyboardArrowLeftRoundedIcon from "@mui/icons-material/KeyboardArrowLeftRounded";
+import { Button } from "@mui/material";
 
 const PlatformA7 = () => {
   return (
-    <div className="page">
-      <h2> معرفی PlatformA7 </h2>
-      <div className="accordionContainer">
-        <Accordion className="customAccordion">
-          <Typography>
-            <div className="customAnswer">
-              <ul>
-                <li>
-                  <b> PlatformA1 :</b>
-                  شرکت کارگزاری صباجهاد در تاریخ 1383/06/08 و با شماره 229185 در
-                  اداره ثبت شرکت‌ها و مؤسسات غیرتجاری تهران به ثبت رسید و از اول
-                  مهرماه همان سال با افتتاح تالار بورس کالای کشاورزی، فعالیت خود
-                  را آغاز نمود. صباجهاد با تکیه بر سرمایه انسانی متخصص و با هدف
-                  ارائه راهکارهای تخصصی مالی در صنعت واسطه گری مالی و بنگاه داری
-                  (بازار سرمایه، بازار پول و هلدینگ ها) فعالیت می کند.
-                </li>
-              </ul>
-            </div>
-          </Typography>
-        </Accordion>
-      </div>
-    </div>
-  );
+		<div className="page">
+			<div className="compartmentContainer">
+				<div className="compartment right">
+					<div className="data">
+						<h2>سامانه معاملات اینترنتی (آفلاین)</h2>
+						<p>
+							با سامانه سفارش های اینترنتی در هر زمان از شبانه روز می توانید
+							درخواست خرید و یا فروش خود را به اتاق معاملات ما ارسال نمایید و
+							اجرای آنها را به معامله گران حرفه ای بسپارید. اگر مشغله روزانه به
+							شما فرصت معامله نمی دهد، ما اجرای سفارش های از پیش ارسال شده شما
+							را به عهده می گیریم.
+						</p>
+						<a
+							href="https://c.sjb.co.ir/User/Login?ReturnUrl=/"
+							rel="noreferrer"
+							target="_blank"
+						>
+							<Button className="button" variant="text" color="error">
+								ورود
+								<KeyboardArrowLeftRoundedIcon className="icon" />
+							</Button>
+						</a>
+					</div>
+					<div className="image platform7"></div>
+				</div>
+			</div>
+		</div>
+	);
 };
 
 export default PlatformA7;

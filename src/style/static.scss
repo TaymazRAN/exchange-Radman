@@ -17,8 +17,8 @@
 		.hollowCard {
 			@include flex-column-centered;
 			padding: 20px 30px;
-			min-width: 250px;
-			margin: 0 30px;
+			min-width: 330px;
+			margin: 0 10px;
 			border-radius: 15px;
 			box-shadow: $box-shadow;
 			background-color: $opposite-font-color;
@@ -541,6 +541,9 @@
 		}
 		.image.platform6 {
 			background-image: url("../assets/image/jpg/platform6.jpg");
+		}
+		.image.platform7 {
+			background-image: url("../assets/image/png/platform7.png");
 		}
 		.image.bours1 {
 			background-image: url("../assets/image/jpg/bours1.jpg");

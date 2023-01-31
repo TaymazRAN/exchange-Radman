@@ -4,9 +4,9 @@ import KeyboardArrowDownRoundedIcon from "@mui/icons-material/KeyboardArrowDownR
 import { Link, useNavigate } from "react-router-dom";
 
 const SuperMenu = () => {
-  const navigate = useNavigate();
+	const navigate = useNavigate();
 
-  return (
+	return (
 		<>
 			<nav class="d-navbar">
 				<div className="d">
@@ -118,30 +118,19 @@ const SuperMenu = () => {
 						<div className="d-content">
 							<div className="d-row">
 								<div className="d-column">
-									<Link to="/static/Platforms"> پلتفرم ها </Link>
-									<Link to="/static/PlatformA1"> سرمایه‌گذاری کم ریسک </Link>
-									<Link to="/static/PlatformA2">
-										{" "}
-										سرمایه‌گذاری با تقسیم سود ماهانه{" "}
-									</Link>
-									<Link to="/static/PlatformA3">
-										{" "}
-										سرمایه‌گذاری وجوه بیکار برای دوره‌های کوتاه مدت{" "}
-									</Link>
+									<Link to="/static/PlatformA1">همراه پلاس</Link>
+									<Link to="/static/PlatformA2">سامانه فروش سهام عدالت</Link>
+									<Link to="/static/PlatformA3">آنلاین پلاس</Link>
 								</div>
 								<div className="d-column">
-									<Link to="/static/PlatformA4">
-										{" "}
-										سرمایه‌گذاری تدریجی با مبالغ کم{" "}
-									</Link>
-									<Link to="/static/PlatformA5"> سرمایه‌گذاری اسلامی </Link>
-									<Link to="/static/PlatformA6">
-										{" "}
-										سرمایه‌گذاری اختصاصی شما{" "}
-									</Link>
+									<Link to="/static/PlatformA4">همراه تریدر آتی</Link>
+									<Link to="/static/PlatformA5">سرمایه‌گذاری اسلامی</Link>
+									<Link to="/static/PlatformA6">سامانه آنلاین آتی</Link>
 								</div>
 								<div className="d-column">
-									<Link to="/static/PlatformA7"> سرمایه‌گذاری در طلا </Link>
+									<Link to="/static/PlatformA7">
+										سامانه معاملات اینترنتی (آفلاین)
+									</Link>
 								</div>
 							</div>
 						</div>
