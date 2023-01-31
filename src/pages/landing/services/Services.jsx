@@ -1,8 +1,11 @@
 import * as React from "react";
 import KeyboardArrowLeftRoundedIcon from "@mui/icons-material/KeyboardArrowLeftRounded";
 import { Button } from "@mui/material";
+import { useNavigate } from "react-router-dom";
 
 export default function Services() {
+	const navigate = useNavigate();
+
 	return (
 		<div className="cardBox">
 			<h2> خدمات کارگزاری صبا جهاد </h2>
@@ -16,7 +19,12 @@ export default function Services() {
 						بازار رسمی و سازمان‌یافتهٔ سرمایه است که در آن خرید و فروش سهام
 						شرکت‌ها و اوراق بهادار ...
 					</p>
-					<Button className="button" variant="text" color="error">
+					<Button
+						className="button"
+						variant="text"
+						color="error"
+						onClick={(event) => navigate("/static/ServicesA1")}
+					>
 						مطالب بیشتر
 						<KeyboardArrowLeftRoundedIcon className="icon" />
 					</Button>
@@ -30,7 +38,12 @@ export default function Services() {
 						به داد و ستد نقد، نسیه و سلف انواع محصولات صنعتی و کشاورزی در ایران
 						می‌پردازد و راه‌اندازی معاملات ابزارهای مشتقه و ...
 					</p>
-					<Button className="button" variant="text" color="error">
+					<Button
+						className="button"
+						variant="text"
+						color="error"
+						onClick={(event) => navigate("/static/ServicesB1")}
+					>
 						مطالب بیشتر
 						<KeyboardArrowLeftRoundedIcon className="icon" />
 					</Button>
@@ -44,7 +57,12 @@ export default function Services() {
 						یک مرکز مالی برای انجام قراردادهای آتی استاندارد است که شامل
 						توافق‌نامه‌ای قانونی با حدومرز مشخص است و ...
 					</p>
-					<Button className="button" variant="text" color="error">
+					<Button
+						className="button"
+						variant="text"
+						color="error"
+						onClick={(event) => navigate("/static/ServicesC2")}
+					>
 						مطالب بیشتر
 						<KeyboardArrowLeftRoundedIcon className="icon" />
 					</Button>
@@ -58,7 +76,12 @@ export default function Services() {
 						به منظور انجام معاملات حامل‌های انرژی با مجوز شورای عالی بورس و
 						اوراق بهادار به عنوان چهارمین بورس رسمی کشور و ...
 					</p>
-					<Button className="button" variant="text" color="error">
+					<Button
+						className="button"
+						variant="text"
+						color="error"
+						onClick={(event) => navigate("/static/ServicesD1")}
+					>
 						مطالب بیشتر
 						<KeyboardArrowLeftRoundedIcon className="icon" />
 					</Button>
