@@ -1,8 +1,7 @@
 import { createSlice } from "@reduxjs/toolkit";
 import { createAsyncThunk } from "@reduxjs/toolkit";
 import axios from "axios";
-import configData from "../../services/config.json";
-
+import configData from "../../../services/config.json";
 const url = `${configData.AddressApi}/Member`;
 
 export const fetchManagerByUsername = createAsyncThunk(
@@ -17,7 +16,9 @@ export const fetchManagerByUsername = createAsyncThunk(
 export const fetchAllMember = createAsyncThunk(
   "manager/fetchAllMember",
   async () => {
-    return axios.get(`${url}/GetAllMember`).then((response) => response.data);
+    return await axios
+      .get(`${url}/GetAllMember`)
+      .then((response) => response.data);
   }
 );
 
@@ -38,11 +39,9 @@ export const updateManager = createAsyncThunk(
 );
 
 export const suspendManager = createAsyncThunk(
-  "manager/suspendManager",
-  async (id) => {
-    return axios
-      .post(`${url}/${"DeleteMember?id="}${id}`)
-      .then((response) => response.data);
+  "manager/deleteManager",
+  async (user) => {
+    return axios.delete(`${url}/${user}`).then((response) => response.data);
   }
 );
 
@@ -72,6 +71,21 @@ export const slice = createSlice({
     },
   },
   extraReducers: (builder) => {
+    // fetchManagerByUsername
+    builder.addCase(fetchManagerByUsername.pending, (state, action) => {
+      state.loading = true;
+    });
+    builder.addCase(fetchManagerByUsername.fulfilled, (state, action) => {
+      state.loading = false;
+      state.manager = action.payload;
+      state.ready = true;
+      state.error = "";
+    });
+    builder.addCase(fetchManagerByUsername.rejected, (state, action) => {
+      state.loading = false;
+      state.ready = false;
+      state.error = action.error.message;
+    });
     // fetchManagerByUsername
     builder.addCase(fetchManagerByUsername.pending, (state, action) => {
       state.loading = true;

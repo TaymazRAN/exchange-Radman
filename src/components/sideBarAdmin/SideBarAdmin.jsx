@@ -75,6 +75,14 @@ export default function SideBarAdmin() {
                 درباره ما{" "}
               </NavLink>
               <NavLink
+                to="/admin/manager"
+                activeclassname="active"
+                className="sideBarListItem"
+              >
+                <PeopleOutlineIcon className="sideBarIcon" />
+                manager
+              </NavLink>
+              <NavLink
                 to="/admin/user"
                 activeclassname="active"
                 className="sideBarListItem"
