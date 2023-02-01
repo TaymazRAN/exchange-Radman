@@ -1,32 +1,38 @@
 import React from "react";
-import Accordion from "@mui/material/Accordion";
-import Typography from "@mui/material/Typography";
+import KeyboardArrowLeftRoundedIcon from "@mui/icons-material/KeyboardArrowLeftRounded";
+import { Button } from "@mui/material";
 
 const PlatformA3 = () => {
   return (
-    <div className="page">
-      <h2> PlatformA3</h2>
-      <div className="accordionContainer">
-        <Accordion className="customAccordion">
-          <Typography>
-            <div className="customAnswer">
-              <ul>
-                <li>
-                  <b> سامانه معاملات :</b>
-                  شرکت کارگزاری صباجهاد در تاریخ 1383/06/08 و با شماره 229185 در
-                  اداره ثبت شرکت‌ها و مؤسسات غیرتجاری تهران به ثبت رسید و از اول
-                  مهرماه همان سال با افتتاح تالار بورس کالای کشاورزی، فعالیت خود
-                  را آغاز نمود. صباجهاد با تکیه بر سرمایه انسانی متخصص و با هدف
-                  ارائه راهکارهای تخصصی مالی در صنعت واسطه گری مالی و بنگاه داری
-                  (بازار سرمایه، بازار پول و هلدینگ ها) فعالیت می کند.
-                </li>
-              </ul>
-            </div>
-          </Typography>
-        </Accordion>
-      </div>
-    </div>
-  );
+		<div className="page">
+			<div className="compartmentContainer">
+				<div className="compartment right">
+					<div className="data">
+						<h2>آنلاین پلاس</h2>
+						<p>
+							سامانه «آنلاین پلاس» بر پایه نیازهای متفاوت معامله گران حرفه ای
+							طراحی شده که یکی از ویژگی های برجسته آن، اختصاصی سازی امکانات
+							متنوع این سامانه معاملاتی می باشد. امکان مدیریت سفارش ها با حجم
+							بالا و یا ارسال همزمان سفارش در چند نماد مختلف، شما را قادر می
+							سازد در کوتاه ترین زمان ممکن، استراتژی معاملاتی خود را اجرا
+							نمایید.{" "}
+						</p>
+						<a
+							href="https://onlineplus.sjb.co.ir/Account/Login"
+							rel="noreferrer"
+							target="_blank"
+						>
+							<Button className="button" variant="text" color="error">
+								مطالب بیشتر
+								<KeyboardArrowLeftRoundedIcon className="icon" />
+							</Button>
+						</a>
+					</div>
+					<div className="image platform3"></div>
+				</div>
+			</div>
+		</div>
+	);
 };
 
 export default PlatformA3;

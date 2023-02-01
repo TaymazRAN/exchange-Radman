@@ -1,29 +1,31 @@
 import React from "react";
-import Accordion from "@mui/material/Accordion";
-import Typography from "@mui/material/Typography";
+import KeyboardArrowLeftRoundedIcon from "@mui/icons-material/KeyboardArrowLeftRounded";
+import { Button } from "@mui/material";
 
 const PlatformA1 = () => {
 	return (
 		<div className="page">
-			<h2> PlatformA2</h2>
-			<div className="accordionContainer">
-				<Accordion className="customAccordion">
-					<Typography>
-						<div className="customAnswer">
-							<ul>
-								<li>
-									<b> سامانه معاملات :</b>
-									شرکت کارگزاری صباجهاد در تاریخ 1383/06/08 و با شماره 229185 در
-									اداره ثبت شرکت‌ها و مؤسسات غیرتجاری تهران به ثبت رسید و از اول
-									مهرماه همان سال با افتتاح تالار بورس کالای کشاورزی، فعالیت خود
-									را آغاز نمود. صباجهاد با تکیه بر سرمایه انسانی متخصص و با هدف
-									ارائه راهکارهای تخصصی مالی در صنعت واسطه گری مالی و بنگاه داری
-									(بازار سرمایه، بازار پول و هلدینگ ها) فعالیت می کند.
-								</li>
-							</ul>
-						</div>
-					</Typography>
-				</Accordion>
+			<div className="compartmentContainer">
+				<div className="compartment right">
+					<div className="data">
+						<h2>همراه پلاس</h2>
+						<p>
+							با همراه پلاس نیازی به نصب اپلیکیشن ندارید. اگر در زمان معاملات،
+							خارج از محل کار و یا زندگی خود هستید، ما همراه پلاس را به شما
+							پیشنهاد می کنیم. از طریق این سامانه به راحتی، با سرعت بالا و بدون
+							نیاز به نصب اپلیکیشن، با گوشی ها و تبلت ها با سیستم عامل Android و
+							iOS وارد سامانه معاملات شوید.{" "}
+						</p>
+
+						<a href="https://mobile.sjb.co.ir" rel="noreferrer" target="_blank">
+							<Button className="button" variant="text" color="error">
+								ورود
+								<KeyboardArrowLeftRoundedIcon className="icon" />
+							</Button>
+						</a>
+					</div>
+					<div className="image platform1"></div>
+				</div>
 			</div>
 		</div>
 	);

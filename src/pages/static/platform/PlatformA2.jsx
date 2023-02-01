@@ -1,32 +1,35 @@
 import React from "react";
-import Accordion from "@mui/material/Accordion";
-import Typography from "@mui/material/Typography";
+import KeyboardArrowLeftRoundedIcon from "@mui/icons-material/KeyboardArrowLeftRounded";
+import { Button } from "@mui/material";
 
 const PlatformA2 = () => {
   return (
-    <div className="page">
-      <h2> PlatformA2</h2>
-      <div className="accordionContainer">
-        <Accordion className="customAccordion">
-          <Typography>
-            <div className="customAnswer">
-              <ul>
-                <li>
-                  <b> سامانه معاملات :</b>
-                  شرکت کارگزاری صباجهاد در تاریخ 1383/06/08 و با شماره 229185 در
-                  اداره ثبت شرکت‌ها و مؤسسات غیرتجاری تهران به ثبت رسید و از اول
-                  مهرماه همان سال با افتتاح تالار بورس کالای کشاورزی، فعالیت خود
-                  را آغاز نمود. صباجهاد با تکیه بر سرمایه انسانی متخصص و با هدف
-                  ارائه راهکارهای تخصصی مالی در صنعت واسطه گری مالی و بنگاه داری
-                  (بازار سرمایه، بازار پول و هلدینگ ها) فعالیت می کند.
-                </li>
-              </ul>
-            </div>
-          </Typography>
-        </Accordion>
-      </div>
-    </div>
-  );
+		<div className="page">
+			<div className="compartmentContainer">
+				<div className="compartment left">
+					<div className="image platform2"></div>
+					<div className="data">
+						<h2>سامانه فروش سهام عدالت</h2>
+						<p>
+							اگر سهام عدالت به شما تعلق گرفته و نسبت به آزاد سازی آن اقدام
+							نموده اید، می توانید بدون دریافت کد بورسی و بدون مراجعه حضوری به
+							کارگزاری، نسبت به فروش آن اقدام نمایید.{" "}
+						</p>
+						<a
+							href="https://sjbse.etadbir.com/login.html"
+							rel="noreferrer"
+							target="_blank"
+						>
+							<Button className="button" variant="text" color="error">
+								فروش
+								<KeyboardArrowLeftRoundedIcon className="icon" />
+							</Button>
+						</a>
+					</div>
+				</div>
+			</div>
+		</div>
+	);
 };
 
 export default PlatformA2;
