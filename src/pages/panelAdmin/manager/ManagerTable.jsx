@@ -15,8 +15,7 @@ import {
 } from "../../../features/account/managerSlice";
 
 const ManagerTable = () => {
-  const organid = JSON.parse(localStorage.getItem("organid"));
-
+  // const organid = JSON.parse(localStorage.getItem("organid"));
   const data = useSelector((state) => state.manager.data);
   // const loading = useSelector((state) => state.request.loading);
   const handleLoading = useSelector((state) => state.manager.handleLoading);
@@ -50,16 +49,16 @@ const ManagerTable = () => {
     setErrorAlert(false);
   };
 
-  useEffect(() => {
-    dispatch(fetchOrganizationManagers(organid));
-    // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, []);
+  // useEffect(() => {
+  //   dispatch(fetchOrganizationManagers(organid));
+  //   // eslint-disable-next-line react-hooks/exhaustive-deps
+  // }, []);
 
   useEffect(() => {
     if (handleError === "success") {
       handleOpenSuccess("عملیات با موفقیت انجام شد");
       setTimeout(() => {
-        navigate(`/organization/manager`);
+        navigate(`/admin/manager`);
         dispatch(managerActions.clearHandleError());
       }, 1500);
     } else if (handleError !== "success" && handleError !== "") {

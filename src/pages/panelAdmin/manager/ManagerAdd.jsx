@@ -10,6 +10,13 @@ import LoadingRedux from "../../../components/loadingRedux/LoadingRedux";
 import LoadingSmall from "../../../components/loadingSmall/LoadingSmall";
 import { registerActions } from "../../../features/account/registerSlice";
 import { addManager } from "../../../features/account/managerSlice";
+import {
+  FormControl,
+  FormHelperText,
+  InputLabel,
+  MenuItem,
+  Select,
+} from "@mui/material";
 
 const validationSchema = yup.object().shape({
   fullName: yup.string().required("نام مدیر را وارد کنید"),
@@ -142,55 +149,61 @@ export default function ManagerAdd(props) {
                   error={touched.fullName && Boolean(errors.fullName)}
                   helperText={touched.fullName && errors.fullName}
                 />
-                {/* <FormControl margin="dense" fullWidth className="profileInput">
+                <FormControl margin="dense" fullWidth className="profileInput">
                   <InputLabel
-                    error={touched.isExecutive && Boolean(errors.isExecutive)}
+                    error={touched.responsible && Boolean(errors.responsible)}
                   >
                     نوع مدیر
                   </InputLabel>
                   <Select
-                    labelId="isExecutive"
-                    id="isExecutive"
+                    labelId="responsible"
+                    id="responsible"
                     variant="outlined"
-                    value={values.isExecutive}
+                    value={values.responsible}
                     onChange={(e) => {
-                      setFieldValue("isExecutive", e.target.value);
+                      setFieldValue("responsible", e.target.value);
                     }}
-                    error={touched.isExecutive && Boolean(errors.isExecutive)}
+                    error={touched.responsible && Boolean(errors.responsible)}
                     fullWidth
                     label="نوع مدیر"
                   >
                     <MenuItem value="" sx={{ justifyContent: "flex-end" }}>
                       <em>انتخاب کنید</em>
                     </MenuItem>
-                    <MenuItem value={true} sx={{ justifyContent: "flex-end" }}>
+                    <MenuItem
+                      value={"Admin"}
+                      sx={{ justifyContent: "flex-end" }}
+                    >
                       مدیر اصلی
                     </MenuItem>
-                    <MenuItem value={false} sx={{ justifyContent: "flex-end" }}>
+                    <MenuItem
+                      value={"Users"}
+                      sx={{ justifyContent: "flex-end" }}
+                    >
                       مدیر عادی
                     </MenuItem>
                   </Select>
                   <FormHelperText
-                    error={touched.isExecutive && Boolean(errors.isExecutive)}
+                    error={touched.responsible && Boolean(errors.responsible)}
                   >
-                    {touched.isExecutive && errors.isExecutive}
+                    {touched.responsible && errors.responsible}
                   </FormHelperText>
-                </FormControl> */}
+                </FormControl>
               </div>
               <div className="profileInputContainer">
                 <TextField
                   dir="rtl"
                   margin="dense"
-                  id="responsible"
+                  id="image"
                   label="عکس"
                   type="text"
                   fullWidth
                   variant="outlined"
                   className="profileInput"
-                  value={values.responsible}
+                  value={values.image}
                   onChange={handleChange}
-                  error={touched.responsible && Boolean(errors.responsible)}
-                  helperText={touched.responsible && errors.responsible}
+                  error={touched.image && Boolean(errors.image)}
+                  helperText={touched.image && errors.image}
                 />
                 <TextField
                   dir="rtl"
@@ -223,33 +236,41 @@ export default function ManagerAdd(props) {
               </div>
 
               <div className="profileInputContainer">
-                <Button
-                  variant="outlined"
-                  className="profileInput"
-                  component="label"
-                  margin="dense"
-                  color="error"
-                  onClick={(event) => navigate("/admin/manager")}
-                  id="logoFileName"
-                  sx={{ padding: "15px 0", marginTop: "4px" }}
-                  fullWidth
-                >
-                  انصراف
-                </Button>
-                <Button
-                  variant="outlined"
-                  className="profileInput"
-                  component="label"
-                  margin="dense"
-                  id="logoFileName"
-                  color="primary"
-                  sx={{ padding: "15px 0", marginTop: "4px" }}
-                  onClick={(event) => handleSubmit()}
-                  fullWidth
-                >
-                  اضافه کردن
-                  {handleLoading ? <LoadingSmall /> : null}
-                </Button>
+                <div style={{ display: "flex" }}>
+                  <div className="BtnBottom">
+                    {" "}
+                    <Button
+                      variant="outlined"
+                      className="profileInput"
+                      component="label"
+                      margin="dense"
+                      color="error"
+                      onClick={(event) => navigate("/admin/manager")}
+                      id="logoFileName"
+                      sx={{ padding: "15px 0", marginTop: "4px" }}
+                      fullWidth
+                    >
+                      انصراف
+                    </Button>
+                  </div>
+                  <div className="BtnBottom">
+                    {" "}
+                    <Button
+                      variant="outlined"
+                      className="profileInput"
+                      component="label"
+                      margin="dense"
+                      id="logoFileName"
+                      color="primary"
+                      sx={{ padding: "15px 0", marginTop: "4px" }}
+                      onClick={(event) => handleSubmit()}
+                      fullWidth
+                    >
+                      اضافه کردن
+                      {handleLoading ? <LoadingSmall /> : null}
+                    </Button>
+                  </div>
+                </div>
               </div>
             </Form>
           )}

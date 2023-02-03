@@ -119,8 +119,8 @@ export default function Dashboard() {
               <Area
                 type="monotone"
                 dataKey="user"
-                stroke="#49DEE9"
-                fill="#49DEE9"
+                stroke="#4955b6"
+                fill="#4955b6"
                 fillOpacity={0.6}
               />
               <Tooltip />
@@ -137,8 +137,8 @@ export default function Dashboard() {
                 type="monotone"
                 dataKey="user"
                 radius={[10, 10, 0, 0]}
-                stroke="#49DEE9"
-                fill="#49DEE9"
+                stroke="#4955b6"
+                fill="#4955b6"
                 fillOpacity={0.6}
               />
               <Tooltip />

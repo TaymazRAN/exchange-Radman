@@ -2,7 +2,12 @@
 	padding: 0;
 	margin-bottom: 20px;
 }
-
+.CustomGrid{
+  padding: 0;
+  /* margin: 10; */
+  height: "100%";
+  direction: rtl;
+}
 .dataGrid:last-child {
 	margin-bottom: 0;
 }
@@ -35,20 +40,27 @@
 	align-items: center;
 	justify-content: right;
 	margin-bottom: 15px;
+  color: rgb(0, 0, 91) !;
 }
 
 .credit {
 	color: #222222 !important;
 	margin-right: auto !important;
 }
-
+.BtnBottom{
+flex: 1;
+ margin: 5 ; 
+}
 .topButton {
 	margin-right: 15px;
+  color: #028c40;
 }
 
 .topButtonIcon {
-	font-size: 20px;
+	font-size: 25px;
 	margin-right: 5px;
+  color: #028c40;
+  font-weight: bold;
 }
 
 .percentageContainer {
@@ -66,7 +78,7 @@
 	top: 0;
 	left: 0;
 	height: 100%;
-	background-color: #06b800;
+	background-color: #050f5c;
 	z-index: 2;
 }
 

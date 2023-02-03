@@ -1,5 +1,5 @@
 import { useSelector, useDispatch } from "react-redux";
-import { DataGrid } from "@mui/x-data-grid";
+import { DataGrid, GridToolbar } from "@mui/x-data-grid";
 import AddIcon from "@mui/icons-material/Add";
 import EditOutlinedIcon from "@mui/icons-material/EditOutlined";
 import { Button } from "@mui/material";
@@ -17,17 +17,14 @@ import {
 
 const MemberList = () => {
   // const organid = JSON.parse(localStorage.getItem("organid"));
-
   const data = useSelector((state) => state.manager.data);
   // const loading = useSelector((state) => state.request.loading);
   const handleLoading = useSelector((state) => state.manager.handleLoading);
   const error = useSelector((state) => state.manager.error);
   const handleError = useSelector((state) => state.manager.handleError);
   const ready = useSelector((state) => state.manager.ready);
-
   const dispatch = useDispatch();
   const navigate = useNavigate();
-
   const [successAlert, setSuccessAlert] = useState(false);
   const [successText, setSuccessText] = useState("");
   const handleOpenSuccess = (text) => {
@@ -55,7 +52,6 @@ const MemberList = () => {
     // dispatch(fetchOrganizationManagers(organid));
     dispatch(fetchAllMember());
     console.log("data", data);
-    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
 
   useEffect(() => {
@@ -74,30 +70,17 @@ const MemberList = () => {
 
   const columns = [
     {
-      field: "id",
-      headerName: "id",
-      flex: 1,
-    },
-    {
       field: "fullName",
-      headerName: "fullName",
+      headerName: "نام و نام خانوادگی",
       flex: 1,
     },
-    {
-      field: "image",
-      headerName: "image",
-      flex: 1,
-    },
+
     {
       field: "responsible",
-      headerName: "responsible",
+      headerName: "مسئولیت",
       flex: 1,
     },
-    {
-      field: "body",
-      headerName: "body",
-      flex: 1,
-    },
+
     // {
     //   field: "isExecutive",
     //   headerName: "نوع مدیر",
@@ -129,7 +112,8 @@ const MemberList = () => {
               ویرایش
             </Button>
             <AlertDeleteRedux
-              title="کاربر"
+              titleMessage="عضو هیات مدیره"
+              nameMessage={parameters.row.fullName}
               clickFunction={(event) => {
                 dispatch(suspendManager(parameters.id));
               }}
@@ -142,7 +126,7 @@ const MemberList = () => {
   ];
 
   return (
-    <div dir="rtl" className="dataGrid">
+    <div className="CustomGrid" style={{ width: "96%", height: "95%" }}>
       <SnackAlert
         props={{
           successAlert,
@@ -165,7 +149,7 @@ const MemberList = () => {
         </Button>
       </div>
 
-      <div style={{ height: 500, width: 800 }}>
+      <div style={{ height: 450 }}>
         <>
           {error !== "" || !ready ? (
             <LoadingRedux error={error} />
@@ -173,11 +157,13 @@ const MemberList = () => {
             <DataGrid
               rows={data}
               columns={columns}
-              pageSize={7}
+              pageSize={5}
               rowsPerPageOptions={[7]}
               checkboxSelection
               disableSelectionOnClick
               sx={{ color: "#2C3333", fontSize: "13px" }}
+              pagination
+              components={{ Toolbar: GridToolbar }}
             />
           )}
         </>

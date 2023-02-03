@@ -7,35 +7,42 @@ import Button from "@mui/material/Button";
 import LoadingSmall from "../loadingSmall/LoadingSmall";
 
 export default function AlertDeleteRedux(props) {
-	const submit = () => {
-		confirmAlert({
-			title: `پاک کردن ${props.title}`,
-			message: `آیا از پاک کردن این ${props.title} مطمئن هستید؟`,
-			overlayClassName: "deleteTestClass",
-			buttons: [
-				{
-					label: "بله",
-					onClick: props.clickFunction,
-				},
-				{
-					label: "خیر",
-				},
-			],
-		});
-	};
+  // const navigate = useNavigate();
+  const submit = () => {
+    confirmAlert({
+      title: `پاک کردن ${props.titleMessage}`,
+      message: `آیا از پاک کردن    " ${props.nameMessage}  " مطمئن هستید؟`,
+      overlayClassName: "deleteTestClass",
+      buttons: [
+        {
+          label: "بله",
+          onClick: props.clickFunction,
 
-	return (
-		<>
-			<Button
-				className="gridButton"
-				// onClick={confirmDelete}
-				color="error"
-				onClick={submit}
-			>
-				{props.loading ? null : <DeleteOutlineIcon className="gridIcon" />}
-				حذف
-				{props.loading ? <LoadingSmall /> : null}
-			</Button>
-		</>
-	);
+          // navigate(`/admin/manager`),
+        },
+        {
+          label: "خیر",
+        },
+      ],
+    });
+  };
+
+  // useEffect(() => {
+  //   navigate(`/admin/manager`);
+  // }, []);
+
+  return (
+    <>
+      <Button
+        className="gridButton"
+        // onClick={confirmDelete}
+        color="error"
+        onClick={submit}
+      >
+        {props.loading ? null : <DeleteOutlineIcon className="gridIcon" />}
+        حذف
+        {props.loading ? <LoadingSmall /> : null}
+      </Button>
+    </>
+  );
 }

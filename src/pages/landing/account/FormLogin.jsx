@@ -34,7 +34,7 @@ export default function FormLogin() {
                 variant="contained"
                 sx={{
                   fontSize: "16px",
-                  backgroundColor: "#49DEE9",
+                  backgroundColor: "#4955b6",
                   color: "#ffffff",
                   borderRadius: "20px",
                   height: "40px",

@@ -5,7 +5,6 @@ import configData from "../../services/config.json";
 
 const url = `${configData.AddressApi}/Member`;
 
-// api/v1/Member?id=a3bdcf61-4380-4e57-bd7c-22e66a72c26f
 export const fetchManagerByID = createAsyncThunk(
   "manager/fetchManagerByID",
   async (id) => {
@@ -23,7 +22,7 @@ export const fetchAllMember = createAsyncThunk(
 export const fetchOrganizationManagers = createAsyncThunk(
   "user/fetchOrganizationManagers",
   async (organid) => {
-    return axios
+    return await axios
       .get(`${url}/organization/${organid}`)
       .then((response) => response.data);
   }
@@ -31,9 +30,11 @@ export const fetchOrganizationManagers = createAsyncThunk(
 
 export const updateManager = createAsyncThunk(
   "manager/updateManager",
-  async ({ id, data }) => {
-    return axios
-      .post(`${url}/UpdateMember/${id}`, data)
+  async (user, data) => {
+    console.log("user--", user.user);
+    console.log("data--", user.data);
+    return await axios
+      .post(`${url}/${"UpdateMember?id="}${user.user}`, user.data)
       .then((response) => response.data);
   }
 );
@@ -52,7 +53,7 @@ export const addManager = createAsyncThunk(
 export const suspendManager = createAsyncThunk(
   "manager/suspendManager",
   async (id) => {
-    return axios
+    return await axios
       .post(`${url}/${"DeleteMember?id="}${id}`)
       .then((response) => response.data);
   }
@@ -61,7 +62,7 @@ export const suspendManager = createAsyncThunk(
 export const uploadManagerImage = createAsyncThunk(
   "manager/uploadManagerImage",
   async ({ user, data }) => {
-    return axios
+    return await axios
       .put(`${url}/${user}/image`, data)
       .then((response) => response.data);
   }
@@ -84,7 +85,7 @@ export const slice = createSlice({
     },
   },
   extraReducers: (builder) => {
-    // fetchManagerByID
+    // fetchManagerByID----------------------------------------------
     builder.addCase(fetchManagerByID.pending, (state, action) => {
       state.loading = true;
     });
@@ -100,7 +101,7 @@ export const slice = createSlice({
       state.error = action.error.message;
     });
 
-    // fetchAllMember
+    // fetchAllMember------------------------------------------------
     builder.addCase(fetchAllMember.pending, (state, action) => {
       state.loading = true;
     });
@@ -116,7 +117,7 @@ export const slice = createSlice({
       state.error = action.error.message;
     });
 
-    // updateManager
+    // updateManager ------------------------------------------------
     builder.addCase(updateManager.pending, (state, action) => {
       state.handleLoading = true;
     });
@@ -129,7 +130,7 @@ export const slice = createSlice({
       state.handleError = action.error.message;
     });
 
-    // deleteManager
+    // deleteManager --------------------------------------------
     builder.addCase(suspendManager.pending, (state, action) => {
       state.handleLoading = true;
     });
@@ -141,7 +142,7 @@ export const slice = createSlice({
       state.handleLoading = false;
       state.handleError = action.error.message;
     });
-    //addManager
+    //addManager ---------------------------------------------------
     builder.addCase(addManager.pending, (state, action) => {
       state.handleLoading = true;
     });
@@ -153,7 +154,7 @@ export const slice = createSlice({
       state.handleLoading = false;
       state.handleError = action.error.message;
     });
-    // uploadManagerImage
+    // uploadManagerImage ------------------------------------------
     builder.addCase(uploadManagerImage.pending, (state, action) => {
       state.handleLoading = true;
     });

@@ -10,16 +10,21 @@
 .react-confirm-alert-body::before {
 	content: "";
 	display: inline-block;
-	width: 80px;
-	height: 80px;
+	width: 100px;
+	height: 100px;
 	background-size: cover;
 	background-position: center center;
-	background-image: url("https://www.pngall.com/wp-content/uploads/8/Warning-PNG-Free-Image.png");
-	margin-bottom: 20px !important;
+	/* background-image: url("https://www.pngall.com/wp-content/uploads/8/Warning-PNG-Free-Image.png"); */
+	background-image: url("./../../assets/image/png/delete.png");
+
+	margin-bottom: 10px !important;
 }
 
 .confirmTestClass .react-confirm-alert-body::before {
-	background-image: url("https://cdn-icons-png.flaticon.com/512/1004/1004739.png");
+	/* background-image: url("https://cdn-icons-png.flaticon.com/512/1004/1004739.png"); */
+	background-image: url("./../../assets/image/png/delete.png");
+
+
 }
 
 .react-confirm-alert-body h1 {

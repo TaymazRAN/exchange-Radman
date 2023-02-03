@@ -126,7 +126,7 @@ const MenuTop = () => {
                   my: 2,
                   display: "block",
                   margin: "0 15px",
-                  color: "#49DEE9",
+                  color: "#4955b6",
                   fontSize: "16px",
                   borderRadius: "20px",
                   height: "40px",
@@ -143,7 +143,7 @@ const MenuTop = () => {
               <IconButton
                 sx={{
                   marginLeft: "10px",
-                  color: "#49DEE9",
+                  color: "#4955b6",
                 }}
               >
                 <HomeRoundedIcon sx={{ fontSize: "30px" }} />
@@ -162,7 +162,7 @@ const MenuTop = () => {
                   paddingRight: "15px",
                   boxShadow: "0 2px 5px #dddddd",
                   fontSize: "15px",
-                  color: "#49DEE9",
+                  color: "#4955b6",
                 }}
               >
                 <NavLink to="/login" className="link">
