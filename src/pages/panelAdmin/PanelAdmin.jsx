@@ -12,6 +12,12 @@ import { fetchUsers } from "../../features/account/userSlice";
 import MemberList from "./manager/MemberList";
 import ManagerAdd from "./manager/ManagerAdd";
 import ManagerEdit from "./manager/ManagerEdit";
+import QuestionAdd from "./question/QuestionAdd";
+import QuestionEdit from "./question/QuestionEdit";
+import QuestionList from "./question/QuestionList";
+import SubMenuList from "./subMenu/SubMenuList";
+import SubMenuAdd from "./subMenu/SubMenuAdd";
+import SubMenuEdit from "./subMenu/SubMenuEdit";
 
 export default function PanelAdmin() {
   const token = JSON.parse(localStorage.getItem("token"));
@@ -20,7 +26,6 @@ export default function PanelAdmin() {
   if (token) {
     axios.interceptors.request.use(function (config) {
       config.headers.Authorization = `Bearer ${token.token}`;
-
       return config;
     });
   }
@@ -49,6 +54,12 @@ export default function PanelAdmin() {
               <Route path="/manager" element={<MemberList />} />
               <Route path="/managerAdd" element={<ManagerAdd />} />
               <Route path="/managerEdit/:id" element={<ManagerEdit />} />
+              <Route path="/question" element={<QuestionList />} />
+              <Route path="/questionAdd" element={<QuestionAdd />} />
+              <Route path="/questionEdit/:id" element={<QuestionEdit />} />
+              <Route path="/subMenu" element={<SubMenuList />} />
+              <Route path="/subMenuAdd" element={<SubMenuAdd />} />
+              <Route path="/subMenuEdit/:id" element={<SubMenuEdit />} />
             </Routes>
           </div>
         </div>

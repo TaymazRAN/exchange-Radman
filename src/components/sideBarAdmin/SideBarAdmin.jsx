@@ -82,6 +82,25 @@ export default function SideBarAdmin() {
                 <PeopleOutlineIcon className="sideBarIcon" />
                 manager
               </NavLink>
+
+              <NavLink
+                to="/admin/subMenu"
+                activeclassname="active"
+                className="sideBarListItem"
+              >
+                <PeopleOutlineIcon className="sideBarIcon" />
+                subMenu
+              </NavLink>
+
+              <NavLink
+                to="/admin/question"
+                activeclassname="active"
+                className="sideBarListItem"
+              >
+                <PeopleOutlineIcon className="sideBarIcon" />
+                question
+              </NavLink>
+
               <NavLink
                 to="/admin/user"
                 activeclassname="active"
@@ -90,16 +109,9 @@ export default function SideBarAdmin() {
                 <PeopleOutlineIcon className="sideBarIcon" />
                 پلتفرم های معاملاتی
               </NavLink>
+
               <NavLink
-                to="/admin/user"
-                activeclassname="active"
-                className="sideBarListItem"
-              >
-                <PeopleOutlineIcon className="sideBarIcon" />
-                سوالات متداول
-              </NavLink>{" "}
-              <NavLink
-                to="/admin/user"
+                to="/admin/question"
                 activeclassname="active"
                 className="sideBarListItem"
               >

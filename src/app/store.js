@@ -2,6 +2,7 @@ import { configureStore } from "@reduxjs/toolkit";
 import loginSlice from "../features/account/loginSlice";
 import managerSlice from "../features/account/managerSlice";
 import registerSlice from "../features/account/registerSlice";
+import subMenuSlice from "../features/account/subMenuSlice";
 import userSlice from "../features/account/userSlice";
 import departmentSlice from "../features/department/departmentSlice";
 import employeeSlice from "../features/employee/employeeSlice";
@@ -26,6 +27,7 @@ const store = configureStore({
     register: registerSlice,
     user: userSlice,
     manager: managerSlice,
+    subMenu: subMenuSlice,
     department: departmentSlice,
     employee: employeeSlice,
     organization: organizationSlice,
