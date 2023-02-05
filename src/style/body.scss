@@ -126,13 +126,15 @@
 			}
 		}
 		.card.why .card.service {
-			min-height: 220px;
-			margin-right: -200px;
-			min-width: 220px;
-			max-width: 220px;
-			margin-bottom: 0;
-			box-shadow: none;
-			background-color: $secondary200;
+	 min-height: 220px;
+margin-right: -200px;
+min-width: 220px;
+max-width: 220px;
+margin-bottom: 0;
+box-shadow: none;
+background-color: #2e3192;
+color: white;
+
 		}
 		.card.why {
 			overflow: unset;

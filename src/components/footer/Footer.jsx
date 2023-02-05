@@ -74,10 +74,9 @@ export default function Footer() {
       </div>
       <div className="copyright">
         {/* تمام حقوق برای کارگزاری صبا جهاد وهلدینگ الماس داده محفوظ می‌باشد. © */}
-        <a href="radman.app" style={{ backgroundColor: "white", fontSize: 25 }}>
-          طراحی و اجرا توسط رادمان{" "}
+        <a href="radman.app" style={{ fontSize: 25 }}>
+          طراحی و اجرا توسط رادمان ۱۳۹۰ - ۱۴۰۱
         </a>
-        ۱۳۹۰ - ۱۴۰۱
       </div>
     </div>
   );
