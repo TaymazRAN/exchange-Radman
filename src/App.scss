@@ -56,8 +56,34 @@
 	}
 }
 .textBody{
-   line-height: 3 ; 
+   line-height: 3 !important; 
    text-Align: "justify" 
+
+}
+.tabTypography{
+  // line-height: 3 !important;
+  border: rgb(4, 26, 88) 1 !important;
+  border-radius: 10px !important;
+  // background-color: #888 !important;
+  font-size: 14px !important;
+  margin: 5px !important;
+  background-color: rgb(204, 204, 204) !important;
+
+}
+
+.tabTypographyVertical{
+    border: rgb(4, 26, 88) 1 !important;
+    border-radius: 10px !important;
+    margin: 14 !important;
+    font-size: 14px !important;
+    margin: 2px !important;
+    background-color: rgb(204, 204, 204) !important;
+    padding: 2px 5px !important;
+}
+
+.tabTypography:hover{
+  // line-height: 3 !important;
+  background-color:rgb(4, 26, 88) 1 !important;
 
 }
 ::-webkit-scrollbar {

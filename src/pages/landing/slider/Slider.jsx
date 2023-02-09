@@ -76,7 +76,7 @@ export default function Slider() {
             </h1>
             <p className="description">
               {" "}
-              بهترین و هوشمند ترین سامانه معاملاتی{" "}
+              در 2 دقیقه ثبت نام خود را در کارگزاری صبا جهاد انجام دهید{" "}
             </p>
             <a
               href="https://customer.sjb.co.ir"

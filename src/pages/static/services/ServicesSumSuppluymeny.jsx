@@ -7,13 +7,13 @@ import AccordionDetails from "@mui/material/AccordionDetails";
 import Typography from "@mui/material/Typography";
 import ExpandMoreIcon from "@mui/icons-material/ExpandMore";
 
-const ServicesA1 = () => {
+const ServicesSumSuppluymeny = () => {
   return (
     <div className="page">
       <div className="compartmentContainer">
         <div className="compartment right">
           <div className="data">
-            <h2>معرفی بورس اوراق بهادار</h2>
+            <h2>معرفی بورس اوراق بهادار ServicesSumSuppluymeny</h2>
             <p>
               بورس اوراق بهادار یک بازار متشکل و رسمی سرمایه است که در آن سهم
               شرکت‌ها و اوراق مشارکت بر اساس مقرارت مورد معامله قرار می‌گیرد.
@@ -121,7 +121,6 @@ const ServicesA1 = () => {
                   جهاد 100 تومان است. هر فرد وقتی اقدام به خرید سهام می‌کند در
                   واقع فعالیت خود در بازار سرمایه را شروع کرده است. افراد پس از
                   خرید سهام، مالک جزئی از دارایی شرکت می‌شوند.
-                  <br />
                 </div>
               </Typography>
             </AccordionDetails>
@@ -246,4 +245,4 @@ const ServicesA1 = () => {
   );
 };
 
-export default ServicesA1;
+export default ServicesSumSuppluymeny;

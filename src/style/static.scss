@@ -59,9 +59,10 @@
 	.fullImage {
 		@include centered-background;
 		width: 100%;
-		border-radius: 20px;
-		margin: 30px 0;
+		border-radius: 10px;
+		margin: 10px 0;
 		aspect-ratio: 5/2;
+    background-size: auto;
 	}
 	.fullImage.long {
 		aspect-ratio: 3/2;
@@ -102,8 +103,15 @@
 	.fullImage.about {
 		background-image: url("../assets/image/jpg/about.jpg");
 	}
-	.fullImage.about2 {
-		background-image: url("../assets/image/jpg/about2.jpg");
+  .fullImage.sabt {
+		background-image: url("../assets/image/jahad/sabt.png");
+	} 
+  .fullImage.RegisterSum {
+		background-image: url("../assets/image/jahad/RegisterSum.jpg");
+	}
+  
+	.fullImage.saham {
+		background-image: url("../assets/image/jahad/saham.png");
 	}
 	.fullImage.chart {
 		background-image: url("../assets/image/jpg/chart.jpg");

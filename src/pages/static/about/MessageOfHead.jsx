@@ -11,7 +11,7 @@ const MessageOfHead = () => {
           <Typography>
             <div className="customAnswer">
               <ul>
-                <li>
+                <li className="textBody">
                   <b> پیام مدیر عامل :</b>
                   شرکت کارگزاری صباجهاد در تاریخ 1383/06/08 و با شماره 229185 در
                   اداره ثبت شرکت‌ها و مؤسسات غیرتجاری تهران به ثبت رسید و از اول

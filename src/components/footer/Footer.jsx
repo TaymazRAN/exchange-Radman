@@ -28,7 +28,7 @@ export default function Footer() {
             <h2>خدمات</h2>
             <a href="/">بورس اوراق بهادر</a>
             <a href="/">بورس کالا</a>
-            <a href="/">آتی کالا</a>
+            {/* <a href="/">آتی کالا</a> */}
             <a href="/">بورس انرژی</a>
             <a href="/">عرضه و پذیرش شرکت‌ها</a>
           </div>
@@ -41,18 +41,23 @@ export default function Footer() {
             </p>
             <p>
               <PhoneRoundedIcon className="footerIcon" />
-              شماره تماس: ۰۲۱-۶۳۴۸۶۰۰۰
+              شماره تماس : ۰۲۱۶۳۴۸۶۰۰۰
             </p>
             <p>
               <FaxRoundedIcon className="footerIcon" />
-              شماره فکس: ۰۲۱-۶۴۴۸۶۰۰۰
+              شماره فکس : ۰۲۱۶۴۴۸۶۰۰۰
             </p>
             <p>
               <EmailRoundedIcon className="footerIcon" />
               ایمیل: info@sjb.co.ir
             </p>
           </div>
-          <div className="column map"></div>
+          {/* <a
+            target="_blank"
+            href="https://www.google.com/maps/place/%D8%B4%D8%B1%DA%A9%D8%AA+%DA%A9%D8%A7%D8%B1%DA%AF%D8%B2%D8%A7%D8%B1%DB%8C+%D8%B5%D9%86%D8%AF%D9%88%D9%82+%D8%A8%D8%A7%D8%B2%D9%86%D8%B4%D8%B3%D8%AA%DA%AF%DB%8C+%DA%A9%D8%B4%D9%88%D8%B1+(%D8%B5%D8%A8%D8%A7+%D8%AC%D9%87%D8%A7%D8%AF)%E2%80%AD/@35.7038756,51.4015164,18z/data=!3m1!4b1!4m5!3m4!1s0x3f8e0142c7ed3b85:0x9873faef5750da59!8m2!3d35.7038734!4d51.4026107"
+          > */}
+          <div className="column map"> </div>
+
           <div className="column social">
             <h2>ما را در شبکه‌های اجتماعی دنبال کنید</h2>
             <div className="socialContainer">
@@ -74,7 +79,7 @@ export default function Footer() {
       </div>
       <div className="copyright">
         {/* تمام حقوق برای کارگزاری صبا جهاد وهلدینگ الماس داده محفوظ می‌باشد. © */}
-        <a href="radman.app" style={{ fontSize: 25 }}>
+        <a href="radman.app" style={{ fontSize: 18 }}>
           طراحی و اجرا توسط رادمان ۱۳۹۰ - ۱۴۰۱
         </a>
       </div>
