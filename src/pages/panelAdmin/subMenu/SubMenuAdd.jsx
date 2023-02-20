@@ -20,6 +20,7 @@ import {
   addsubMenu,
   subMenuActions,
 } from "../../../features/account/subMenuSlice";
+import Editor from "../../../components/editor/Editor";
 
 const validationSchema = yup.object().shape({
   title: yup.string().required("  عنوان را وارد کنید"),
@@ -82,7 +83,7 @@ export default function SubMenuAdd(props) {
     if (handleError === "success") {
       handleOpenSuccess("عملیات با موفقیت انجام شد");
       setTimeout(() => {
-        navigate(`/admin/subMenu`);
+        // navigate(`/admin/subMenu`);
         dispatch(subMenuActions.clearHandleError());
       }, 1500);
     } else if (handleError !== "success" && handleError !== "") {
@@ -148,6 +149,16 @@ export default function SubMenuAdd(props) {
                   onChange={handleChange}
                   error={touched.title && Boolean(errors.title)}
                   helperText={touched.title && errors.title}
+                />
+                <Editor
+                  dir="rtl"
+                  id="title"
+                  // label="body"
+                  placeholder="title وارد  کن  "
+                  value={values.title}
+                  onChange={handleChange}
+                  // error={touched.body && Boolean(errors.body)}
+                  // helperText={touched.body && errors.body}
                 />
                 <FormControl margin="dense" fullWidth className="profileInput">
                   <InputLabel

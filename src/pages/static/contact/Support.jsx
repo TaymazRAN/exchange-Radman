@@ -51,8 +51,7 @@ const Support = () => {
                   id="panel1a-header"
                 >
                   <div className="customQuestion">
-                    چه کسی اصل سرمایه (آورده اولیه) سرمایه‌گذاران صندوق تضمین
-                    صبا جهاد را تضمین می‌کند؟
+                    سهم چیست؟
                     <div className="customBorder"></div>
                   </div>
                 </AccordionSummary>
@@ -61,7 +60,12 @@ const Support = () => {
                     <div className="customAnswer">
                       <ul>
                         <li>
-                          <b>تکست:</b>تکست
+                          سرمایه هر شرکت سهامی به قسمت‌های مساوی تقسیم می‌شود که
+                          به هر یک از این قسمت‌ها، یک سهم می‌گویند. معمولا قیمت
+                          اسمی سهام در ایران 100 تومان است. هر فرد وقتی اقدام به
+                          خرید سهام می‌کند در واقع فعالیت خود در بازار سرمایه را
+                          شروع کرده است. افراد پس از خرید سهام، مالک جزئی از
+                          دارایی شرکت می‌شوند.
                         </li>
                       </ul>
                     </div>
@@ -79,7 +83,7 @@ const Support = () => {
                   id="panel1a-header"
                 >
                   <div className="customQuestion">
-                    آیا سود سرمایه‌گذاری در صندوق تضمین صبا جهاد، تضمین می‌شود؟
+                    سهام عادی چیست؟
                     <div className="customBorder"></div>
                   </div>
                 </AccordionSummary>
@@ -88,7 +92,11 @@ const Support = () => {
                     <div className="customAnswer">
                       <ul>
                         <li>
-                          <b>تکست:</b>تکست
+                          سهام عادی، سهامی است که شرکت‌ها عرضه می‌کنند و
+                          سهامداران به نسبت سهام خود، مالک شرکت می‌شوند. افراد
+                          سهام عادی را هر زمان که بخواهند می‌توانند بفروشند اما
+                          اگر شرایط بازار و کشور خوب باشد با قیمت بالاتر و اگر
+                          شرایط بازار خوب نباشد با قیمت کمتر به فروش می‌رسد.
                         </li>
                       </ul>
                     </div>
@@ -106,18 +114,19 @@ const Support = () => {
                   id="panel1a-header"
                 >
                   <div className="customQuestion">
-                    پذیره‌نویسی صندوق تضمین صبا جهاد چگونه انجام می‌شود؟
+                    سهام ممتاز چیست؟
                     <div className="customBorder"></div>
                   </div>
                 </AccordionSummary>
                 <AccordionDetails>
                   <Typography>
                     <div className="customAnswer">
-                      <ul>
-                        <li>
-                          <b>تکست:</b>تکست
-                        </li>
-                      </ul>
+                      سهامی است که شرکت عرضه می‌کند و سود آن مثلا این طور گفته
+                      می‌شود: 10 درصد از قیمت اسمی سهام. حال اگر قیمت اسمی سهام
+                      100 تومان باشد، 10درصد آن 10 تومان می‌شود. سود سهام ممتاز
+                      نسبتا دائمی است و پرداخت سود آن نسبت به سهام عادی اولویت
+                      دارد. برای رعایت حقوق سهامداران شرکت‌هایی که در بورس
+                      پذیرفته می‌شوند دارای سهام عادی، مشابه و یکسان هستند.
                     </div>
                   </Typography>
                 </AccordionDetails>
@@ -137,19 +146,19 @@ const Support = () => {
                   id="panel1a-header"
                 >
                   <div className="customQuestion">
-                    آیا امکان ابطال واحدهای صندوق تضمین صبا جهاد قبل از ۶ ماه
-                    وجود دارد؟
+                    سرمایه‌گذاری چیست؟
                     <div className="customBorder"></div>
                   </div>
                 </AccordionSummary>
                 <AccordionDetails>
                   <Typography>
                     <div className="customAnswer">
-                      <ul>
-                        <li>
-                          <b>تکست:</b>تکست
-                        </li>
-                      </ul>
+                      منظور از سرمایه‌گذاری، صرف هزینه‌ای مشخص به همراه پذیرفتن
+                      ریسک (احتمال خطر) مشخص یا نامشخص برای کسب سود در آینده
+                      است. مهمترین هدف سرمایه‌گذاری، کاهش «هزینه‌های فرصت» است
+                      به این معنا که ممکن است فرد پول مازاد راکدی داشته باشد که
+                      بتواند آن را در محلی برای سرمایه‌گذاری و کسب سود به
+                      کارگیرد اما به علت عدم آگاهی، فرصت کسب سود را از دست بدهد.
                     </div>
                   </Typography>
                 </AccordionDetails>
@@ -165,18 +174,19 @@ const Support = () => {
                   id="panel1a-header"
                 >
                   <div className="customQuestion">
-                    ترکیب دارایی صندوق تضمین صبا جهاد چگونه است؟
+                    کارگزار کیست؟
                     <div className="customBorder"></div>
                   </div>
                 </AccordionSummary>
                 <AccordionDetails>
                   <Typography>
                     <div className="customAnswer">
-                      <ul>
-                        <li>
-                          <b>تکست:</b>تکست
-                        </li>
-                      </ul>
+                      منظور از سرمایه‌گذاری، صرف هزینه‌ای مشخص به همراه پذیرفتن
+                      ریسک (احتمال خطر) مشخص یا نامشخص برای کسب سود در آینده
+                      است. مهمترین هدف سرمایه‌گذاری، کاهش «هزینه‌های فرصت» است
+                      به این معنا که ممکن است فرد پول مازاد راکدی داشته باشد که
+                      بتواند آن را در محلی برای سرمایه‌گذاری و کسب سود به
+                      کارگیرد اما به علت عدم آگاهی، فرصت کسب سود را از دست بدهد.
                     </div>
                   </Typography>
                 </AccordionDetails>
@@ -192,19 +202,17 @@ const Support = () => {
                   id="panel1a-header"
                 >
                   <div className="customQuestion">
-                    آیا محدودیتی در میزان (درصد) سود سرمایه‌گذاران صندوق تضمین
-                    وجود دارد؟
+                    کارگزار کیست؟
                     <div className="customBorder"></div>
                   </div>
                 </AccordionSummary>
                 <AccordionDetails>
                   <Typography>
                     <div className="customAnswer">
-                      <ul>
-                        <li>
-                          <b>تکست:</b>تکست
-                        </li>
-                      </ul>
+                      شرکت‌هایی هستند که افراد برای خرید و فروش سهام باید به
+                      آنها مراجعه کنند. کارگزاری‌ها واسطه بین سهامداران و
+                      شرکت‌های حاضر در بورس هستند و به دو دسته دولتی و خصوصی
+                      تقسیم می‌شوند.
                     </div>
                   </Typography>
                 </AccordionDetails>

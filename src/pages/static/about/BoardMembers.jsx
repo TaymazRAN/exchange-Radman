@@ -5,6 +5,7 @@ import Typography from "@mui/material/Typography";
 const BoardMembers = () => {
   return (
     <div className="accordionContainer">
+      <div className="fullImage about"></div>
       <h2 className="">اعضای هیئت مدیره</h2>
       <Accordion className="customAccordion">
         <Typography>

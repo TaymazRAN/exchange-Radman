@@ -4,32 +4,57 @@ import { Button } from "@mui/material";
 
 const PlatformA2 = () => {
   return (
-		<div className="page">
-			<div className="compartmentContainer">
-				<div className="compartment left">
-					<div className="image platform2"></div>
-					<div className="data">
-						<h2>سامانه فروش سهام عدالت</h2>
-						<p>
-							اگر سهام عدالت به شما تعلق گرفته و نسبت به آزاد سازی آن اقدام
-							نموده اید، می توانید بدون دریافت کد بورسی و بدون مراجعه حضوری به
-							کارگزاری، نسبت به فروش آن اقدام نمایید.{" "}
-						</p>
-						<a
-							href="https://sjbse.etadbir.com/login.html"
-							rel="noreferrer"
-							target="_blank"
-						>
-							<Button className="button" variant="text" color="error">
-								فروش
-								<KeyboardArrowLeftRoundedIcon className="icon" />
-							</Button>
-						</a>
-					</div>
-				</div>
-			</div>
-		</div>
-	);
+    <div className="page">
+      <div className="compartmentContainer">
+        <div className="compartment left">
+          <div className="image platform2"></div>
+          <div className="data">
+            <h2>سامانه فروش سهام عدالت</h2>
+            <p>
+              اگر سهام عدالت به شما تعلق گرفته و نسبت به آزاد سازی آن اقدام
+              نموده اید، می توانید بدون دریافت کد بورسی و بدون مراجعه حضوری به
+              کارگزاری، نسبت به فروش آن اقدام نمایید.{" "}
+            </p>
+            <a
+              href="https://sjbse.etadbir.com/login.html"
+              rel="noreferrer"
+              target="_blank"
+            >
+              <Button className="button" variant="text" color="error">
+                فروش
+                <KeyboardArrowLeftRoundedIcon className="icon" />
+              </Button>
+            </a>
+          </div>
+          <p>
+            چه کسانی می توانند سهام عدالت خود را بفروشند
+            <br />
+            اشخاصی که در سایت samanese.ir شماره شبای بانکی و شماره تلفن همراه
+            خود را ثبت و روش مستقیم را انتخاب نموده اند، می توانند ۶٠ درصد از
+            سهام خود را به فروش برسانند. <br />
+            فروش سهام عدالت <br />
+            اگر روش مستقیم را برای فروش سهام عدالت انتخاب نموده اید به سامانه
+            فروش سهام عدالت کارگزاری جهاد مراجعه نمایید و روی گزینه “ثبت نام”
+            کلیک نمایید. کد ملی و شماره موبایل خود را وارد کنید، پس از دریافت
+            پیامک کد تایید روی شماره موبایل خود و وارد نمودن آن در سامانه، می
+            توانید نسبت به تعیین نام کاربری(کد ملی) و کلمه عبور اقدام نمایید. در
+            این مرحله می توانید نسبت به مشاهده و ثبت درخواست فروش دارایی خود
+            اقدام نمایید. <br />
+            دریافت وجه حاصل از فروش سهام عدالت
+            <br />
+            پس از فروش سهام عدالت، چنانچه در سامانه، گزینه واریز وجه به حساب را
+            انتخاب کرده باشید، مبلغ مورد نظر به شماره حساب ثبت شده شما در سامانه
+            سهام عدالت واریز خواهد شد. <br />
+            <br />د بورسی و معاملات آنلاین با کارگزاری جهاد اگر علاقمند به
+            سرمایه گذاری در بورس هستید و قصد خرید و فروش سهام را دارید، در سایت
+            https://sjb.co.ir/ ثبت نام کنید، سپس برای احراز هویت به دفاتر
+            پیشخوان که در پایان ثبت نام معرفی شده است مراجعه نمایید. چند روز بعد
+            نام کاربری و کلمه عبور برای شما ایمیل و پیامک می شود
+          </p>
+        </div>
+      </div>
+    </div>
+  );
 };
 
 export default PlatformA2;

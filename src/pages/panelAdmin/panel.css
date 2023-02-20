@@ -6,6 +6,7 @@
 
 .page {
 	flex: 4;
+  width: 100%;
 }
 
 .sidebar {

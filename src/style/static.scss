@@ -183,9 +183,9 @@
 		}
 	}
 	.accordionContainer {
-		width: 100%;
+		width: 100% !important;
 		.customAccordion {
-			width: 100%;
+			width: 100% !important;
 			box-shadow: none;
 			border-radius: 0;
 			background-color: transparent;
@@ -523,10 +523,12 @@
 			border-radius: 15px;
 			width: 100%;
 			aspect-ratio: 3/2;
-			margin-right: 50px;
+			// margin-right: 50px;
 			flex: 3;
-			margin-bottom: 20px;
-			max-width: 400px;
+			// margin-bottom: 20px;
+			max-width: 600px !important;
+      max-height: 600px !important;
+      
 		}
 		.image.radius {
 			border-radius: 20px;
@@ -534,6 +536,48 @@
 		}
 		.image.platform1 {
 			background-image: url("../assets/image/jpg/platform1.jpg");
+		}
+    .image.platformA71 {
+			background-image: url("../assets/image/jpg/PlatformA71.png");
+		}
+    .image.platformA72 {
+			background-image: url("../assets/image/jpg/PlatformA72.png");
+		}
+
+    .image.PlatformA31 {
+			background-image: url("../assets/image/jpg/PlatformA31.png");
+		}
+    .image.PlatformA11 {
+			background-image: url("../assets/image/jpg/PlatformA11.png");
+		}
+    .image.PlatformA12 {
+			background-image: url("../assets/image/jpg/PlatformA12.png");
+		}
+    .image.PlatformA13 {
+			background-image: url("../assets/image/jpg/PlatformA13.png");
+		}
+
+    .image.PlatformA61 {
+			background-image: url("../assets/image/jpg/PlatformA61.png");
+		}
+ .image.PlatformA62 {
+			background-image: url("../assets/image/jpg/PlatformA62.png");
+		}
+ .image.PlatformA63 {
+			background-image: url("../assets/image/jpg/PlatformA63.png");
+		}
+ .image.PlatformA64 {
+			background-image: url("../assets/image/jpg/PlatformA64.png");
+		}
+
+    .image.PlatformA32 {
+			background-image: url("../assets/image/jpg/PlatformA32.png");
+		}
+    .image.PlatformA33 {
+			background-image: url("../assets/image/jpg/PlatformA33.png");
+		}
+    .image.PlatformA34 {
+			background-image: url("../assets/image/jpg/PlatformA34.png");
 		}
 		.image.platform2 {
 			background-image: url("../assets/image/jpg/platform2.jpg");

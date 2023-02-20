@@ -62,23 +62,26 @@
 
 }
 .tabTypography{
-  // line-height: 3 !important;
-  border:1px rgb(4, 26, 88)!important;
+  border:3px rgb(4, 26, 88)!important;
+  color: rgb(28, 27, 27) !important;
   border-radius: 10px !important;
-  // background-color: #888 !important;
   font-size: 14px !important;
   margin: 5px !important;
   background-color: rgb(204, 204, 204) !important;
+  font-weight: bold !important;
 
 }
 
 .tabTypographyVertical{
-    border:1px rgb(4, 26, 88)!important;
+  border:3px rgb(4, 26, 88)!important;
+    color: rgb(28, 27, 27) !important;
     border-radius: 10px !important;
     font-size: 14px !important;
     margin: 2px !important;
     background-color: rgb(204, 204, 204) !important;
     padding: 2px 5px !important;
+  font-weight: bold !important;
+
 }
 
 .tabTypography:hover{

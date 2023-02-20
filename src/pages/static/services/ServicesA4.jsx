@@ -26,16 +26,117 @@ const ServicesA4 = () => {
                     aria-controls="panel1a-content"
                     id="panel1a-header"
                   >
-                    <div className="faqQuestion">
-                      موعد تحویل خودرو چه زمانی است؟
-                    </div>
+                    <div className="faqQuestion">سهم چیست؟</div>
                   </AccordionSummary>
                   <AccordionDetails>
                     <Typography>
                       <div className="faqAnswer">
-                        موعد تحویل برای خودروهای مختلف توسط کارخانه سازنده آن
-                        تعیین شده و در اطلاعیه عرضه خودرو در بورس کالا مشخص می
-                        شود
+                        سرمایه هر شرکت سهامی به قسمت‌های مساوی تقسیم می‌شود که
+                        به هر یک از این قسمت‌ها، یک سهم می‌گویند. معمولا قیمت
+                        اسمی سهام در ایران 100 تومان است. هر فرد وقتی اقدام به
+                        خرید سهام می‌کند در واقع فعالیت خود در بازار سرمایه را
+                        شروع کرده است. افراد پس از خرید سهام، مالک جزئی از
+                        دارایی شرکت می‌شوند.
+                      </div>
+                    </Typography>
+                  </AccordionDetails>
+                </Accordion>
+                <Accordion className="faqAccordion">
+                  <AccordionSummary
+                    expandIcon={
+                      <ExpandMoreIcon
+                        style={{ color: "#D0CD38", fontSize: 25 }}
+                      />
+                    }
+                    aria-controls="panel1a-content"
+                    id="panel1a-header"
+                  >
+                    <div className="faqQuestion">سهام عادی چیست؟</div>
+                  </AccordionSummary>
+                  <AccordionDetails>
+                    <Typography>
+                      <div className="faqAnswer">
+                        {" "}
+                        سهام عادی، سهامی است که شرکت‌ها عرضه می‌کنند و سهامداران
+                        به نسبت سهام خود، مالک شرکت می‌شوند. افراد سهام عادی را
+                        هر زمان که بخواهند می‌توانند بفروشند اما اگر شرایط بازار
+                        و کشور خوب باشد با قیمت بالاتر و اگر شرایط بازار خوب
+                        نباشد با قیمت کمتر به فروش می‌رسد.
+                      </div>
+                    </Typography>
+                  </AccordionDetails>
+                </Accordion>
+                <Accordion className="faqAccordion">
+                  <AccordionSummary
+                    expandIcon={
+                      <ExpandMoreIcon
+                        style={{ color: "#D0CD38", fontSize: 25 }}
+                      />
+                    }
+                    aria-controls="panel1a-content"
+                    id="panel1a-header"
+                  >
+                    <div className="faqQuestion">سهام ممتاز چیست؟</div>
+                  </AccordionSummary>
+                  <AccordionDetails>
+                    <Typography>
+                      <div className="faqAnswer">
+                        سهامی است که شرکت عرضه می‌کند و سود آن مثلا این طور گفته
+                        می‌شود: 10 درصد از قیمت اسمی سهام. حال اگر قیمت اسمی
+                        سهام 100 تومان باشد، 10درصد آن 10 تومان می‌شود. سود سهام
+                        ممتاز نسبتا دائمی است و پرداخت سود آن نسبت به سهام عادی
+                        اولویت دارد. برای رعایت حقوق سهامداران شرکت‌هایی که در
+                        بورس پذیرفته می‌شوند دارای سهام عادی، مشابه و یکسان
+                        هستند.
+                      </div>
+                    </Typography>
+                  </AccordionDetails>
+                </Accordion>
+                <Accordion className="faqAccordion">
+                  <AccordionSummary
+                    expandIcon={
+                      <ExpandMoreIcon
+                        style={{ color: "#D0CD38", fontSize: 25 }}
+                      />
+                    }
+                    aria-controls="panel1a-content"
+                    id="panel1a-header"
+                  >
+                    <div className="faqQuestion">سرمایه‌گذاری چیست؟</div>
+                  </AccordionSummary>
+                  <AccordionDetails>
+                    <Typography>
+                      <div className="faqAnswer">
+                        منظور از سرمایه‌گذاری، صرف هزینه‌ای مشخص به همراه
+                        پذیرفتن ریسک (احتمال خطر) مشخص یا نامشخص برای کسب سود در
+                        آینده است. مهمترین هدف سرمایه‌گذاری، کاهش «هزینه‌های
+                        فرصت» است به این معنا که ممکن است فرد پول مازاد راکدی
+                        داشته باشد که بتواند آن را در محلی برای سرمایه‌گذاری و
+                        کسب سود به کارگیرد اما به علت عدم آگاهی، فرصت کسب سود را
+                        از دست بدهد.
+                      </div>
+                    </Typography>
+                  </AccordionDetails>
+                </Accordion>
+                <Accordion className="faqAccordion">
+                  <AccordionSummary
+                    expandIcon={
+                      <ExpandMoreIcon
+                        style={{ color: "#D0CD38", fontSize: 25 }}
+                      />
+                    }
+                    aria-controls="panel1a-content"
+                    id="panel1a-header"
+                  >
+                    <div className="faqQuestion">کارگزار کیست؟</div>
+                  </AccordionSummary>
+                  <AccordionDetails>
+                    <Typography>
+                      <div className="faqAnswer">
+                        شرکت‌هایی هستند که افراد برای خرید و فروش سهام باید به
+                        آنها مراجعه کنند. کارگزاری‌ها واسطه بین سهامداران و
+                        شرکت‌های حاضر در بورس هستند و به دو دسته دولتی و خصوصی
+                        تقسیم می‌شوند.
                       </div>
                     </Typography>
                   </AccordionDetails>
@@ -51,16 +152,18 @@ const ServicesA4 = () => {
                     id="panel1a-header"
                   >
                     <div className="faqQuestion">
-                      چه نوع خودرو هایی در بورس کالا قابل معامله است؟
+                      شرکت‌های سهامی‌خاص و سهامی‌عام چیست؟
                     </div>
                   </AccordionSummary>
                   <AccordionDetails>
                     <Typography>
                       <div className="faqAnswer">
-                        باتوجه به تلاش وزارت صمت و بورس کالا قرار است تمام
-                        محصولات تولیدی کارخانه های مهم سازنده خودرو در بورس کالا
-                        عرضه شود. درحال حاضر محصولات مختلفی از سواری و وانت تا
-                        کشنده و از چندین کارخانه در بورس کالا قابل خرید است.
+                        به شرکت‌هایی که سهام آنها در دست عموم مردم باشد (بیشتر
+                        از 51 درصد) و کنترل آنها نیز در اختیار مردم باشد، سهامی
+                        عام می‌گویند مانند شرکت‌های پذیرفته‌شده در بورس اوراق
+                        بهادار. در نقطه مقابل،‌ چنانچه کنترل و مالکیت شرکت و
+                        تصمیم‌گیری درباره آن در اختیار افراد خاص باشد، سهامی خاص
+                        نامیده می‌شوند.
                       </div>
                     </Typography>
                   </AccordionDetails>
@@ -75,17 +178,18 @@ const ServicesA4 = () => {
                     aria-controls="panel1a-content"
                     id="panel1a-header"
                   >
-                    <div className="faqQuestion">
-                      اگر خرید انجام نشود، مبلغ بلوکه شده در حساب عملیاتی چگونه
-                      آزاد خواهد شد؟
-                    </div>
+                    <div className="faqQuestion">کد بورسی چیست؟</div>
                   </AccordionSummary>
                   <AccordionDetails>
                     <Typography>
                       <div className="faqAnswer">
-                        باتوجه به شرایط بورس کالا مبلغ پایه که برای خرید خودرو
-                        واریز شده درصورت لغو یا ناموفق بودن در انجام معامله در
-                        طی چند ساعت تا 1 روز به حساب بازخواهد گشت.
+                        کد بورسی مانند شماره ملی منحصر به فرد است. شما با داشتن
+                        کد بورسی می‌توانید از طریق یک یا چند کارگزاری به خرید و
+                        فروش سهام،‌ عرضه اولیه، اوراق اسناد خزانه اسلامی یا
+                        تسهیلات مسکن بپردازید. حتی اگر از چند کارگزاری خرید و
+                        فروش آنلاین سهام انجام دهید، کد بورسی شما یکسان خواهد
+                        بود. بعد از داشتن کد بورسی لازم است رمز خرید و فروش
+                        آنلاین سهام دریافت و معاملات خود را آغاز کنید.
                       </div>
                     </Typography>
                   </AccordionDetails>
@@ -100,21 +204,13 @@ const ServicesA4 = () => {
                     aria-controls="panel1a-content"
                     id="panel1a-header"
                   >
-                    <div className="faqQuestion">
-                      -آیا برای خرید خودرو محدودیتی در بورس کالا وجود دارد؟
-                    </div>
+                    <div className="faqQuestion">عرضه اولیه چیست؟</div>
                   </AccordionSummary>
                   <AccordionDetails>
                     <Typography>
                       <div className="faqAnswer">
-                        باتوجه به شرایط عرضه محصولات مختلف ممکن است محدودیت های
-                        مختلفی برای خریداران خودرو از بورس کالا وضع شود.محدودیت
-                        هایی که تا به امروز برای برخی خودروها اعمال شدند عبارتند
-                        از:شرط سن بالای 18 سال یا نخریدن خودرو از بورس کالا در
-                        طی سال جاری هم چنین در برخی از خودروهای عرضه شده در بورس
-                        کالا شرط نخریدن خودرو از شرکت های خودروسازی از ابتدای
-                        سال 98 نیز وجود دارد.برای مطالعه شرایط و محدودیت های هر
-                        خودرو به مشخصات عرضه آن خودرو مراجعه کنید.
+                        در عرضه اولیه، سهام یک شرکت برای بار اول در بورس توسط
+                        عموم قابل خریداری خواهد بود.
                       </div>
                     </Typography>
                   </AccordionDetails>
@@ -129,256 +225,14 @@ const ServicesA4 = () => {
                     aria-controls="panel1a-content"
                     id="panel1a-header"
                   >
-                    <div className="faqQuestion">
-                      چگونه از زمان عرضه خودرو در بورس کالا مطلع شویم ؟
-                    </div>
+                    <div className="faqQuestion">اعتبار چیست؟ </div>
                   </AccordionSummary>
                   <AccordionDetails>
                     <Typography>
                       <div className="faqAnswer">
-                        با مراجعه به سایت بورس کالا و قسمت اطلاعیه عرضه خودروهای
-                        مختلف می توان از شرایط و زمان عرضه خودروها مطلع شد
-                      </div>
-                    </Typography>
-                  </AccordionDetails>
-                </Accordion>
-                <Accordion className="faqAccordion">
-                  <AccordionSummary
-                    expandIcon={
-                      <ExpandMoreIcon
-                        style={{ color: "#D0CD38", fontSize: 25 }}
-                      />
-                    }
-                    aria-controls="panel1a-content"
-                    id="panel1a-header"
-                  >
-                    <div className="faqQuestion">
-                      نحوه ثبت سفارش خرید خودرو چگونه است؟
-                    </div>
-                  </AccordionSummary>
-                  <AccordionDetails>
-                    <Typography>
-                      <div className="faqAnswer">
-                        درمرحله اول باید در سامانه ebgo ثبت نام کرده و در این
-                        سامانه ثبت سفارش کنید.پس از آن باید با کارگزاری خود در
-                        تماس بوده تا بتوانید هماهنگی های لازم برای معامله را
-                        انجام دهید.
-                      </div>
-                    </Typography>
-                  </AccordionDetails>
-                </Accordion>
-                <Accordion className="faqAccordion">
-                  <AccordionSummary
-                    expandIcon={
-                      <ExpandMoreIcon
-                        style={{ color: "#D0CD38", fontSize: 25 }}
-                      />
-                    }
-                    aria-controls="panel1a-content"
-                    id="panel1a-header"
-                  >
-                    <div className="faqQuestion">
-                      مبلغ پیش پرداخت جهت خرید خودرو را باید به چه حسابی واریز
-                      کنیم؟
-                    </div>
-                  </AccordionSummary>
-                  <AccordionDetails>
-                    <Typography>
-                      <div className="faqAnswer">
-                        مبلغ پیش پرداخت جهت خرید خودرو به حساب وکالتی که فرد
-                        متقاضی در بانک ها باز کرده است باید واریز شود.
-                      </div>
-                    </Typography>
-                  </AccordionDetails>
-                </Accordion>
-                <Accordion className="faqAccordion">
-                  <AccordionSummary
-                    expandIcon={
-                      <ExpandMoreIcon
-                        style={{ color: "#D0CD38", fontSize: 25 }}
-                      />
-                    }
-                    aria-controls="panel1a-content"
-                    id="panel1a-header"
-                  >
-                    <div className="faqQuestion">
-                      امکان خرید خودرو با کد آتی وجود دارد؟
-                    </div>
-                  </AccordionSummary>
-                  <AccordionDetails>
-                    <Typography>
-                      <div className="faqAnswer">
-                        برای خرید خودرو از بورس کالا باید کد بورس کالا از سایت
-                        EBGO را دریافت کرد و این کد با کد آتی فرق میکند. در
-                        نتیجه نمیتوان با کد آتی از بورس کالا خودرو خریداری کرد.
-                      </div>
-                    </Typography>
-                  </AccordionDetails>
-                </Accordion>
-                <Accordion className="faqAccordion">
-                  <AccordionSummary
-                    expandIcon={
-                      <ExpandMoreIcon
-                        style={{ color: "#D0CD38", fontSize: 25 }}
-                      />
-                    }
-                    aria-controls="panel1a-content"
-                    id="panel1a-header"
-                  >
-                    <div className="faqQuestion">
-                      نام کاربری و رمز عبور سامانه EBGO را از کجا دریافت کنیم؟
-                    </div>
-                  </AccordionSummary>
-                  <AccordionDetails>
-                    <Typography>
-                      <div className="faqAnswer">
-                        برای دریافت نام کاربری و رمز عبور سامانه EBGO باید اول
-                        در این سامانه ثبت نام کرد و سپس نام کابربری و رمز عبور
-                        برای فرد متقاضی ارسال میشود.
-                      </div>
-                    </Typography>
-                  </AccordionDetails>
-                </Accordion>
-                <Accordion className="faqAccordion">
-                  <AccordionSummary
-                    expandIcon={
-                      <ExpandMoreIcon
-                        style={{ color: "#D0CD38", fontSize: 25 }}
-                      />
-                    }
-                    aria-controls="panel1a-content"
-                    id="panel1a-header"
-                  >
-                    <div className="faqQuestion">
-                      در صورتی که خرید خودرو انجام نشود، مبلغ پیش‌پرداخت چگونه
-                      عودت داده خواهد شد؟
-                    </div>
-                  </AccordionSummary>
-                  <AccordionDetails>
-                    <Typography>
-                      <div className="faqAnswer">
-                        در صورتی که خودرو خریداری نشود، مبلغ پیش پرداخت در همان
-                        حساب وکالتی باقی میماند و فرد میتواند پول خود را برداشت
-                        کند.
-                      </div>
-                    </Typography>
-                  </AccordionDetails>
-                </Accordion>
-                <Accordion className="faqAccordion">
-                  <AccordionSummary
-                    expandIcon={
-                      <ExpandMoreIcon
-                        style={{ color: "#D0CD38", fontSize: 25 }}
-                      />
-                    }
-                    aria-controls="panel1a-content"
-                    id="panel1a-header"
-                  >
-                    <div className="faqQuestion">
-                      -چگونه از بورس خودرو بخریم؟
-                    </div>
-                  </AccordionSummary>
-                  <AccordionDetails>
-                    <Typography>
-                      <div className="faqAnswer">
-                        برای خرید خودرو از بورس کالا ابتدا لازم است که در سامانه
-                        سجام ثبت نام کنید و سپس کد بورسی خود را از کارگزاری
-                        دریافت نمایید. سپس با واریز وجه نقد در حساب وکالتی و ثبت
-                        سفارس در روز عرضه تا روز معامله می‌توانید خورو مورد نظر
-                        را خریداری کنید.
-                      </div>
-                    </Typography>
-                  </AccordionDetails>
-                </Accordion>
-                <Accordion className="faqAccordion">
-                  <AccordionSummary
-                    expandIcon={
-                      <ExpandMoreIcon
-                        style={{ color: "#D0CD38", fontSize: 25 }}
-                      />
-                    }
-                    aria-controls="panel1a-content"
-                    id="panel1a-header"
-                  >
-                    <div className="faqQuestion">
-                      برای خرید خودرو از بورس کالا چه نوع کد بورسی لازم است؟
-                    </div>
-                  </AccordionSummary>
-                  <AccordionDetails>
-                    <Typography>
-                      <div className="faqAnswer">
-                        جهت خرید ماشین از بورس کالا تنها کد بورسی بازار فیزیکی
-                        بورس کالا مورد نیاز است و کد بورس خرید سهام و آتی
-                        کاربردی ندارد.
-                      </div>
-                    </Typography>
-                  </AccordionDetails>
-                </Accordion>
-                <Accordion className="faqAccordion">
-                  <AccordionSummary
-                    expandIcon={
-                      <ExpandMoreIcon
-                        style={{ color: "#D0CD38", fontSize: 25 }}
-                      />
-                    }
-                    aria-controls="panel1a-content"
-                    id="panel1a-header"
-                  >
-                    <div className="faqQuestion">حساب وکالتی چیست؟</div>
-                  </AccordionSummary>
-                  <AccordionDetails>
-                    <Typography>
-                      <div className="faqAnswer">
-                        حساب وکالتی یک نوع حساب بانکی است که برای واریز وجوه
-                        پیش‌پرداخت مشتری نزد یکی از بانک‌های منتخب افتتاح
-                        می‌شود.
-                      </div>
-                    </Typography>
-                  </AccordionDetails>
-                </Accordion>
-                <Accordion className="faqAccordion">
-                  <AccordionSummary
-                    expandIcon={
-                      <ExpandMoreIcon
-                        style={{ color: "#D0CD38", fontSize: 25 }}
-                      />
-                    }
-                    aria-controls="panel1a-content"
-                    id="panel1a-header"
-                  >
-                    <div className="faqQuestion">
-                      چه زمانی باید ثبت سفارش کنیم؟
-                    </div>
-                  </AccordionSummary>
-                  <AccordionDetails>
-                    <Typography>
-                      <div className="faqAnswer">
-                        از تاریخ انتشار اطلاعیه عرضه تا ساعت ۸:۳۰ صبح روز عرضه
-                        امکان ثبت سفارش وجود دارد.
-                      </div>
-                    </Typography>
-                  </AccordionDetails>
-                </Accordion>
-
-                <Accordion className="faqAccordion">
-                  <AccordionSummary
-                    expandIcon={
-                      <ExpandMoreIcon
-                        style={{ color: "#D0CD38", fontSize: 25 }}
-                      />
-                    }
-                    aria-controls="panel1a-content"
-                    id="panel1a-header"
-                  >
-                    <div className="faqQuestion">
-                      مبلغ پیش پرداخت خرید خودرو را چطور باید واریز کرد؟
-                    </div>
-                  </AccordionSummary>
-                  <AccordionDetails>
-                    <Typography>
-                      <div className="faqAnswer">
-                        پیش پرداخت خرید خودرو می‌بایست به حساب وکالتی اخذ شده
-                        واریز شود.
+                        اعتبار پولی است که کارگزاری‌ها با درخواست مشتریان، بسته
+                        به شرایط پرتفوی اشخاص، برای خرید و فروش در اختیار آنها
+                        قرار می‌دهند.
                       </div>
                     </Typography>
                   </AccordionDetails>

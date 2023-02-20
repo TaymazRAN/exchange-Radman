@@ -80,11 +80,14 @@ const SuperMenu = () => {
                     مدارک مورد نیاز جهت صدور کد مشتریان بازار فیزیکی{" "}
                   </Link>
                   <Link to="/static/ServicesB3"> خدمات کارگزاری </Link>
-                  <Link to="/static/ServicesB4"> نمای بازار </Link>
+                  {/* <Link to="/static/ServicesB4"> نمای بازار </Link> */}
+
+                  <a href="https://tts.ime.co.ir/" target="_blank">
+                    نمای بازار
+                  </a>
                 </div>
                 <div className="d-column">
                   <h3>آتی کالا</h3>
-
                   <a
                     href="https://bimeiranbroker.ir/Content/media/image/2022/01/96_orig.pdf"
                     target="_blank"

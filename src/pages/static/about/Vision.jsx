@@ -1,12 +1,10 @@
 import React from "react";
-import Accordion from "@mui/material/Accordion";
-import Typography from "@mui/material/Typography";
 
 const Vision = () => {
   return (
     <div className="page">
       <h2> چشم انداز و ماموریت </h2>
-      <div className="accordionContainer">
+      {/* <div className="accordionContainer">
         <Accordion className="customAccordion">
           <Typography>
             <div className="customAnswer">
@@ -29,7 +27,7 @@ const Vision = () => {
             </div>
           </Typography>
         </Accordion>
-      </div>
+      </div> */}
       <div className="page">
         <div className="accordionContainer">
           <div className="viewCardContainer">

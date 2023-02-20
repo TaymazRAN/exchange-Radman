@@ -5,69 +5,77 @@ import "react-quill/dist/quill.snow.css";
 import "react-quill/dist/quill.bubble.css";
 
 class Editor extends Component {
-	constructor(props) {
-		super(props);
+  constructor(props) {
+    super(props);
+    this.state = { editorHtml: "", theme: "snow" };
+    console.log("Props Editor ", props);
+    // this.handleChange = this.handleChange.bind(this);
+  }
 
-		this.modules = {
-			toolbar: [
-				[
-					{ size: [] },
-				],
-				["bold", "italic", "underline", "strike"],
-				[{ color: [] }, { background: [] }],
-				[{ script: "super" }, { script: "sub" }],
-				[{ header: "1" }, { header: "2" }, "blockquote", "code-block"],
-				[
-					{ list: "ordered" },
-					{ list: "bullet" },
-					{ indent: "-1" },
-					{ indent: "+1" },
-				],
-				[{ direction: "rtl" }, { align: [] }],
-				["link", "image", "video", "formula"],
-				["clean"],
-			],
-		};
+  handleChange(html) {
+    this.setState({ editorHtml: html });
+  }
 
-		this.formats = [
-			"font",
-			"size",
-			"bold",
-			"italic",
-			"underline",
-			"list",
-			"bullet",
-			"align",
-			"color",
-			"background",
-		];
-
-		this.state = {
-			comments: "",
-		};
-
-		this.rteChange = this.rteChange.bind(this);
-	}
-
-	rteChange = (content, delta, source, editor) => {
-		console.log(editor.getHTML()); // rich text
-		console.log(editor.getText()); // plain text
-		console.log(editor.getLength()); // number of characters
-	};
-
-	render() {
-		return (
-			<div dir="ltr">
-				<ReactQuill
-					theme="snow"
-					modules={this.modules}
-					formats={this.formats}
-					onChange={this.rteChange}
-					value={this.state.comments || ""}
-				/>
-			</div>
-		);
-	}
+  render() {
+    return (
+      <div>
+        <ReactQuill
+          // defaultValue={this.props.value}
+          key={this.props.id}
+          handleChange={this.props.onChange}
+          value={this.props.value}
+          modules={Editor.modules}
+          formats={Editor.formats}
+          bounds={this.props.id}
+          placeholder={this.props.placeholder}
+        />
+      </div>
+    );
+  }
 }
+
+/*
+ * Quill modules to attach to editor
+ * See https://quilljs.com/docs/modules/ for complete options
+ */
+Editor.modules = {
+  toolbar: [
+    [{ header: "1" }, { header: "2" }, { font: [] }],
+    [{ size: [] }],
+    ["bold", "italic", "underline", "strike", "blockquote"],
+    [
+      { list: "ordered" },
+      { list: "bullet" },
+      { indent: "-1" },
+      { indent: "+1" },
+    ],
+    ["link", "image", "video"],
+    ["clean"],
+  ],
+  clipboard: {
+    // toggle to add extra line breaks when pasting HTML:
+    matchVisual: false,
+  },
+};
+/*
+ * Quill editor formats
+ * See https://quilljs.com/docs/formats/
+ */
+Editor.formats = [
+  "header",
+  "font",
+  "size",
+  "bold",
+  "italic",
+  "underline",
+  "strike",
+  "blockquote",
+  "list",
+  "bullet",
+  "indent",
+  "link",
+  "image",
+  "video",
+];
 
 export default Editor;
