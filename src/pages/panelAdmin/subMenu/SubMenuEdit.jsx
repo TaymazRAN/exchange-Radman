@@ -28,6 +28,8 @@ export default function SubMenuEdit(props) {
   const dispatch = useDispatch();
 
   const data = useSelector((state) => state.subMenu.subMenu);
+
+  console.log("data...", data);
   const [post, setPost] = useState(undefined);
   const handleLoading = useSelector((state) => state.subMenu.handleLoading);
   const ready = useSelector((state) => state.subMenu.ready);
@@ -71,11 +73,20 @@ export default function SubMenuEdit(props) {
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [data]);
 
+  const initialValues = {
+    id: fixNull(post?.id),
+    title: fixNull(post?.title),
+    body: fixNull(post?.body),
+    groupType: fixNull(post?.groupType),
+  };
+
+  console.log("initialValues", initialValues);
   useEffect(() => {
     if (handleError === "success") {
       handleOpenSuccess("عملیات با موفقیت انجام شد");
       setTimeout(() => {
-        navigate(`/admin/subMenu`);
+        navigate(`/admin/subMenuList/${initialValues.groupType}`);
+
         dispatch(subMenuActions.clearHandleError());
       }, 1500);
     } else if (handleError === "uploaded") {
@@ -96,12 +107,6 @@ export default function SubMenuEdit(props) {
     if (formRef.current) {
       formRef.current.handleSubmit();
     }
-  };
-
-  const initialValues = {
-    id: fixNull(post?.id),
-    title: fixNull(post?.title),
-    body: fixNull(post?.body),
   };
 
   const submit = (data) => {
@@ -136,27 +141,48 @@ export default function SubMenuEdit(props) {
         >
           {({ handleChange, values, setFieldValue, errors, touched }) => (
             <Form>
+              {console.log("values", values)}
               <div className="mainPanelTitle bold">
                 ویرایش مدیریت منو {post.title}
               </div>
-
               <div className="profileInputContainer">
-                <TextField
-                  dir="rtl"
-                  margin="dense"
-                  id="title"
-                  label="عنوان"
-                  type="text"
-                  fullWidth
-                  variant="outlined"
-                  className="profileInput"
-                  value={values.title}
-                  onChange={handleChange}
-                  error={touched.title && Boolean(errors.title)}
-                  helperText={touched.title && errors.title}
-                />
-
-                <TextField
+                <div style={{ display: "flex" }}>
+                  <div style={{ flex: 1 }}>
+                    <TextField
+                      dir="rtl"
+                      margin="dense"
+                      id="title"
+                      label="نام گروه  اصلی  "
+                      type="text"
+                      fullWidth
+                      variant="outlined"
+                      className="profileInput"
+                      value={values.title}
+                      onChange={handleChange}
+                      error={touched.title && Boolean(errors.title)}
+                      helperText={touched.title && errors.title}
+                      disabled
+                    />
+                  </div>
+                  <div style={{ flex: 1 }}>
+                    <TextField
+                      dir="rtl"
+                      margin="dense"
+                      id="groupType"
+                      label="عنوان  منو "
+                      type="text"
+                      fullWidth
+                      variant="outlined"
+                      className="profileInput"
+                      value={values.groupType}
+                      onChange={handleChange}
+                      error={touched.groupType && Boolean(errors.groupType)}
+                      helperText={touched.groupType && errors.groupType}
+                      disabled
+                    />
+                  </div>
+                </div>
+                <textarea
                   dir="rtl"
                   margin="dense"
                   id="body"
@@ -169,9 +195,10 @@ export default function SubMenuEdit(props) {
                   onChange={handleChange}
                   error={touched.body && Boolean(errors.body)}
                   helperText={touched.body && errors.body}
+                  style={{ height: "300px", width: "1000px" }}
+                  multiline="true"
                 />
               </div>
-
               <div className="profileInputContainer">
                 <div style={{ display: "flex" }}>
                   <div className="BtnBottom">
@@ -181,7 +208,11 @@ export default function SubMenuEdit(props) {
                       component="label"
                       margin="dense"
                       color="error"
-                      onClick={(event) => navigate("/admin/subMenu")}
+                      onClick={(event) =>
+                        navigate(
+                          `/admin/subMenuList/${initialValues.groupType}`
+                        )
+                      }
                       id="logoFileName"
                       sx={{ padding: "15px 0", marginTop: "4px" }}
                       fullWidth

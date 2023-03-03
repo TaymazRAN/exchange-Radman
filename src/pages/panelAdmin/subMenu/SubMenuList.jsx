@@ -3,21 +3,28 @@ import { DataGrid, GridToolbar } from "@mui/x-data-grid";
 import AddIcon from "@mui/icons-material/Add";
 import EditOutlinedIcon from "@mui/icons-material/EditOutlined";
 import { Button } from "@mui/material";
-import { useNavigate } from "react-router-dom";
+import { useNavigate, useParams } from "react-router-dom";
 import React, { useState, useEffect } from "react";
 import AlertDeleteRedux from "../../../components/alertDelete/AlertDeleteRedux";
 import SnackAlert from "../../../components/snackAlert/SnackAlert";
 import LoadingRedux from "../../../components/loadingRedux/LoadingRedux";
 import {
   fetchAllSubMenu,
+  fetchsubMenuByGroupType,
   subMenuActions,
   suspendsubMenu,
 } from "../../../features/account/subMenuSlice";
 
 const SubMenuList = () => {
+  const { GroupType } = useParams();
+  console.log("usepARAM", GroupType);
+
   // const organid = JSON.parse(localStorage.getItem("organid"));
-  const data = useSelector((state) => state.subMenu.data);
+
+  const data = useSelector((state) => state.subMenu.subMenu);
+  console.log("Object Data", data);
   console.log(data);
+  const [post, setPost] = useState(undefined);
   const handleLoading = useSelector((state) => state.subMenu.handleLoading);
   const error = useSelector((state) => state.subMenu.error);
   const handleError = useSelector((state) => state.subMenu.handleError);
@@ -48,16 +55,16 @@ const SubMenuList = () => {
   };
 
   useEffect(() => {
-    // dispatch(fetchOrganizationManagers(organid));
-    dispatch(fetchAllSubMenu());
-    console.log("data", data);
+    dispatch(fetchsubMenuByGroupType(GroupType));
+    // dispatch(fetchAllSubMenu());
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
 
   useEffect(() => {
     if (handleError === "success") {
       handleOpenSuccess("عملیات با موفقیت انجام شد");
       setTimeout(() => {
-        navigate(`/admin/subMenu`);
+        // navigate(`/admin/subMenu`);
         dispatch(subMenuActions.clearHandleError());
       }, 1500);
     } else if (handleError !== "success" && handleError !== "") {
@@ -67,16 +74,31 @@ const SubMenuList = () => {
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [handleError]);
 
+  useEffect(() => {
+    if (Object.keys(data).length !== 0) {
+      setPost(data);
+      // console.log("data...", data);
+      console.log("post...", post);
+    }
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [data]);
+
   const columns = [
     {
+      field: "groupType",
+      headerName: "نام گروه اصلی  ",
+      flex: 1,
+    },
+
+    {
       field: "title",
-      headerName: "موضوع",
+      headerName: "نام  منو  ",
       flex: 1,
     },
 
     {
       field: "body",
-      headerName: "body",
+      headerName: "متن منو ",
       flex: 1,
     },
 

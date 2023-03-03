@@ -12,6 +12,16 @@ export const fetchsubMenuByID = createAsyncThunk(
   }
 );
 
+export const fetchsubMenuByGroupType = createAsyncThunk(
+  "subMenu/fetchsubMenuByGroupType",
+  async (groupType) => {
+    console.log("groupType", groupType);
+    return await axios
+      .get(`${url}/GetAllGropName?groupType=${groupType}`)
+      .then((response) => response.data);
+  }
+);
+
 export const fetchAllSubMenu = createAsyncThunk(
   "subMenu/fetchAllSubMenu",
   async () => {
@@ -96,6 +106,22 @@ export const slice = createSlice({
       state.error = "";
     });
     builder.addCase(fetchsubMenuByID.rejected, (state, action) => {
+      state.loading = false;
+      state.ready = false;
+      state.error = action.error.message;
+    });
+
+    // fetchsubMenuByGroupType----------------------------------------------
+    builder.addCase(fetchsubMenuByGroupType.pending, (state, action) => {
+      state.loading = true;
+    });
+    builder.addCase(fetchsubMenuByGroupType.fulfilled, (state, action) => {
+      state.loading = false;
+      state.subMenu = action.payload;
+      state.ready = true;
+      state.error = "";
+    });
+    builder.addCase(fetchsubMenuByGroupType.rejected, (state, action) => {
       state.loading = false;
       state.ready = false;
       state.error = action.error.message;

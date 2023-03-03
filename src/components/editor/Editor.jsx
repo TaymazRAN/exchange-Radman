@@ -1,38 +1,53 @@
 import "./editor.css";
-import React, { Component } from "react";
+import React, { useState } from "react";
 import ReactQuill from "react-quill";
 import "react-quill/dist/quill.snow.css";
 import "react-quill/dist/quill.bubble.css";
 
-class Editor extends Component {
-  constructor(props) {
-    super(props);
-    this.state = { editorHtml: "", theme: "snow" };
-    console.log("Props Editor ", props);
-    // this.handleChange = this.handleChange.bind(this);
-  }
+// function Editor extends Component {
 
-  handleChange(html) {
-    this.setState({ editorHtml: html });
-  }
+// const Editor ()=>{
 
-  render() {
-    return (
-      <div>
-        <ReactQuill
-          // defaultValue={this.props.value}
-          key={this.props.id}
-          handleChange={this.props.onChange}
-          value={this.props.value}
-          modules={Editor.modules}
-          formats={Editor.formats}
-          bounds={this.props.id}
-          placeholder={this.props.placeholder}
-        />
-      </div>
-    );
+const Editor = (props) => {
+  const [first, setFirst] = useState("name");
+  // constructor(props) {
+  //   super(props);
+  //   this.state = { editorHtml: "", theme: "snow" };
+  //   console.log("Props Editor ", props);
+  //   // this.handleChange = this.handleChange.bind(this);
+  // }
+
+  // handleChange(html) {
+  //   this.setState({ editorHtml: html });
+  //   console.log("event.target.value", { editorHtml: html });
+  // }
+
+  function handleChange(editor) {
+    console.log(editor);
+    // props.handleChange = editor;
+    // setFirst(editor);
   }
-}
+  // props.onChange = first;
+  console.log("props.onChange", props.onChange);
+  // handleChange(event) {
+  //   console.log("event.target.value", event.target.value);
+  // }
+
+  return (
+    <div>
+      <ReactQuill
+        // defaultValue={this.props.value}
+        onChange={handleChange}
+        key={props.id}
+        modules={Editor.modules}
+        formats={Editor.formats}
+        // bounds={props.id}
+        placeholder={props.placeholder}
+        value={props.body}
+      />
+    </div>
+  );
+};
 
 /*
  * Quill modules to attach to editor

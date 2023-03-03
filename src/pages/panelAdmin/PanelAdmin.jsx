@@ -1,7 +1,7 @@
 import "./panel.css";
 import "./table.css";
 import { Routes, Route } from "react-router-dom";
-import UserTable from "./user/UserTable";
+// import UserTable from "./user/UserTable";
 import MenuTopAdmin from "../../components/menuTopAdmin/MenuTopAdmin";
 import SideBarAdmin from "../../components/sideBarAdmin/SideBarAdmin";
 import Dashboard from "./dashboard/Dashboard";
@@ -49,7 +49,7 @@ export default function PanelAdmin() {
           <div className="page panelBox">
             <Routes>
               <Route path="/" element={<Dashboard />} />
-              <Route path="/user" element={<UserTable />} />
+              {/* <Route path="/user" element={<UserTable />} /> */}
               <Route path="/menu" element={<MenuTable />} />
               <Route path="/manager" element={<MemberList />} />
               <Route path="/managerAdd" element={<ManagerAdd />} />
@@ -58,6 +58,7 @@ export default function PanelAdmin() {
               <Route path="/questionAdd" element={<QuestionAdd />} />
               <Route path="/questionEdit/:id" element={<QuestionEdit />} />
               <Route path="/subMenu" element={<SubMenuList />} />
+              <Route path="/subMenuList/:GroupType" element={<SubMenuList />} />
               <Route path="/subMenuAdd" element={<SubMenuAdd />} />
               <Route path="/subMenuEdit/:id" element={<SubMenuEdit />} />
             </Routes>

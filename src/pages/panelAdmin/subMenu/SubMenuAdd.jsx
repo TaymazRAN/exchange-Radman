@@ -83,7 +83,7 @@ export default function SubMenuAdd(props) {
     if (handleError === "success") {
       handleOpenSuccess("عملیات با موفقیت انجام شد");
       setTimeout(() => {
-        // navigate(`/admin/subMenu`);
+        navigate(`/admin/subMenu`);
         dispatch(subMenuActions.clearHandleError());
       }, 1500);
     } else if (handleError !== "success" && handleError !== "") {
@@ -102,6 +102,7 @@ export default function SubMenuAdd(props) {
   const initialValues = {
     title: "",
     body: "",
+    groupType: "",
   };
 
   const submit = (values) => {
@@ -150,12 +151,27 @@ export default function SubMenuAdd(props) {
                   error={touched.title && Boolean(errors.title)}
                   helperText={touched.title && errors.title}
                 />
+
+                <TextField
+                  dir="rtl"
+                  margin="dense"
+                  id="body"
+                  label="body "
+                  type="text"
+                  fullWidth
+                  variant="outlined"
+                  className="profileInput"
+                  value={values.body}
+                  onChange={handleChange}
+                  error={touched.body && Boolean(errors.body)}
+                  helperText={touched.body && errors.body}
+                />
                 <Editor
                   dir="rtl"
-                  id="title"
+                  id="body"
                   // label="body"
-                  placeholder="title وارد  کن  "
-                  value={values.title}
+                  placeholder="body وارد  کن  "
+                  value={values.body}
                   onChange={handleChange}
                   // error={touched.body && Boolean(errors.body)}
                   // helperText={touched.body && errors.body}

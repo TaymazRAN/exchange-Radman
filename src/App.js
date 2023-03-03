@@ -15,33 +15,33 @@ import { prefixer } from "stylis";
 import rtlPlugin from "stylis-plugin-rtl";
 
 const theme = createTheme({
-	direction: "rtl",
+  direction: "rtl",
 });
 
 const cacheRtl = createCache({
-	key: "muirtl",
-	stylisPlugins: [prefixer, rtlPlugin],
+  key: "muirtl",
+  stylisPlugins: [prefixer, rtlPlugin],
 });
 
 function App() {
-	return (
-		<CacheProvider value={cacheRtl}>
-			<ThemeProvider theme={theme}>
-				<div className="App">
-					<Provider store={store}>
-						<Router>
-							<Routes>
-								<Route path="/" element={<Landing />} />
-								<Route path="/static/*" element={<Static />} />
-								<Route path="/login/*" element={<Login />} />
-								<Route path="/admin/*" element={<PanelAdmin />} />
-							</Routes>
-						</Router>
-					</Provider>
-				</div>
-			</ThemeProvider>
-		</CacheProvider>
-	);
+  return (
+    <CacheProvider value={cacheRtl}>
+      <ThemeProvider theme={theme}>
+        <div className="App">
+          <Provider store={store}>
+            <Router>
+              <Routes>
+                <Route path="/" element={<Landing />} />
+                <Route path="/static/*" element={<Static />} />
+                <Route path="/login/*" element={<Login />} />
+                <Route path="/admin/*" element={<PanelAdmin />} />
+              </Routes>
+            </Router>
+          </Provider>
+        </div>
+      </ThemeProvider>
+    </CacheProvider>
+  );
 }
 
 export default App;
