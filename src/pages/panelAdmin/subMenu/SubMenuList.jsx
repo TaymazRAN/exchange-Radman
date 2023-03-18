@@ -9,7 +9,6 @@ import AlertDeleteRedux from "../../../components/alertDelete/AlertDeleteRedux";
 import SnackAlert from "../../../components/snackAlert/SnackAlert";
 import LoadingRedux from "../../../components/loadingRedux/LoadingRedux";
 import {
-  fetchAllSubMenu,
   fetchsubMenuByGroupType,
   subMenuActions,
   suspendsubMenu,
@@ -17,7 +16,7 @@ import {
 
 const SubMenuList = () => {
   const { GroupType } = useParams();
-  console.log("usepARAM", GroupType);
+  console.log("GroupType ==", GroupType);
 
   // const organid = JSON.parse(localStorage.getItem("organid"));
 
@@ -33,6 +32,7 @@ const SubMenuList = () => {
   const navigate = useNavigate();
   const [successAlert, setSuccessAlert] = useState(false);
   const [successText, setSuccessText] = useState("");
+
   const handleOpenSuccess = (text) => {
     setSuccessText(text);
     setSuccessAlert(true);
@@ -58,7 +58,7 @@ const SubMenuList = () => {
     dispatch(fetchsubMenuByGroupType(GroupType));
     // dispatch(fetchAllSubMenu());
     // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, []);
+  }, [data]);
 
   useEffect(() => {
     if (handleError === "success") {

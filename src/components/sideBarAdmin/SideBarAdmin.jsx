@@ -3,21 +3,21 @@ import React from "react";
 // import PersonOutlineIcon from "@mui/icons-material/PersonOutline";
 import PeopleOutlineIcon from "@mui/icons-material/PeopleOutline";
 // import BarChartOutlinedIcon from "@mui/icons-material/BarChartOutlined";
-import CategoryOutlinedIcon from "@mui/icons-material/CategoryOutlined";
-import Inventory2OutlinedIcon from "@mui/icons-material/Inventory2Outlined";
-import DiscountOutlinedIcon from "@mui/icons-material/DiscountOutlined";
+// import CategoryOutlinedIcon from "@mui/icons-material/CategoryOutlined";
+// import Inventory2OutlinedIcon from "@mui/icons-material/Inventory2Outlined";
+// import DiscountOutlinedIcon from "@mui/icons-material/DiscountOutlined";
 import { Navigate, NavLink, useNavigate } from "react-router-dom";
 import Accordion from "@mui/material/Accordion";
 import AccordionDetails from "@mui/material/AccordionDetails";
 import AccordionSummary from "@mui/material/AccordionSummary";
 import ExpandMoreIcon from "@mui/icons-material/ExpandMore";
 // import AppsIcon from "@mui/icons-material/Apps";
-import CorporateFareIcon from "@mui/icons-material/CorporateFare";
+// import CorporateFareIcon from "@mui/icons-material/CorporateFare";
 // import InventoryIcon from "@mui/icons-material/Inventory";
 import HomeRoundedIcon from "@mui/icons-material/HomeRounded";
 import EmailOutlinedIcon from "@mui/icons-material/EmailOutlined";
 import WidgetsRoundedIcon from "@mui/icons-material/WidgetsRounded";
-import SettingsSuggestOutlinedIcon from "@mui/icons-material/SettingsSuggestOutlined";
+// import SettingsSuggestOutlinedIcon from "@mui/icons-material/SettingsSuggestOutlined";
 import { Button } from "@mui/material";
 
 export default function SideBarAdmin() {
@@ -42,6 +42,13 @@ export default function SideBarAdmin() {
     "landing",
     "About_Chart",
     "About_Member",
+    "menu_AtiKala",
+    "Question_AtiKala",
+    "MenuBoursKala",
+    "MenuBoursEnerji",
+    "SupportQuestion",
+    "Branch",
+    "Platform",
   ];
   return (
     <div className="sideBar">
@@ -175,7 +182,7 @@ export default function SideBarAdmin() {
                   className="gridButton"
                   color="info"
                   onClick={(event) =>
-                    navigate(`/admin/subMenuList/${listMenu[4]}`)
+                    navigate(`/admin/subMenuList/${listMenu[7]}`)
                   }
                 >
                   منوی آتی کالا
@@ -188,7 +195,7 @@ export default function SideBarAdmin() {
                   className="gridButton"
                   color="info"
                   onClick={(event) =>
-                    navigate(`/admin/subMenuList/${listMenu[3]}`)
+                    navigate(`/admin/subMenuList/${listMenu[8]}`)
                   }
                 >
                   سوالات متدوال آتی کالا
@@ -200,7 +207,7 @@ export default function SideBarAdmin() {
                   className="gridButton"
                   color="info"
                   onClick={(event) =>
-                    navigate(`/admin/subMenuList/${listMenu[3]}`)
+                    navigate(`/admin/subMenuList/${listMenu[9]}`)
                   }
                 >
                   منوی بورس کالا
@@ -212,7 +219,7 @@ export default function SideBarAdmin() {
                   className="gridButton"
                   color="info"
                   onClick={(event) =>
-                    navigate(`/admin/subMenuList/${listMenu[3]}`)
+                    navigate(`/admin/subMenuList/${listMenu[10]}`)
                   }
                 >
                   منوی بورس انرژی
@@ -242,9 +249,7 @@ export default function SideBarAdmin() {
                 <Button
                   className="gridButton"
                   color="info"
-                  onClick={(event) =>
-                    navigate(`/admin/subMenuList/${listMenu[4]}`)
-                  }
+                  onClick={(event) => navigate(`/admin/cantact`)}
                 >
                   تماس با ما
                 </Button>
@@ -254,9 +259,7 @@ export default function SideBarAdmin() {
                 <Button
                   className="gridButton"
                   color="info"
-                  onClick={(event) =>
-                    navigate(`/admin/subMenuList/${listMenu[3]}`)
-                  }
+                  onClick={(event) => navigate(`/admin/Account`)}
                 >
                   شماره حساب
                 </Button>
@@ -267,7 +270,7 @@ export default function SideBarAdmin() {
                   className="gridButton"
                   color="info"
                   onClick={(event) =>
-                    navigate(`/admin/subMenuList/${listMenu[3]}`)
+                    navigate(`/admin/subMenuList/${listMenu[11]}`)
                   }
                 >
                   تماس با پشتیبانی
@@ -275,16 +278,14 @@ export default function SideBarAdmin() {
                 <WidgetsRoundedIcon className="sideBarIcon" />
               </li>
               <li>
-                <Button
-                  className="gridButton"
-                  color="info"
-                  onClick={(event) =>
-                    navigate(`/admin/subMenuList/${listMenu[3]}`)
-                  }
+                <NavLink
+                  to={`/admin/subMenuList/${listMenu[12]}`}
+                  activeclassname="active"
+                  className="sideBarListItem"
                 >
                   شعب ودفاتر
-                </Button>
-                <WidgetsRoundedIcon className="sideBarIcon" />
+                  <HomeRoundedIcon className="sideBarIcon" />
+                </NavLink>
               </li>{" "}
             </ul>
           </AccordionDetails>
@@ -307,7 +308,7 @@ export default function SideBarAdmin() {
                 className="gridButton"
                 color="info"
                 onClick={(event) =>
-                  navigate(`/admin/subMenuList/${listMenu[4]}`)
+                  navigate(`/admin/subMenuList/${listMenu[13]}`)
                 }
               >
                 پلتفرم های معاملاتی
