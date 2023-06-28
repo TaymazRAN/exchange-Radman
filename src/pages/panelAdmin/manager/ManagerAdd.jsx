@@ -101,6 +101,8 @@ export default function ManagerAdd(props) {
     responsible: "",
     body: "",
     description: "",
+    ModifiedDate: "2023-06-23T12:29:29.962Z",
+    CreateDate: "2023-06-23T12:29:29.962Z",
   };
 
   const submit = (values) => {

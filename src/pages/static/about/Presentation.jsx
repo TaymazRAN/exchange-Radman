@@ -1,13 +1,36 @@
-import React from "react";
+import React, { useEffect } from "react";
+import { useDispatch, useSelector } from "react-redux";
+import { fetchsubMenuByID } from "../../../features/account/subMenuSlice";
 
 const Presentation = () => {
+  const id = "e83b544f-0e63-49fc-92b5-6e2afff09369";
+  const dispatch = useDispatch();
+  const data = useSelector((state) => state.subMenu.subMenu);
+
+  useEffect(() => {
+    dispatch(fetchsubMenuByID(id));
+    // window.location.reload();
+  }, []);
+
+  console.log("Pass Data", data);
+
   return (
     <div className="page" style={{ textAlign: "center" }}>
       <div className="accordionContainer">
         <div className="fullImage about"></div>
       </div>
+      <div
+        dangerouslySetInnerHTML={{
+          __html: data.body,
+        }}
+      ></div>
 
-      <div>
+      {/* dangerouslySetInnerHTML=
+      {{
+        __html: data.map((home) => <div>{home.body}</div>),
+      }}
+       */}
+      {/* <div>
         <div className="split big centered">
           <h2>معرفی کارگزاری صبا جهاد</h2>
           <p className="textBody">
@@ -54,7 +77,7 @@ const Presentation = () => {
           صندوق بازنشستگی کشوری است و ترکیب سهامداران شرکت به شرح زیر است.
         </p>
       </div>
-      <div className="fullImage saham"></div>
+      <div className="fullImage saham"></div> */}
     </div>
   );
 };

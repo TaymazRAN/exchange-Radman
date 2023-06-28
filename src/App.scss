@@ -58,12 +58,15 @@
 .textBody{
    line-height: 3 !important; 
    text-Align: "justify" !important; 
-   align-items: "justify";
+   align-items: "justify" !important;
+   text-justify: "justify" !important;
+   justify-content: "justify" !important;
+
 
 }
 .tabTypography{
   border:3px rgb(4, 26, 88)!important;
-  color: rgb(28, 27, 27) !important;
+  color: rgb(21, 20, 20) !important;
   border-radius: 10px !important;
   font-size: 14px !important;
   margin: 5px !important;
@@ -72,18 +75,41 @@
 
 }
 
+.tabTypography:hover{
+  border:3px rgb(4, 26, 88)!important;
+  color: rgb(28, 27, 27) !important;
+  border-radius: 10px !important;
+  font-size: 14px !important;
+  margin: 5px !important;
+  background-color: rgb(204, 204, 204) !important;
+  font-weight: bold !important;
+  border: 3px solid #D0CD38 !important;
+
+}
+
 .tabTypographyVertical{
   border:3px rgb(4, 26, 88)!important;
-    color: rgb(28, 27, 27) !important;
+    color: rgb(16, 15, 15) !important;
     border-radius: 10px !important;
     font-size: 14px !important;
-    margin: 2px !important;
+    margin: 2;
     background-color: rgb(204, 204, 204) !important;
     padding: 2px 5px !important;
   font-weight: bold !important;
 
 }
 
+.tabTypographyVertical:hover{
+    border-radius: 10px !important;
+    font-size: 14px !important;
+    // margin: 2px !important;
+    background-color: rgb(204, 204, 204) !important;
+    padding: 2px 5px !important;
+    color: rgb(28, 27, 27) !important;
+  font-weight: bold !important;
+  border: 3px solid #D0CD38 !important;
+
+}
 .tabTypography:hover{
   // line-height: 3 !important;
   background-color:rgb(4, 26, 88) 1 !important;

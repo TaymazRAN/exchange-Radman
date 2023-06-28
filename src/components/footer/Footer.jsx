@@ -57,8 +57,25 @@ export default function Footer() {
             href="https://www.google.com/maps/place/%D8%B4%D8%B1%DA%A9%D8%AA+%DA%A9%D8%A7%D8%B1%DA%AF%D8%B2%D8%A7%D8%B1%DB%8C+%D8%B5%D9%86%D8%AF%D9%88%D9%82+%D8%A8%D8%A7%D8%B2%D9%86%D8%B4%D8%B3%D8%AA%DA%AF%DB%8C+%DA%A9%D8%B4%D9%88%D8%B1+(%D8%B5%D8%A8%D8%A7+%D8%AC%D9%87%D8%A7%D8%AF)%E2%80%AD/@35.7038756,51.4015164,18z/data=!3m1!4b1!4m5!3m4!1s0x3f8e0142c7ed3b85:0x9873faef5750da59!8m2!3d35.7038734!4d51.4026107"
           > */}
           <div className="column map"> </div>
+          <div>
+            <a
+              referrerPolicy="origin"
+              target="_blank"
+              href="https://trustseal.enamad.ir/?id=19257&amp;Code=BHPCp06fyJXpYFR9zahu"
+              rel="noreferrer"
+            >
+              <img
+                referrerPolicy="origin"
+                src="https://Trustseal.eNamad.ir/logo.aspx?id=19257&amp;Code=BHPCp06fyJXpYFR9zahu"
+                alt=""
+                style={{ cursor: "pointer" }}
+                id="BHPCp06fyJXpYFR9zahu"
+                width="100px"
+              />{" "}
+            </a>
+          </div>
 
-          <div className="column social">
+          {/* <div className="column social">
             <h2>ما را در شبکه‌های اجتماعی دنبال کنید</h2>
             <div className="socialContainer">
               <a href="/" className="socialLink">
@@ -74,7 +91,7 @@ export default function Footer() {
                 <LinkedInIcon className="footerIcon" />
               </a>
             </div>
-          </div>
+          </div> */}
         </div>
       </div>
       <div className="copyright">

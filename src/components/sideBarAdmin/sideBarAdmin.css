@@ -28,13 +28,14 @@
 	font-weight: 500;
 	padding-right: 10px;
 	border-right: 3px solid #39d3fa;
-	color: #717171;
+	color: #0288d1;
 }
 
 .sideBarList {
-	list-style: none;
+	/* list-style: none; */
 	padding: 5px 0;
 	margin: -5px 0;
+  /* background-color: gray; */
 }
 
 .sideBarListItem {
@@ -49,6 +50,9 @@
 	text-decoration: none;
 	background-color: transparent;
 	margin: 8px 5px;
+  background-color: #f2ebeb !important;
+  padding: 3px;
+  font-weight: 500;
 }
 
 li.sideBarListItem {
@@ -65,7 +69,7 @@ li.sideBarListItem .sideBarIcon {
 
 .sideBarListItem.active,
 .sideBarListItem:hover {
-	background-color: #e6effb;
+	background-color: #aac2e3;
 }
 
 .sideBarIcon {

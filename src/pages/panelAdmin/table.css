@@ -53,13 +53,17 @@ flex: 1;
 }
 .topButton {
 	margin-right: 15px;
-  color: #028c40;
+  /* color: #028c40; */
+  color: rgb(238, 238, 239) !important;
+  background-color: #0773ae !important;
+  font-weight: 600;
+
 }
 
 .topButtonIcon {
-	font-size: 25px;
+	font-size: 2em;
 	margin-right: 5px;
-  color: #028c40;
+  color: #fafafc;
   font-weight: bold;
 }
 

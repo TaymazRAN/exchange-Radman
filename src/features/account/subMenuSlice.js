@@ -3,12 +3,15 @@ import { createAsyncThunk } from "@reduxjs/toolkit";
 import axios from "axios";
 import configData from "../../services/config.json";
 
-const url = `${configData.AddressApi}/SubMenu`;
+const url = `${configData.AddressApi}/ApiPerson`;
 
+// http://localhost:4268/ApiPerson/GetByIdPersons?Id=1fc2eaae-2fb9-47e6-be05-10d21785a5f1
 export const fetchsubMenuByID = createAsyncThunk(
   "subMenu/fetchsubMenuByID",
   async (id) => {
-    return axios.get(`${url}?id=${id}`).then((response) => response.data);
+    return axios
+      .get(`${url}/GetByIdPersons?id=${id}`)
+      .then((response) => response.data);
   }
 );
 
@@ -17,43 +20,31 @@ export const fetchsubMenuByGroupType = createAsyncThunk(
   async (groupType) => {
     console.log("groupType", groupType);
     return await axios
-      .get(`${url}/GetAllGropName?groupType=${groupType}`)
-      .then((response) => response.data);
-  }
-);
-
-export const fetchAllSubMenu = createAsyncThunk(
-  "subMenu/fetchAllSubMenu",
-  async () => {
-    return axios.get(`${url}/GetAllSubMenu`).then((response) => response.data);
-  }
-);
-
-export const fetchOrganizationsubMenus = createAsyncThunk(
-  "user/fetchOrganizationsubMenus",
-  async (organid) => {
-    return await axios
-      .get(`${url}/organization/${organid}`)
+      .get(`${url}/GetAllPersonsGroup?groupby=${groupType}`)
       .then((response) => response.data);
   }
 );
 
 export const updatesubMenu = createAsyncThunk(
   "subMenu/updatesubMenu",
-  async (user, data) => {
-    console.log("user--", user.user);
-    console.log("data--", user.data);
+  // async (ID, title, groupType, body) => {
+  async (data) => {
+    // console.log("user Redux pass ", user.user);
+    console.log("data pass Redux", data);
     return await axios
-      .post(`${url}/${"UpdateSubMenu?id="}${user.user}`, user.data)
+      // .post(`${url}/${"UpdatePerson?id="}${ID}`, ID, title, groupType, body)
+      .post(`${url}/${"UpdatePerson"}`, data)
       .then((response) => response.data);
   }
 );
 
+// http://localhost:4268/ApiPerson/InsertToPersons'
 export const addsubMenu = createAsyncThunk(
   "subMenu/addsubMenu",
   async (data) => {
     const register = await axios
-      .post(`${url}/InsertSubMenu`, data)
+      // .post(`${url}/InsertToPersons`, data)
+      .post(`${url}/${"InsertToPersons"}`, data)
       .then((response) => response.data);
 
     return { register, data };
@@ -64,7 +55,23 @@ export const suspendsubMenu = createAsyncThunk(
   "subMenu/suspendsubMenu",
   async (id) => {
     return await axios
-      .post(`${url}/${"DeleteSubMenu?id="}${id}`)
+      .post(`${url}/${"RemovePersons?id="}${id}`)
+      .then((response) => response.data);
+  }
+);
+
+export const fetchAllSubMenu = createAsyncThunk(
+  "subMenu/fetchAllSubMenu",
+  async () => {
+    return axios.get(`${url}/GetAllPersons`).then((response) => response.data);
+  }
+);
+
+export const fetchOrganizationsubMenus = createAsyncThunk(
+  "user/fetchOrganizationsubMenus",
+  async (organid) => {
+    return await axios
+      .get(`${url}/organization/${organid}`)
       .then((response) => response.data);
   }
 );

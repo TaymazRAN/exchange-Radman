@@ -8,7 +8,7 @@ const SuperMenu = () => {
 
   return (
     <>
-      <nav class="d-navbar">
+      <nav className="d-navbar">
         <div className="d">
           <Button
             className="button"
@@ -46,7 +46,7 @@ const SuperMenu = () => {
             </div>
           </div>
         </div>
-        <div class="d">
+        <div className="d">
           <Button className="button d-btn" variant="text" color="error">
             خدمات
             <KeyboardArrowDownRoundedIcon className="superArrow" />
@@ -82,7 +82,11 @@ const SuperMenu = () => {
                   <Link to="/static/ServicesB3"> خدمات کارگزاری </Link>
                   {/* <Link to="/static/ServicesB4"> نمای بازار </Link> */}
 
-                  <a href="https://tts.ime.co.ir/" target="_blank">
+                  <a
+                    href="https://tts.ime.co.ir/"
+                    rel="noreferrer"
+                    target="_blank"
+                  >
                     نمای بازار
                   </a>
                 </div>
@@ -91,6 +95,7 @@ const SuperMenu = () => {
                   <a
                     href="https://bimeiranbroker.ir/Content/media/image/2022/01/96_orig.pdf"
                     target="_blank"
+                    rel="noreferrer"
                   >
                     آتی صندوق طلا
                   </a>

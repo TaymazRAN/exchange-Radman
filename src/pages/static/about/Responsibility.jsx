@@ -1,51 +1,31 @@
-import React from "react";
+import React, { useEffect } from "react";
 import Accordion from "@mui/material/Accordion";
 import Typography from "@mui/material/Typography";
+import { useDispatch, useSelector } from "react-redux";
+import { fetchsubMenuByID } from "../../../features/account/subMenuSlice";
 
 const Responsibility = () => {
+  const id = "7c43b099-e1a5-4aed-b571-de8ec9264841";
+  const dispatch = useDispatch();
+  const data = useSelector((state) => state.subMenu.subMenu);
+  useEffect(() => {
+    dispatch(fetchsubMenuByID(id));
+    // window.location.reload();
+  }, []);
+
+  console.log("Pass Data", data);
   return (
     <div className="page">
       <h2> مسئولیت اجتماعی: </h2>
       <div className="accordionContainer">
         <Accordion className="customAccordion">
           <Typography>
-            <div className="customAnswer">
-              <ul>
-                <li className="textBody">
-                  <b> مسئولیت اجتماعی:</b>
-                  امروزه مسئولیت اجتماعی شرکت‌ها (Corporate Social
-                  Responsibility) که در ادبیات اقتصاد و مدیریت دنیا به عنوان CSR
-                  شناخته می‌شود؛ این مفهوم بنیادین را در اقتصاد قرن بیست و یکم
-                  رواج می‌دهد که مسئولیت‌های صاحبان کسب و کار، تنها شامل
-                  مصرف‌کنندگان نهایی کالا و خدمات نیست و دامنه وسیعی از ذی‌نفعان
-                  را پوشش می‌دهد. نگاه اخلاقی به کسب و کار ماحصل تفکر مسئولیت
-                  اجتماعی بوده و جایگاه اجتماعی شرکت‌ها را در سطوح بین‌المللی
-                  تعریف و تبیین می‌کند.
-                  <br />
-                  شرکت کارگزاری صباجهاد، هم‌ راستا با اهداف عالی کشور همواره
-                  تلاش داشته تا نقش خود را به عنوان یکی از زیر مجموعه های صندوق
-                  بازنشستگی کل کشور در قبال جامعه نیز انجام دهد و به همین منظور،
-                  وظایف و تعهداتی را در خصوص«مسئولیت اجتماعی» تعریف و اجرا کرده
-                  است؛ فعالیت‌هایی که پیش برنده سود و منفعت اجتماعی و فراتر از
-                  منافع سازمانی و وظایف قانونی بوده است.
-                  <br />
-                  به عبارت دیگر،«مسئولیت‌های اجتماعی شرکتی» بخشی از «اخلاق کسب و
-                  کار» محسوب شده و شامل «مسئولانه عمل کردن» در قبال جامعه، به
-                  ویژه با گسترش روزافزون اثرگذاری شرکت‌ها بر محورهای تشکیل دهنده
-                  توسعه پایدار یعنی «اقتصاد»، «جامعه» و «محیط زیست» است.
-                  <br />
-                  کارگزاری صبا جهاد به عنوان نهادی اقتصادی – اجتماعی تلاش کرده
-                  است تا با حفظ ارتباط خود با نهادهای اجتماعی در راستای کمک به
-                  بهبود اشتغال، درآمدزایی و خوداتکایی شهروندان حرکت کند. طی
-                  سال‌های اخیر همکاری با انجمن‌های مردم نهاد از جمله محک، کهریزک
-                  و ... در بخش‌های مختلف منجر به اشتغالزایی ده‌ها نفری و رفع
-                  نیازهای ضروری خانواده‌های نیازمند شده است. این کارگزاری آماده
-                  همکاری با نهادهای مدنی مختلف برای کمک به بهبود رفاه اجتماعی
-                  است.
-                  <br />
-                </li>
-              </ul>
-            </div>
+            <div
+              className="textBody"
+              dangerouslySetInnerHTML={{
+                __html: data.body,
+              }}
+            ></div>
           </Typography>
         </Accordion>
       </div>

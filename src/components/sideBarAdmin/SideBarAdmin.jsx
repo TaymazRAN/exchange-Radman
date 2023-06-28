@@ -35,7 +35,7 @@ export default function SideBarAdmin() {
   };
   const navigate = useNavigate();
   const listMenu = [
-    "About",
+    "About", //0
     "Platform",
     "Momelat",
     "Question_Landing",
@@ -49,6 +49,19 @@ export default function SideBarAdmin() {
     "SupportQuestion",
     "Branch",
     "Platform",
+    "TaminMali", //14
+    "Sandog_Sarmayegozari", //15
+    "Arze_Paziresh_Sherkat", //16
+    "Tamin_Mali_Jamei", //17
+    "Common_Question_BoursOrag", //18
+    "Menu_Bours_orga", //19
+    "bourse_Energi", //20
+    "Bours_Kala", //21
+    "Ati_Kala", //22
+    "Ati_Kala_Question", //23
+    "Connect_Branch", //24
+    "Connect_Account", //25
+    "Connect_Support", //26
   ];
   return (
     <div className="sideBar">
@@ -64,7 +77,7 @@ export default function SideBarAdmin() {
             aria-controls="panel1bh-content"
             id="panel1bh-header"
           >
-            <div className="sideBarTitle bold"> صفحه اصلی </div>
+            <div className="sideBarTitle bold"> مدیریت صفحه اصلی </div>
           </AccordionSummary>
           <AccordionDetails>
             <ul className="sideBarList">
@@ -88,7 +101,7 @@ export default function SideBarAdmin() {
                 >
                   مدیریت منوها
                 </Button>
-                <WidgetsRoundedIcon className="sideBarIcon" />
+                {/* <WidgetsRoundedIcon className="sideBarIcon" /> */}
               </li>
 
               <li>
@@ -96,70 +109,28 @@ export default function SideBarAdmin() {
                   className="gridButton"
                   color="info"
                   onClick={(event) =>
-                    navigate(`/admin/subMenuList/${listMenu[3]}`)
+                    navigate(`/admin/SubMenulistDynamic/${listMenu[3]}`)
                   }
                 >
                   سوالات متدوال
                 </Button>
-                <WidgetsRoundedIcon className="sideBarIcon" />
+                {/* <WidgetsRoundedIcon className="sideBarIcon" /> */}
               </li>
             </ul>
           </AccordionDetails>
         </Accordion>
-        <Accordion
-          className="accordionSide"
-          expanded={expanded === "panel20"}
-          onChange={handleChange("panel20")}
-          sx={accordionStyle}
-        >
-          <AccordionSummary
-            expandIcon={<ExpandMoreIcon />}
-            aria-controls="panel1bh-content"
-            id="panel1bh-header"
-          >
-            <div className="sideBarTitle bold"> درباره ما </div>
-          </AccordionSummary>
-          <AccordionDetails>
-            <ul className="sideBarList">
-              <li>
-                <Button
-                  className="gridButton"
-                  color="info"
-                  onClick={(event) =>
-                    navigate(`/admin/subMenuList/${listMenu[0]}`)
-                  }
-                >
-                  مدیریت منوها
-                </Button>
-                <WidgetsRoundedIcon className="sideBarIcon" />
-              </li>
 
-              <li>
-                <Button
-                  className="gridButton"
-                  color="info"
-                  onClick={(event) =>
-                    navigate(`/admin/subMenuList/${listMenu[5]}`)
-                  }
-                >
-                  چارت سازمانی و معرفی مدیران
-                </Button>
-                <WidgetsRoundedIcon className="sideBarIcon" />
-              </li>
-              <li>
-                <Button
-                  className="gridButton"
-                  color="info"
-                  onClick={(event) =>
-                    navigate(`/admin/subMenuList/${listMenu[6]}`)
-                  }
-                >
-                  اعضای هیات مدیره
-                </Button>
-                <WidgetsRoundedIcon className="sideBarIcon" />
-              </li>
-            </ul>
-          </AccordionDetails>
+        <Accordion className="accordionSide" sx={accordionStyle}>
+          <div className="sideBarTitle bold">
+            {" "}
+            <Button
+              className="gridButton"
+              color="info"
+              onClick={(event) => navigate(`/admin/subMenuList/${listMenu[0]}`)}
+            >
+              مدیریت منو درباره ما
+            </Button>
+          </div>
         </Accordion>
 
         <Accordion
@@ -173,7 +144,7 @@ export default function SideBarAdmin() {
             aria-controls="panel1bh-content"
             id="panel1bh-header"
           >
-            <div className="sideBarTitle bold"> خدمات </div>
+            <div className="sideBarTitle bold"> خدمات - بورس اوراق </div>
           </AccordionSummary>
           <AccordionDetails>
             <ul className="sideBarList">
@@ -182,12 +153,12 @@ export default function SideBarAdmin() {
                   className="gridButton"
                   color="info"
                   onClick={(event) =>
-                    navigate(`/admin/subMenuList/${listMenu[7]}`)
+                    navigate(`/admin/subMenuList/${listMenu[19]}`)
                   }
                 >
-                  منوی آتی کالا
+                  منوی بورس اوراق بهادار
                 </Button>
-                <WidgetsRoundedIcon className="sideBarIcon" />
+                {/* <WidgetsRoundedIcon className="sideBarIcon" /> */}
               </li>
 
               <li>
@@ -195,36 +166,63 @@ export default function SideBarAdmin() {
                   className="gridButton"
                   color="info"
                   onClick={(event) =>
-                    navigate(`/admin/subMenuList/${listMenu[8]}`)
+                    navigate(`/admin/SubMenulistDynamic/${listMenu[14]}`)
                   }
                 >
-                  سوالات متدوال آتی کالا
+                  خدمات - تامین مالی
                 </Button>
-                <WidgetsRoundedIcon className="sideBarIcon" />
+                {/* <WidgetsRoundedIcon className="sideBarIcon" /> */}
+              </li>
+
+              <li>
+                <Button
+                  className="gridButton"
+                  color="info"
+                  onClick={(event) =>
+                    navigate(`/admin/SubMenulistDynamic/${listMenu[15]}`)
+                  }
+                >
+                  صندوق سرمایه گذاری
+                </Button>
+                {/* <WidgetsRoundedIcon className="sideBarIcon" /> */}
+              </li>
+
+              <li>
+                <Button
+                  className="gridButton"
+                  color="info"
+                  onClick={(event) =>
+                    navigate(`/admin/SubMenulistDynamic/${listMenu[16]}`)
+                  }
+                >
+                  عرضه و پذیرش شرکت
+                </Button>
+                {/* <WidgetsRoundedIcon className="sideBarIcon" /> */}
+              </li>
+
+              <li>
+                <Button
+                  className="gridButton"
+                  color="info"
+                  onClick={(event) =>
+                    navigate(`/admin/SubMenulistDynamic/${listMenu[17]}`)
+                  }
+                >
+                  تامین مالی جمعی
+                </Button>
+                {/* <WidgetsRoundedIcon className="sideBarIcon" /> */}
               </li>
               <li>
                 <Button
                   className="gridButton"
                   color="info"
                   onClick={(event) =>
-                    navigate(`/admin/subMenuList/${listMenu[9]}`)
+                    navigate(`/admin/SubMenulistDynamic/${listMenu[18]}`)
                   }
                 >
-                  منوی بورس کالا
+                  سوالات متدوال اوراق
                 </Button>
-                <WidgetsRoundedIcon className="sideBarIcon" />
-              </li>
-              <li>
-                <Button
-                  className="gridButton"
-                  color="info"
-                  onClick={(event) =>
-                    navigate(`/admin/subMenuList/${listMenu[10]}`)
-                  }
-                >
-                  منوی بورس انرژی
-                </Button>
-                <WidgetsRoundedIcon className="sideBarIcon" />
+                {/* <WidgetsRoundedIcon className="sideBarIcon" /> */}
               </li>
             </ul>
           </AccordionDetails>
@@ -232,8 +230,90 @@ export default function SideBarAdmin() {
 
         <Accordion
           className="accordionSide"
-          expanded={expanded === "panel22"}
-          onChange={handleChange("panel22")}
+          expanded={expanded === "panel23"}
+          onChange={handleChange("panel23")}
+          sx={accordionStyle}
+        >
+          <div className="sideBarTitle bold">
+            {" "}
+            <Button
+              className="gridButton"
+              color="info"
+              onClick={(event) =>
+                navigate(`/admin/subMenuList/${listMenu[21]}`)
+              }
+            >
+              خدمات - بورس کالا
+            </Button>
+          </div>
+        </Accordion>
+
+        <Accordion
+          className="accordionSide"
+          expanded={expanded === "panel23"}
+          onChange={handleChange("panel23")}
+          sx={accordionStyle}
+        >
+          <div className="sideBarTitle bold">
+            {" "}
+            <Button
+              className="gridButton"
+              color="info"
+              onClick={(event) =>
+                navigate(`/admin/subMenuList/${listMenu[20]}`)
+              }
+            >
+              خدمات - بورس انرژی
+            </Button>
+          </div>
+        </Accordion>
+
+        <Accordion
+          className="accordionSide"
+          expanded={expanded === "panel14"}
+          onChange={handleChange("panel14")}
+          sx={accordionStyle}
+        >
+          <AccordionSummary
+            expandIcon={<ExpandMoreIcon />}
+            aria-controls="panel1bh-content"
+            id="panel1bh-header"
+          >
+            <div className="sideBarTitle bold"> خدمات - آتی کالا </div>
+          </AccordionSummary>
+          <AccordionDetails>
+            <ul className="sideBarList">
+              <li>
+                <Button
+                  className="gridButton"
+                  color="info"
+                  onClick={(event) =>
+                    navigate(`/admin/SubMenulistDynamic/${listMenu[23]}`)
+                  }
+                >
+                  سوالات - آتی کالا
+                </Button>
+                {/* <WidgetsRoundedIcon className="sideBarIcon" /> */}
+              </li>
+              <li>
+                <Button
+                  className="gridButton"
+                  color="info"
+                  onClick={(event) =>
+                    navigate(`/admin/subMenuList/${listMenu[22]}`)
+                  }
+                >
+                  مدیریت آتی کالا
+                </Button>
+                {/* <WidgetsRoundedIcon className="sideBarIcon" /> */}
+              </li>
+            </ul>
+          </AccordionDetails>
+        </Accordion>
+        <Accordion
+          className="accordionSide"
+          expanded={expanded === "panel29"}
+          onChange={handleChange("panel29")}
           sx={accordionStyle}
         >
           <AccordionSummary
@@ -249,166 +329,42 @@ export default function SideBarAdmin() {
                 <Button
                   className="gridButton"
                   color="info"
-                  onClick={(event) => navigate(`/admin/cantact`)}
+                  onClick={(event) =>
+                    navigate(`/admin/SubMenulistDynamic/${listMenu[24]}`)
+                  }
                 >
-                  تماس با ما
+                  شعب و دفاتر
                 </Button>
-                <WidgetsRoundedIcon className="sideBarIcon" />
+                {/* <WidgetsRoundedIcon className="sideBarIcon" /> */}
               </li>
+
               <li>
                 <Button
                   className="gridButton"
                   color="info"
-                  onClick={(event) => navigate(`/admin/Account`)}
+                  onClick={(event) =>
+                    navigate(`/admin/SubMenulistDynamic/${listMenu[25]}`)
+                  }
                 >
-                  شماره حساب
+                  شماره حساب ها
                 </Button>
-                <WidgetsRoundedIcon className="sideBarIcon" />
+                {/* <WidgetsRoundedIcon className="sideBarIcon" /> */}
               </li>
               <li>
                 <Button
                   className="gridButton"
                   color="info"
                   onClick={(event) =>
-                    navigate(`/admin/subMenuList/${listMenu[11]}`)
+                    navigate(`/admin/SubMenulistDynamic/${listMenu[26]}`)
                   }
                 >
                   تماس با پشتیبانی
                 </Button>
-                <WidgetsRoundedIcon className="sideBarIcon" />
+                {/* <WidgetsRoundedIcon className="sideBarIcon" /> */}
               </li>
-              <li>
-                <NavLink
-                  to={`/admin/subMenuList/${listMenu[12]}`}
-                  activeclassname="active"
-                  className="sideBarListItem"
-                >
-                  شعب ودفاتر
-                  <HomeRoundedIcon className="sideBarIcon" />
-                </NavLink>
-              </li>{" "}
             </ul>
           </AccordionDetails>
         </Accordion>
-
-        <Accordion
-          className="accordionSide"
-          expanded={expanded === "panel23"}
-          onChange={handleChange("panel23")}
-          sx={accordionStyle}
-        >
-          <AccordionSummary
-            expandIcon={<ExpandMoreIcon />}
-            aria-controls="panel1bh-content"
-            id="panel1bh-header"
-          >
-            <div className="sideBarTitle bold">
-              {" "}
-              <Button
-                className="gridButton"
-                color="info"
-                onClick={(event) =>
-                  navigate(`/admin/subMenuList/${listMenu[13]}`)
-                }
-              >
-                پلتفرم های معاملاتی
-              </Button>
-            </div>
-          </AccordionSummary>
-        </Accordion>
-
-        <Accordion
-          className="accordionSide"
-          expanded={expanded === "panel1"}
-          onChange={handleChange("panel1")}
-          sx={accordionStyle}
-        >
-          <AccordionSummary
-            expandIcon={<ExpandMoreIcon />}
-            aria-controls="panel1bh-content"
-            id="panel1bh-header"
-          >
-            <div className="sideBarTitle bold"> مدیریت درباره ما </div>
-          </AccordionSummary>
-          <AccordionDetails>
-            <ul className="sideBarList">
-              {/* <li className="sideBarListItem">
-                <PersonOutlineIcon className="sideBarIcon" />
-                مدیریت پروفایل
-              </li> */}
-              <NavLink
-                to="/admin/menu"
-                activeclassname="active"
-                className="sideBarListItem"
-              >
-                <WidgetsRoundedIcon className="sideBarIcon" />
-                درباره ما{" "}
-              </NavLink>
-              <NavLink
-                to="/admin/manager"
-                activeclassname="active"
-                className="sideBarListItem"
-              >
-                <PeopleOutlineIcon className="sideBarIcon" />
-                manager
-              </NavLink>
-
-              <Button
-                className="gridButton"
-                color="info"
-                onClick={(event) =>
-                  navigate(`/admin/subMenuList/${listMenu[0]}`)
-                }
-              >
-                About
-              </Button>
-
-              <NavLink
-                to="/admin/question"
-                activeclassname="active"
-                className="sideBarListItem"
-              >
-                <PeopleOutlineIcon className="sideBarIcon" />
-                question
-              </NavLink>
-
-              <NavLink
-                to="/admin/user"
-                activeclassname="active"
-                className="sideBarListItem"
-              >
-                <PeopleOutlineIcon className="sideBarIcon" />
-                پلتفرم های معاملاتی
-              </NavLink>
-
-              <NavLink
-                to="/admin/question"
-                activeclassname="active"
-                className="sideBarListItem"
-              >
-                <PeopleOutlineIcon className="sideBarIcon" />
-                لیست شعبه ها
-              </NavLink>
-              <NavLink
-                to="/admin/user"
-                activeclassname="active"
-                className="sideBarListItem"
-              >
-                <PeopleOutlineIcon className="sideBarIcon" />
-                شماره حساب ها
-              </NavLink>
-              <NavLink
-                to="/admin/contact"
-                activeclassname="active"
-                className="sideBarListItem"
-              >
-                <EmailOutlinedIcon className="sideBarIcon" />
-                تماس ها
-              </NavLink>
-            </ul>
-          </AccordionDetails>
-        </Accordion>
-
         {/* <Accordion
           className="accordionSide"
           expanded={expanded === "panel2"}

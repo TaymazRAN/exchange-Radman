@@ -2,6 +2,8 @@
 	@include flex-column-top;
 	width: 100%;
 	margin-top: 50px;
+  flex-wrap: wrap;
+
 	.data {
 		width: 100%;
 		padding: 30px 60px;
@@ -16,8 +18,10 @@
 			.column {
 				flex: 1;
 				padding: 0 30px 0 20px;
-				min-width: calc(70% / 3);
-				@include flex-column-top-right;
+				// min-width: calc(70% / 3);
+
+        min-width: 220px;
+				// @include flex-column-top-right;
 				min-height: 220px;
 				.footerIcon {
 					color: $opposite-font-color;

@@ -1,5 +1,5 @@
 {
   
-  "AddressApi": "https://localhost:5001/api/v1",
+  "AddressApi": "http://localhost:4268",
   "localApi": "http://localhost:3000" 
 }

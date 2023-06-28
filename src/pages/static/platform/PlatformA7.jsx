@@ -31,7 +31,7 @@ const PlatformA7 = () => {
           <div className="image platform7"></div>
         </div>
         <br /> <br />
-        <div class="borderC"></div>
+        <div className="borderC"></div>
         <br />
         {/* Left 1 */}
         <div className="compartment left">

@@ -1,36 +1,30 @@
-import React from "react";
-import Accordion from "@mui/material/Accordion";
-import Typography from "@mui/material/Typography";
+import React, { useEffect } from "react";
+import { useDispatch, useSelector } from "react-redux";
+import { fetchsubMenuByID } from "../../../features/account/subMenuSlice";
 
 const BoardMembers = () => {
+  const id = "5b8740fd-0f8f-40eb-b590-39105069b347";
+  const dispatch = useDispatch();
+  const data = useSelector((state) => state.subMenu.subMenu);
+  useEffect(() => {
+    dispatch(fetchsubMenuByID(id));
+    // window.location.reload();
+  }, []);
+
+  console.log("Pass Data", data);
   return (
-    <div className="accordionContainer">
-      <div className="fullImage about"></div>
-      <h2 className="">اعضای هیئت مدیره</h2>
-      <Accordion className="customAccordion">
-        <Typography>
-          <div className="customAnswer">
-            <div className="personContainer">
-              {/* <div className="personCard">
-                <div className="image mahnush"></div>
-                <div className="title">خانم مهنوش کریم</div>
-                <div className="role">عضو هیات‌ مدیره</div>
-              </div> */}
-              <div className="personCard">
-                <div className="image alireza"></div>
-                <div className="title">آقای علیرضا مرادی</div>
-                <div className="role">مدیرعامل و نایب رئیس هیات مدیره</div>
-              </div>
-              <div className="personCard">
-                <div className="image ali"></div>
-                <div className="title">آقای علی صلاحی نژاد</div>
-                <div className="role">رئیس هیات مدیره</div>
-              </div>
-            </div>
-          </div>
-        </Typography>
-      </Accordion>
-    </div>
+    <>
+      <div className="accordionContainer" style={{ direction: "ltr" }}>
+        {/* <h2 className=""> مدیران</h2> */}
+
+        <div
+          className="textBody"
+          dangerouslySetInnerHTML={{
+            __html: data.body,
+          }}
+        ></div>
+      </div>
+    </>
   );
 };
 

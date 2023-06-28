@@ -12,7 +12,7 @@ export const getAllpackage = () => {
 // POST
 //api​/Package
 export const createPackage = (packagelist) => {
-  // http://188.95.89.161/api/Package/category
+  // http:// /api/Package/category
   const url = `${SERVER_URL}/package`;
   return axios.post(url, packagelist);
 };
@@ -22,7 +22,7 @@ export const createPackage = (packagelist) => {
 export const getPackageByCategory = ({ id }) => {
   const url = `${SERVER_URL}/Package/by-category/${id}`;
   // const url = `${SERVER_URL}/Package/by-category/1`;
-  // http://188.95.89.161/api/Package/by-category/1
+  // http:// /api/Package/by-category/1
   return axios.get(url);
 };
 

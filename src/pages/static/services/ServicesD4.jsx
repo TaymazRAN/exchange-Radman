@@ -1,3 +1,39 @@
+// import React, { useEffect } from "react";
+// import Accordion from "@mui/material/Accordion";
+// import Typography from "@mui/material/Typography";
+// import { useDispatch, useSelector } from "react-redux";
+// import { fetchsubMenuByID } from "../../../features/account/subMenuSlice";
+
+// const ServicesD4 = () => {
+//   const id = "1c38dc52-70d5-4ec0-82f7-963ab881f9bb";
+//   const dispatch = useDispatch();
+//   const data = useSelector((state) => state.subMenu.subMenu);
+//   useEffect(() => {
+//     dispatch(fetchsubMenuByID(id));
+//     // window.location.reload();
+//   }, []);
+
+//   console.log("Pass Data", data);
+//   return (
+//     <div className="page">
+//       <div className="accordionContainer">
+//         <Accordion className="customAccordion">
+//           <Typography>
+//             <div
+//               className="textBody"
+//               dangerouslySetInnerHTML={{
+//                 __html: data.body,
+//               }}
+//             ></div>
+//           </Typography>
+//         </Accordion>
+//       </div>
+//     </div>
+//   );
+// };
+
+// export default ServicesD4;
+
 import React from "react";
 import Accordion from "@mui/material/Accordion";
 import Typography from "@mui/material/Typography";

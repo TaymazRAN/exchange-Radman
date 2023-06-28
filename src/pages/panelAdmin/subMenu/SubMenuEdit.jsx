@@ -9,7 +9,8 @@ import { fixNull } from "../../../services/fixNull";
 import LoadingRedux from "../../../components/loadingRedux/LoadingRedux";
 import LoadingSmall from "../../../components/loadingSmall/LoadingSmall";
 import SnackAlert from "../../../components/snackAlert/SnackAlert";
-
+import { Editor } from "@tinymce/tinymce-react";
+import "./style.css";
 import {
   fetchsubMenuByID,
   subMenuActions,
@@ -17,25 +18,22 @@ import {
 } from "../../../features/account/subMenuSlice";
 
 const validationSchema = yup.object().shape({
-  title: yup.string().required("نام منو را وارد کنید"),
+  title: yup.string().required(" متن  نباید  خالی باشد  "),
 });
 
 export default function SubMenuEdit(props) {
+  const editorRef = useRef(null);
   const { id } = useParams();
-
   const navigate = useNavigate();
   const formRef = useRef();
   const dispatch = useDispatch();
-
   const data = useSelector((state) => state.subMenu.subMenu);
-
-  console.log("data...", data);
+  // console.log("data...", data);
   const [post, setPost] = useState(undefined);
   const handleLoading = useSelector((state) => state.subMenu.handleLoading);
   const ready = useSelector((state) => state.subMenu.ready);
   const error = useSelector((state) => state.subMenu.error);
   const handleError = useSelector((state) => state.subMenu.handleError);
-
   const [successAlert, setSuccessAlert] = useState(false);
   const [successText, setSuccessText] = useState("");
   const handleOpenSuccess = (text) => {
@@ -49,7 +47,6 @@ export default function SubMenuEdit(props) {
 
   const [errorAlert, setErrorAlert] = useState(false);
   const [errorText, setErrorText] = useState("");
-
   const handleOpenError = (text) => {
     setErrorText(text);
     setErrorAlert(true);
@@ -61,16 +58,13 @@ export default function SubMenuEdit(props) {
 
   useEffect(() => {
     dispatch(fetchsubMenuByID(id));
-    // eslint-disable-next-line react-hooks/exhaustive-deps
+    // window.location.reload();
   }, []);
 
   useEffect(() => {
     if (Object.keys(data).length !== 0) {
       setPost(data);
-      console.log("data...", data);
-      console.log("post...", post);
     }
-    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [data]);
 
   const initialValues = {
@@ -78,20 +72,18 @@ export default function SubMenuEdit(props) {
     title: fixNull(post?.title),
     body: fixNull(post?.body),
     groupType: fixNull(post?.groupType),
+    description: fixNull(post?.description),
+    ModifiedDate: "2023-06-23T12:57:18.542Z",
+    CreateDate: "2023-06-23T12:57:18.542Z",
   };
 
-  console.log("initialValues", initialValues);
   useEffect(() => {
     if (handleError === "success") {
       handleOpenSuccess("عملیات با موفقیت انجام شد");
       setTimeout(() => {
         navigate(`/admin/subMenuList/${initialValues.groupType}`);
-
         dispatch(subMenuActions.clearHandleError());
       }, 1500);
-    } else if (handleError === "uploaded") {
-      handleOpenSuccess("تصویر با موفقیت آپلود شد");
-      dispatch(subMenuActions.clearHandleError());
     } else if (
       handleError !== "success" &&
       handleError !== "" &&
@@ -100,7 +92,6 @@ export default function SubMenuEdit(props) {
       handleOpenError("عملیات با مشکل مواجه شد");
       dispatch(subMenuActions.clearHandleError());
     }
-    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [handleError]);
 
   const handleSubmit = () => {
@@ -111,9 +102,23 @@ export default function SubMenuEdit(props) {
 
   const submit = (data) => {
     // dispatch(updateManager({ user: post.id, data })).unwrap();
-    console.log("data pass", data);
+    console.log("data Submit  ", data);
+    console.log(
+      "Body",
+      editorRef.current ? editorRef.current.getContent() : null
+    );
 
-    dispatch(updatesubMenu({ user: post.id, data })).unwrap();
+    dispatch(
+      updatesubMenu({
+        id: post.id,
+        title: post.title,
+        groupType: post.groupType,
+        description: post.description,
+        ModifiedDate: "2023-06-23T12:57:18.542Z",
+        CreateDate: "2023-06-23T12:57:18.542Z",
+        body: editorRef.current ? editorRef.current.getContent() : null,
+      })
+    ).unwrap();
   };
 
   return (
@@ -134,30 +139,35 @@ export default function SubMenuEdit(props) {
       ) : (
         <Formik
           {...props}
-          initialValues={initialValues}
+          initialValues={data}
           validationSchema={validationSchema}
           onSubmit={submit}
           innerRef={formRef}
         >
           {({ handleChange, values, setFieldValue, errors, touched }) => (
-            <Form>
-              {console.log("values", values)}
+            <Form style={{ height: "800px" }}>
               <div className="mainPanelTitle bold">
-                ویرایش مدیریت منو {post.title}
+                <span>
+                  {/* <button onClick={refresh}>Refresh</button>  */}
+                  ویرایش مدیریت منو{" "}
+                </span>
+                <span style={{ color: "red", fontSize: 22 }}>{post.title}</span>
               </div>
-              <div className="profileInputContainer">
+              {/* <div className="profileInputContainer"> */}
+
+              <div>
                 <div style={{ display: "flex" }}>
                   <div style={{ flex: 1 }}>
                     <TextField
                       dir="rtl"
                       margin="dense"
                       id="title"
-                      label="نام گروه  اصلی  "
+                      // label="نام گروه  اصلی  "
                       type="text"
                       fullWidth
                       variant="outlined"
                       className="profileInput"
-                      value={values.title}
+                      value={post.title}
                       onChange={handleChange}
                       error={touched.title && Boolean(errors.title)}
                       helperText={touched.title && errors.title}
@@ -169,12 +179,12 @@ export default function SubMenuEdit(props) {
                       dir="rtl"
                       margin="dense"
                       id="groupType"
-                      label="عنوان  منو "
+                      // label="عنوان  منو "
                       type="text"
                       fullWidth
                       variant="outlined"
                       className="profileInput"
-                      value={values.groupType}
+                      value={post.groupType}
                       onChange={handleChange}
                       error={touched.groupType && Boolean(errors.groupType)}
                       helperText={touched.groupType && errors.groupType}
@@ -182,21 +192,49 @@ export default function SubMenuEdit(props) {
                     />
                   </div>
                 </div>
-                <textarea
-                  dir="rtl"
-                  margin="dense"
+
+                <Editor
+                  // apiKey={`0l9ca7pyz0qyliy0v9mmkfl2cz69uodvc8l6md8o4cnf6rnc`}
+                  onEditorChange={handleChange}
+                  change
                   id="body"
-                  label="body "
-                  type="text"
-                  fullWidth
-                  variant="outlined"
-                  className="profileInput"
-                  value={values.body}
-                  onChange={handleChange}
-                  error={touched.body && Boolean(errors.body)}
-                  helperText={touched.body && errors.body}
-                  style={{ height: "300px", width: "1000px" }}
-                  multiline="true"
+                  onInit={(evt, editor) => (editorRef.current = editor)}
+                  initialValue={post.body}
+                  init={{
+                    height: 200,
+                    menubar: false,
+                    plugins: [
+                      "a11ychecker",
+                      "advlist",
+                      "advcode",
+                      "advtable",
+                      "autolink",
+                      "checklist",
+                      "export",
+                      "lists",
+                      "link",
+                      "image",
+                      "charmap",
+                      "preview",
+                      "anchor",
+                      "searchreplace",
+                      "visualblocks",
+                      "powerpaste",
+                      "fullscreen",
+                      "formatpainter",
+                      "insertdatetime",
+                      "media",
+                      "table",
+                      "help",
+                      "wordcount",
+                    ],
+                    toolbar:
+                      "insertfile undo redo | casechange blocks | bold italic backcolor forecolor  | image | export | fullscreen " +
+                      "alignleft aligncenter alignright alignjustify | table |" +
+                      "bullist numlist checklist outdent indent | removeformat ",
+                    content_style:
+                      'body { font-family:Helvetica,Arial,sans-serif; font-size:14px ,height: "500px"   }',
+                  }}
                 />
               </div>
               <div className="profileInputContainer">
@@ -238,6 +276,12 @@ export default function SubMenuEdit(props) {
                   </div>
                 </div>
               </div>
+
+              {/* <div
+                dangerouslySetInnerHTML={{
+                  __html: post.body,
+                }}
+              ></div> */}
             </Form>
           )}
         </Formik>

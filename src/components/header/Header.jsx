@@ -2,11 +2,8 @@ import { Button } from "@mui/material";
 import React from "react";
 import { Link } from "react-router-dom";
 import SuperMenu from "../superMenu/SuperMenu";
-import { useNavigate } from "react-router-dom";
 
 export default function Header({ dark }) {
-  const navigate = useNavigate();
-
   return (
     <div className={`header ${dark && "dark"}`}>
       <div className="widthFix">

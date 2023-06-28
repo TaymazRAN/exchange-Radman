@@ -1,6 +1,6 @@
 import axios from "axios";
 
-const SERVER_URL = "http://188.95.89.161/api";
+const SERVER_URL = "http:// /api";
 // GET ​/api​/Package
 
 // GET
@@ -31,7 +31,7 @@ export const getAllpackage = () => {
 
 // POST ​/api​/Package
 export const createPackage = (packagelist) => {
-  // http://188.95.89.161/api/Package/category
+  // http:// /api/Package/category
   const url = `${SERVER_URL}/package`;
   return axios.post(url, packagelist);
 };

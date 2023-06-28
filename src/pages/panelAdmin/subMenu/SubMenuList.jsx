@@ -1,34 +1,29 @@
 import { useSelector, useDispatch } from "react-redux";
 import { DataGrid, GridToolbar } from "@mui/x-data-grid";
-import AddIcon from "@mui/icons-material/Add";
+// import AddIcon from "@mui/icons-material/Add";
 import EditOutlinedIcon from "@mui/icons-material/EditOutlined";
 import { Button } from "@mui/material";
 import { useNavigate, useParams } from "react-router-dom";
 import React, { useState, useEffect } from "react";
-import AlertDeleteRedux from "../../../components/alertDelete/AlertDeleteRedux";
 import SnackAlert from "../../../components/snackAlert/SnackAlert";
 import LoadingRedux from "../../../components/loadingRedux/LoadingRedux";
 import {
   fetchsubMenuByGroupType,
   subMenuActions,
-  suspendsubMenu,
+  // suspendsubMenu,
 } from "../../../features/account/subMenuSlice";
 
 const SubMenuList = () => {
   const { GroupType } = useParams();
+  const dispatch = useDispatch();
+
   console.log("GroupType ==", GroupType);
 
-  // const organid = JSON.parse(localStorage.getItem("organid"));
-
-  const data = useSelector((state) => state.subMenu.subMenu);
-  console.log("Object Data", data);
-  console.log(data);
   const [post, setPost] = useState(undefined);
   const handleLoading = useSelector((state) => state.subMenu.handleLoading);
   const error = useSelector((state) => state.subMenu.error);
   const handleError = useSelector((state) => state.subMenu.handleError);
   const ready = useSelector((state) => state.subMenu.ready);
-  const dispatch = useDispatch();
   const navigate = useNavigate();
   const [successAlert, setSuccessAlert] = useState(false);
   const [successText, setSuccessText] = useState("");
@@ -55,12 +50,6 @@ const SubMenuList = () => {
   };
 
   useEffect(() => {
-    dispatch(fetchsubMenuByGroupType(GroupType));
-    // dispatch(fetchAllSubMenu());
-    // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, [data]);
-
-  useEffect(() => {
     if (handleError === "success") {
       handleOpenSuccess("عملیات با موفقیت انجام شد");
       setTimeout(() => {
@@ -74,6 +63,11 @@ const SubMenuList = () => {
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [handleError]);
 
+  const data = useSelector((state) => state.subMenu.subMenu);
+  useEffect(() => {
+    dispatch(fetchsubMenuByGroupType(GroupType));
+  }, [GroupType]);
+
   useEffect(() => {
     if (Object.keys(data).length !== 0) {
       setPost(data);
@@ -85,12 +79,6 @@ const SubMenuList = () => {
 
   const columns = [
     {
-      field: "groupType",
-      headerName: "نام گروه اصلی  ",
-      flex: 1,
-    },
-
-    {
       field: "title",
       headerName: "نام  منو  ",
       flex: 1,
@@ -99,6 +87,11 @@ const SubMenuList = () => {
     {
       field: "body",
       headerName: "متن منو ",
+      flex: 2,
+    },
+    {
+      field: "groupType",
+      headerName: "نام گروه اصلی  ",
       flex: 1,
     },
 
@@ -132,14 +125,13 @@ const SubMenuList = () => {
               <EditOutlinedIcon className="gridIcon" />
               ویرایش
             </Button>
-            <AlertDeleteRedux
+            {/* <AlertDeleteRedux
               titleMessage=" مدیریت منوهای سایت "
               nameMessage={parameters.row.title}
               clickFunction={(event) => {
                 dispatch(suspendsubMenu(parameters.id));
-              }}
-              loading={handleLoading}
-            />
+              }} */}
+            {/* <loading={handleLoading}/> */}
           </div>
         );
       },
@@ -159,7 +151,7 @@ const SubMenuList = () => {
         }}
       />
 
-      <div className="topButtonContainer">
+      {/* <div className="topButtonContainer">
         <Button
           className="topButton"
           variant="outlined"
@@ -168,9 +160,37 @@ const SubMenuList = () => {
         >
           اضافه کردن <AddIcon className="topButtonIcon" />
         </Button>
+      </div> */}
+
+      <div className="topButtonContainer">
+        <div style={{ display: "flex", justifyContent: "left", width: "100%" }}>
+          {/* <div style={{ flex: 1 }}>
+            <Button
+              className="topButton"
+              variant="outlined"
+              color="success"
+              onClick={(event) => navigate(`/admin/subMenuAdd/${GroupType}`)}
+            >
+              اضافه کردن <AddIcon className="topButtonIcon" />
+            </Button>
+          </div> */}
+
+          <div
+            style={{
+              flex: 1,
+              marginRight: "10px",
+              color: "#025887",
+              fontWeight: "bold",
+              fontSize: "1.1em",
+            }}
+          >
+            {" "}
+            مدیریت بخش منوی : {GroupType}
+          </div>
+        </div>
       </div>
 
-      <div style={{ height: 450 }}>
+      <div style={{ height: "800px" }}>
         <>
           {error !== "" || !ready ? (
             <LoadingRedux error={error} />
@@ -178,7 +198,7 @@ const SubMenuList = () => {
             <DataGrid
               rows={data}
               columns={columns}
-              pageSize={5}
+              pageSize={10}
               rowsPerPageOptions={[7]}
               checkboxSelection
               disableSelectionOnClick

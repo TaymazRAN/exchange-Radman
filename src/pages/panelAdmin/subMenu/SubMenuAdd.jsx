@@ -4,26 +4,20 @@ import TextField from "@mui/material/TextField";
 import Button from "@mui/material/Button";
 import { Formik, Form } from "formik";
 import * as yup from "yup";
-import { useNavigate } from "react-router-dom";
+import { useNavigate, useParams } from "react-router-dom";
 import SnackAlert from "../../../components/snackAlert/SnackAlert";
 import LoadingRedux from "../../../components/loadingRedux/LoadingRedux";
 import LoadingSmall from "../../../components/loadingSmall/LoadingSmall";
-// import { registerActions } from "../../../features/account/registerSlice";
-import {
-  FormControl,
-  FormHelperText,
-  InputLabel,
-  MenuItem,
-  Select,
-} from "@mui/material";
+import { Editor } from "@tinymce/tinymce-react";
+
 import {
   addsubMenu,
   subMenuActions,
 } from "../../../features/account/subMenuSlice";
-import Editor from "../../../components/editor/Editor";
 
 const validationSchema = yup.object().shape({
   title: yup.string().required("  عنوان را وارد کنید"),
+  // body: yup.string().required("  متن  را وارد کنید"),
 
   // password: yup
   //   .string()
@@ -46,8 +40,12 @@ const validationSchema = yup.object().shape({
 });
 
 export default function SubMenuAdd(props) {
+  const editorRef = useRef(null);
   // const organid = JSON.parse(localStorage.getItem("organid"));
   const navigate = useNavigate();
+  const { GroupType } = useParams();
+  console.log("Group Type ", GroupType);
+
   const formRef = useRef();
   const dispatch = useDispatch();
 
@@ -83,7 +81,7 @@ export default function SubMenuAdd(props) {
     if (handleError === "success") {
       handleOpenSuccess("عملیات با موفقیت انجام شد");
       setTimeout(() => {
-        navigate(`/admin/subMenu`);
+        navigate(`/admin/SubMenulistDynamic/${GroupType}`);
         dispatch(subMenuActions.clearHandleError());
       }, 1500);
     } else if (handleError !== "success" && handleError !== "") {
@@ -100,14 +98,29 @@ export default function SubMenuAdd(props) {
   };
 
   const initialValues = {
+    // id: "3fa85f64-5717-4563-b3fc-2c963f66afa0",
     title: "",
     body: "",
-    groupType: "",
+    groupType: GroupType,
+    description: "description",
+    ModifiedDate: "2023-06-23T12:29:29.962Z",
+    CreateDate: "2023-06-23T12:29:29.962Z",
   };
 
   const submit = (values) => {
     // alert(JSON.stringify(values, null, 2));
-    dispatch(addsubMenu(values)).unwrap();
+    console.log("value =", values);
+    // dispatch(addsubMenu(values)).unwrap();
+    dispatch(
+      addsubMenu({
+        title: values.title,
+        groupType: values.groupType,
+        description: values.description,
+        ModifiedDate: "2023-06-23T12:57:18.542Z",
+        CreateDate: "2023-06-23T12:57:18.542Z",
+        body: editorRef.current ? editorRef.current.getContent() : null,
+      })
+    ).unwrap();
   };
 
   return (
@@ -134,7 +147,7 @@ export default function SubMenuAdd(props) {
           innerRef={formRef}
         >
           {({ handleChange, values, setFieldValue, errors, touched }) => (
-            <Form>
+            <Form style={{ height: "800px" }}>
               <div className="mainPanelTitle bold">اضافه کردن منو </div>
               <div className="profileInputContainer">
                 <TextField
@@ -152,11 +165,11 @@ export default function SubMenuAdd(props) {
                   helperText={touched.title && errors.title}
                 />
 
-                <TextField
+                {/* <TextField
                   dir="rtl"
                   margin="dense"
                   id="body"
-                  label="body "
+                  label="متن "
                   type="text"
                   fullWidth
                   variant="outlined"
@@ -165,18 +178,75 @@ export default function SubMenuAdd(props) {
                   onChange={handleChange}
                   error={touched.body && Boolean(errors.body)}
                   helperText={touched.body && errors.body}
-                />
+                  style={{
+                    backgroundColor: "#dddddd",
+                    minHeight: 200,
+                    // border:,
+                  }}
+                  multiline
+                /> */}
+
                 <Editor
-                  dir="rtl"
+                  // apiKey={`0l9ca7pyz0qyliy0v9mmkfl2cz69uodvc8l6md8o4cnf6rnc`}
+                  onEditorChange={handleChange}
+                  change
                   id="body"
-                  // label="body"
-                  placeholder="body وارد  کن  "
-                  value={values.body}
-                  onChange={handleChange}
-                  // error={touched.body && Boolean(errors.body)}
-                  // helperText={touched.body && errors.body}
+                  onInit={(evt, editor) => (editorRef.current = editor)}
+                  initialValue={values.body}
+                  init={{
+                    height: 200,
+                    menubar: false,
+                    plugins: [
+                      "a11ychecker",
+                      "advlist",
+                      "advcode",
+                      "advtable",
+                      "autolink",
+                      "checklist",
+                      "export",
+                      "lists",
+                      "link",
+                      "image",
+                      "charmap",
+                      "preview",
+                      "anchor",
+                      "searchreplace",
+                      "visualblocks",
+                      "powerpaste",
+                      "fullscreen",
+                      "formatpainter",
+                      "insertdatetime",
+                      "media",
+                      "table",
+                      "help",
+                      "wordcount",
+                    ],
+                    toolbar:
+                      "insertfile undo redo | casechange blocks | bold italic backcolor forecolor  | image | export | fullscreen " +
+                      "alignleft aligncenter alignright alignjustify | table |" +
+                      "bullist numlist checklist outdent indent | removeformat ",
+                    // content_style: 'body { font-family:Helvetica,Arial,sans-serif; font-size:14px }'
+                  }}
                 />
-                <FormControl margin="dense" fullWidth className="profileInput">
+
+                <TextField
+                  dir="rtl"
+                  margin="dense"
+                  id="groupType"
+                  label="groupType "
+                  type="text"
+                  fullWidth
+                  variant="outlined"
+                  className="profileInput"
+                  value={values.groupType}
+                  onChange={handleChange}
+                  // error={touched.body && Boolean(errors.groupType)}
+                  // helperText={touched.body && errors.groupType}
+                  // disabled
+                  hidden
+                />
+
+                {/* <FormControl margin="dense" fullWidth className="profileInput">
                   <InputLabel
                     error={touched.responsible && Boolean(errors.responsible)}
                   >
@@ -227,9 +297,8 @@ export default function SubMenuAdd(props) {
                   >
                     {touched.responsible && errors.responsible}
                   </FormHelperText>
-                </FormControl>
+                </FormControl> */}
               </div>
-
               <div className="profileInputContainer">
                 <div style={{ display: "flex" }}>
                   <div className="BtnBottom">
@@ -240,7 +309,9 @@ export default function SubMenuAdd(props) {
                       component="label"
                       margin="dense"
                       color="error"
-                      onClick={(event) => navigate("/admin/subMenu")}
+                      onClick={(event) =>
+                        navigate(`/admin/SubMenulistDynamic/${GroupType}`)
+                      }
                       id="logoFileName"
                       sx={{ padding: "15px 0", marginTop: "4px" }}
                       fullWidth

@@ -1,58 +1,40 @@
 import "./editor.css";
-import React, { useState } from "react";
+import React from "react";
 import ReactQuill from "react-quill";
 import "react-quill/dist/quill.snow.css";
-import "react-quill/dist/quill.bubble.css";
+// import "react-quill/dist/quill.bubble.css";
 
-// function Editor extends Component {
-
-// const Editor ()=>{
-
-const Editor = (props) => {
-  const [first, setFirst] = useState("name");
-  // constructor(props) {
-  //   super(props);
-  //   this.state = { editorHtml: "", theme: "snow" };
-  //   console.log("Props Editor ", props);
-  //   // this.handleChange = this.handleChange.bind(this);
-  // }
-
-  // handleChange(html) {
-  //   this.setState({ editorHtml: html });
-  //   console.log("event.target.value", { editorHtml: html });
-  // }
-
-  function handleChange(editor) {
-    console.log(editor);
-    // props.handleChange = editor;
-    // setFirst(editor);
+class Editor extends React.Component {
+  constructor(props) {
+    super(props);
+    this.state = { editorHtml: "", theme: "snow" };
+    // this.state = { editorHtml: props.value, theme: "snow" };
+    this.handleChange = this.handleChange.bind(this);
+    console.log("Editor Props ", props);
   }
-  // props.onChange = first;
-  console.log("props.onChange", props.onChange);
-  // handleChange(event) {
-  //   console.log("event.target.value", event.target.value);
-  // }
 
-  return (
-    <div>
-      <ReactQuill
-        // defaultValue={this.props.value}
-        onChange={handleChange}
-        key={props.id}
-        modules={Editor.modules}
-        formats={Editor.formats}
-        // bounds={props.id}
-        placeholder={props.placeholder}
-        value={props.body}
-      />
-    </div>
-  );
-};
+  handleChange(html) {
+    this.setState({ editorHtml: html });
+  }
 
-/*
- * Quill modules to attach to editor
- * See https://quilljs.com/docs/modules/ for complete options
- */
+  render() {
+    return (
+      <div>
+        <ReactQuill
+          // theme={this.state.theme}
+          onChange={this.handleChange}
+          value={this.state.editorHtml}
+          // value={this.props.editorHtml}
+          modules={Editor.modules}
+          formats={Editor.formats}
+          // bounds={".app"}
+          placeholder={this.props.placeholder}
+        />
+      </div>
+    );
+  }
+}
+
 Editor.modules = {
   toolbar: [
     [{ header: "1" }, { header: "2" }, { font: [] }],
@@ -73,7 +55,6 @@ Editor.modules = {
   },
 };
 /*
- * Quill editor formats
  * See https://quilljs.com/docs/formats/
  */
 Editor.formats = [
@@ -94,3 +75,8 @@ Editor.formats = [
 ];
 
 export default Editor;
+
+// ReactDOM.render(
+//   <Editor placeholder={'Write something...'}/>,
+//   document.querySelector('.app')
+// )

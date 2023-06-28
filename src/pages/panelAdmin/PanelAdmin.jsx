@@ -7,8 +7,8 @@ import SideBarAdmin from "../../components/sideBarAdmin/SideBarAdmin";
 import Dashboard from "./dashboard/Dashboard";
 import MenuTable from "./menu/menuTable/MenuTable";
 import axios from "axios";
-import { useDispatch, useSelector } from "react-redux";
-import { fetchUsers } from "../../features/account/userSlice";
+// import { useDispatch, useSelector } from "react-redux";
+// import { fetchUsers } from "../../features/account/userSlice";
 import MemberList from "./manager/MemberList";
 import ManagerAdd from "./manager/ManagerAdd";
 import ManagerEdit from "./manager/ManagerEdit";
@@ -18,6 +18,7 @@ import QuestionList from "./question/QuestionList";
 import SubMenuList from "./subMenu/SubMenuList";
 import SubMenuAdd from "./subMenu/SubMenuAdd";
 import SubMenuEdit from "./subMenu/SubMenuEdit";
+import SubMenulistDynamic from "./subMenu/SubMenulistDynamic";
 
 export default function PanelAdmin() {
   const token = JSON.parse(localStorage.getItem("token"));
@@ -30,12 +31,12 @@ export default function PanelAdmin() {
     });
   }
 
-  const dispatch = useDispatch();
-  const ready = useSelector((state) => state.user.ready);
+  // const dispatch = useDispatch();
+  // const ready = useSelector((state) => state.user.ready);
 
-  if (!ready) {
-    dispatch(fetchUsers());
-  }
+  // if (!ready) {
+  //   dispatch(fetchUsers());
+  // }
 
   return (
     <>
@@ -59,7 +60,11 @@ export default function PanelAdmin() {
               <Route path="/questionEdit/:id" element={<QuestionEdit />} />
               <Route path="/subMenu" element={<SubMenuList />} />
               <Route path="/subMenuList/:GroupType" element={<SubMenuList />} />
-              <Route path="/subMenuAdd" element={<SubMenuAdd />} />
+              <Route
+                path="/SubMenulistDynamic/:GroupType"
+                element={<SubMenulistDynamic />}
+              />
+              <Route path="/subMenuAdd/:GroupType" element={<SubMenuAdd />} />
               <Route path="/subMenuEdit/:id" element={<SubMenuEdit />} />
             </Routes>
           </div>

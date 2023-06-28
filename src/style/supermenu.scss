@@ -15,6 +15,18 @@
 	transform: rotate(0deg);
 	transition: $transition-m;
 }
+@media only screen and (max-width: 600px) {
+  .d-navbar a {
+	font-size:  10px;
+   
+  }
+  .superArrow {
+    font-size: 10px;
+  
+}
+}
+
+
 .d {
 	float: right;
 	overflow: hidden;
